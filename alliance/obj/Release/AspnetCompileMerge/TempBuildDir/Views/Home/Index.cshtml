@@ -1,0 +1,180 @@
+﻿@model  List<Car.Remnants>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-autocomplete-source]").each(function () {
+            var target = $(this);
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });
+        });
+    });
+</script>
+
+<div class="bg-box">
+    <div class="container">
+
+      
+
+        <ul class="tabs">
+            <li>
+                <input type="radio" name="tabs" id="tab-1" checked>
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+
+                 
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @{
+                                string searchstr = Request.Params["Part"];
+
+                                @(ViewContext.RouteData.Values["Part"])
+
+
+
+                                Uri myUri = new Uri(Request.Url.AbsoluteUri);
+                                string param1 = HttpUtility.ParseQueryString(myUri.Query).Get("Part");
+
+
+
+
+
+                                if (param1 == null)
+                                {
+                                    param1 = " ";
+                                }
+
+                                if (param1 == "")
+                                {
+                                    param1 = " ";
+                                }
+                            }
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                     }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+                   @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                       <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                 </div>
+            </li>
+
+        </ul>
+       
+
+    </div>
+</div>
+
+
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column index">
+            <h2><a href="#"></a></h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            @*<a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>*@
+        </div>
+        <div class="right-column index">
+            <div class="column-nav">
+                <div class="tab-content clearfix">
+                    <div class="tab-panel1">
+                        <div class="link-box">
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU1Mw%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/mb-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU1Mw%3D%3D" class="brand-name"><span>Mercedes Benz</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3NQ%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/skoda-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3NQ%3D%3D" class="brand-name"><span>Skoda</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3Mw%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/seat-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3Mw%3D%3D" class="brand-name"><span>Seat</span></a>
+                            </div>
+                        </div>
+                        <div class="link-box">
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUxMQ%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/bmw-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUxMQ%3D%3D" class="brand-name"><span>BMW</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUzMw%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/honda-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUzMw%3D%3D" class="brand-name"><span>Honda</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU2MQ%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/opel-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU2MQ%3D%3D" class="brand-name"><span>Opel</span></a>
+                            </div>
+                        </div>
+                        <div class="link-box">
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUwNA%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/audi-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUwNA%3D%3D" class="brand-name"><span>Audi</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3Ng%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/Subaru-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3Ng%3D%3D" class="brand-name"><span>Subaru</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU1OA%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/Nissan-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU1OA%3D%3D" class="brand-name"><span>Nissan</span></a>
+                            </div>
+                        </div>
+                        <div class="link-box">
+                            <div class="logo-wrap">
+                                <a href="#" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/Volkswagen_Logo.png" alt=""></a>
+                                <a href="#" class="brand-name"><span>WolksVagen</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3OQ%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/toyota-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU3OQ%3D%3D" class="brand-name"><span>Toyota</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU1Mg%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/Mazda-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTU1Mg%3D%3D" class="brand-name"><span>Mazda</span></a>
+                            </div>
+                        </div>
+                        <div class="link-box">
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTg3NA%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/Lexus-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTg3NA%3D%3D" class="brand-name"><span>Lexus</span></a>
+                            </div>
+                            <div class="logo-wrap">
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUyNQ%3D%3D" class="brand-img"><img src="@Url.Content("~/Content/")images/auto/Ford-logo.png" alt=""></a>
+                                <a href="http://catalog.alliance-motors.kg/totalcatalog/?st=20&l=YnJhbmRfaWQ9PTUyNQ%3D%3D" class="brand-name"><span>Ford</span></a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+   
+
+           
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,343 @@
+﻿@model Car.Users
+@{
+    ViewBag.Title = "PrivateOfficce";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-autocomplete-source]").each(function () {
+            var target = $(this);
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });
+        });
+    });
+</script>
+
+    <div class="bg-box">
+        <div class="container">
+
+            <div class="con">
+                <h1>Поиск и подбор автозапчастей</h1>
+
+            </div>
+
+            <ul class="tabs">
+
+                <li>
+
+                    <input type="radio" name="tabs" id="tab-1" checked>
+
+                    <label for="tab-1">
+                        Быстрый поиск
+                    </label>
+                    <div class="tab-content">
+                        @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                        {
+                            <div class="search-box1">
+                              @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                              <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                            </div>
+                        }
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" id="tab-2">
+
+                    <label for="tab-2">
+
+                        VIN запрос
+
+                    </label>
+                    <div class="tab-content">
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                        {
+                            <div class="search-box1">
+                                @Html.TextBox("Vin")
+                                @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                                <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                            </div>
+                        }
+                    </div>
+                </li>
+
+            </ul>
+          
+
+        </div>
+    </div>
+
+
+<div class="context-box">
+    <div class="container clearfix">
+      
+       <section class="content-wrapper main-content clear-fix">
+
+
+            <div class="rounded">
+
+
+                <h2>Личный кабинет</h2>
+
+
+                <p class="message-success"></p>
+                <div class="clear-fix">
+                    <div class="float-left" style="width: 50%; text-align: center; border-right: solid 1px #C8C8C8; border-bottom: solid 1px #C8C8C8; height: 200px;">
+
+                        <div class="float-left" style="width: 50%; text-align: center;">
+
+                            <a href="#" style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">
+                                @Html.ActionLink("Все заказы", "AllOrders", "PrivateOfficce")
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <img src="/Content/images/orders.ico" style="width: 64px;">
+                            </a>
+                            <br>
+                            <br>
+
+                            Список заказов
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                        <div class="float-left" style="text-align: center; width: 49.9%;">
+                            <a href="/Orders/ShowPartnersOrders" style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">
+                               
+                              @Html.ActionLink(" Заказы с удаленных складов", "ShowPartnersOrders", "PrivateOfficce")
+                                <br>
+                                <br>
+                                <img src="/Content/images/orders.ico" style="width: 64px;">
+                            </a>
+                            <br>
+                            <br>
+                            Список заказов
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+                    <div class="float-right" style="text-align: center; width: 49.9%; border-bottom: solid 1px #C8C8C8; height: 200px;">
+                        <a href="/Reports" style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">
+                         
+                            @Html.ActionLink("Отчеты", "Reports", "PrivateOfficce")
+                            <br>
+                            <br>
+                            <img src="/Content/images/excel.ico" style="width: 64px;">
+                        </a>
+                        <br>
+                        <br>
+                        Оформление заявки на формирование отчета в формате
+                        <br>
+                        Excel с последующей отправкой его на Вашу почту
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="clear-fix">
+                    <div class="float-left" style="width: 50%; text-align: center; border-right: solid 1px #C8C8C8; border-bottom: solid 1px #C8C8C8; height: 200px;">
+                        <br>
+                        <a href="/Invoice" style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">
+                         
+                            @Html.ActionLink("Накладные", "Invoice", "PrivateOfficce")
+                            <br>
+                            <br>
+                            <img src="/Content/images/orders.ico" style="width: 64px;">
+                        </a>
+                        <br>
+                        <br>
+                        Накладные отгруженного товара
+                        <br>
+                        <br>
+                    </div>
+                    <div class="float-right" style="text-align: center; width: 49.9%; border-bottom: solid 1px #C8C8C8; height: 200px;">
+                        <br>
+                        <a href="/Contracts" style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">
+                            Расшифровка задолженности
+                            <br>
+                            <br>
+                            <img src="/Content/images/money-icon.png" style="width: 80px;">
+                        </a>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="clear-fix">
+                    <div class="float-left" style="width: 50%; text-align: center; border-right: solid 1px #C8C8C8;border-bottom: solid 1px #C8C8C8;height:210px;">
+                        <br>
+                        <span style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">Прайс-лист</span>
+                        <br>
+                        <br>
+                        <img src="/Content/images/orders.ico" style="width: 64px;">
+                        <br>
+                        <br>
+                        <table style="margin: auto;">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="text-align: center"><a href="ftp://ftp.phaeton.kz/Common/Application_List.xls">Скачать файл применяемости автозапчастей</a></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center"><a href="ftp://ftp.phaeton.kz/Common/BOSCH/MASTER_FILE_BOSCH.xls">Мастер-файл BOSCH</a></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center"><a href="/Upload/Nalichie_osnovnoi_sklad_gruz.rar">Скачать прайс-лист грузовых запчастей</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                    <div class="float-right" style="text-align: center; width: 49.9%; border-bottom: solid 1px #C8C8C8; height: 210px;">
+
+                        <br>
+                        <a href="/Account/Guarantee" style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">
+                            Статус гарантийных случаев
+                            <br>
+                            <br><br>
+                            <img src="/Content/images/guarantee.gif" style="width: 80px;">
+                        </a>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="clear-fix">
+                    <div class="float-left" style="width: 50%; text-align: center; border-right: solid 1px #C8C8C8; /*height: 250px; */">
+                        <br>
+                        <span style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">Фото каталоги</span>
+                        <table style="margin: auto;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <br>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right"><a href="/Upload/Lema.pdf">Фото каталог Lema</a></td>
+                                    <td style="text-align: left">
+                                        <a href="/Upload/Stellox.pdf">Фото каталог Stellox</a><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right"><a href="/Upload/TruckTec.pdf">Фото каталог TruckTec</a></td>
+                                    <td style="text-align: left"><a href="/Upload/Valeo.pdf">Фото каталог колодки Valeo</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right;">
+                                        <a href="/Upload/saf.pdf">Фото каталог SAF-Holland</a><br>
+                                    </td>
+                                    <td style="text-align: left">
+                                        <a href="/Upload/Sem.pdf">Фото каталог Sem</a><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right;"><a href="/Upload/Airtech.pdf">Фото каталог Airtech</a></td>
+                                    <td style="text-align: left"><a href="/Upload/Onyarbi.pdf">Фото каталог Onyarbi</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right;">
+                                        <a href="/Upload/DieselTechnics.pdf">Фото каталог Diesel Technics</a><br>
+                                    </td>
+                                    <td style="text-align: left">
+                                        <a href="/Upload/Wabco.pdf">Фото каталог Wabco</a><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right;">
+                                        <a href="/Upload/FRISTOM.pdf">Фото каталог Fristom</a><br>
+                                    </td>
+                                    <td style="text-align: left">
+                                        <a href="/Upload/NISSENS.pdf">Фото каталог Nissens</a><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right;">
+                                        <a href="/Upload/masu.pdf">Фото каталог Masu</a><br>
+                                    </td>
+                                    <td style="text-align: left"><a href="/Upload/Meritor.pdf">Фото каталог Meritor</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50%; text-align: right;">
+                                        <a href="/Upload/sachs.pdf">Фото каталог SACHS сцепление</a><br>
+                                    </td>
+                                    <td style="text-align: left"><a href="/Upload/OEGermany.pdf">Фото каталог OE Germany</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="float-right" style="text-align: center; width: 49.9%;">
+                        <div>
+                            <br>
+                            <span style="color: #576a8f; font-size: 16px; font-weight: 900; text-decoration: none;">Личные данные</span>
+                            <table border="0" style="width: 100%; text-align: center">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 50%;text-align:right;">Логин</td>
+                                        <td style="text-align: left"><b>Alliance</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;text-align:right;">Имя</td>
+                                        <td style="text-align: left"><b>Тавалдыев Бектемир</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;text-align:right;">Фамилия</td>
+                                        <td style="text-align: left"><b></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;text-align:right;">E-mail</td>
+                                        <td style="text-align: left"><b>akberdi.torgoev@alliance-motors.kg</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%;">&nbsp;</td>
+                                        <td style="text-align: left"><a href="/Account/ChangeMail">Изменить e-mail</a></td>
+                                    </tr>
+                                   
+
+                                    <tr>
+                                        <td style="width: 50%;">&nbsp;</td>
+                                        <td style="text-align: left"><a href="#">Отписаться от рассылки</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="clear-fix"></div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@* This below line is for create javascript section*@
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

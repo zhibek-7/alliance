@@ -1,0 +1,213 @@
+﻿﻿@using Car.Controllers;
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="~/Content/images/Aliance.png" type="image/png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = 1200">
+    <title>Alliance Motors</title>
+    <meta name="description" content="Купить автозапчасти для иномарок в интернет – магазине Альянс Моторс можно с помощью каталога запчастей или воспользовавшись поиском. Оригинальные запчасти и замены в наличии и под заказ: японские, американские и европейские. Доставка." />
+    <meta name="keywords" content="Запчасти, автозапчасти, купить запчасти, купить запчасти бишкек, каталог запчастей, каталог запчастей Бишкек ,интернет магазин автозапчастей, продажа запчастей, запчасти форд, ниссан, тойота, bmw, альянсмоторс" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/")css/main.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/")css/reset.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/")css/media.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='@Url.Content("~/Content/themes/base/all.css")' rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+    @{
+
+        Uri myUri1 = new Uri(Request.Url.AbsoluteUri);
+        string urln = "http://alliance-motors.kg/Home/SearchDetail";
+
+        string urln2 = "http://alliance-motors.kg/Home/Search";
+        if (Convert.ToString(myUri1).Split('?')[0] == urln || Convert.ToString(myUri1).Split('?')[0] == urln2)
+        {
+
+
+        }
+        else
+        {
+            <script src='@Url.Content("~/Scripts/jquery-ui-1.12.1.min.js")' type="text/javascript"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        }
+    }
+
+    @Styles.Render("~/Content/css")
+
+
+    @{
+        if (Convert.ToString(myUri1).Split('?')[0] == urln2)
+        {
+
+        }
+        else
+        {
+            @Scripts.Render("~/bundles/modernizr")
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    }
+
+  
+
+</head>
+<body>
+
+    <header>
+        <div class="blue-line">
+            <div class="container">
+                <div class="admin-panel">
+
+
+
+                    <div class="admin-in2">
+                        @{ var user = Session["user"] as Users;}
+
+
+                        @if (Session["LogedUserFullName"] != null)
+                        {
+                            <a href="#"> id - @Html.Action("getSessionId", "Home", true)</a>
+                            <a href="#"> @Html.Action("getSessionName", "Home", true) </a>
+                            @Html.ActionLink("Выход", "Logout", "Home")
+                        }
+                        else
+                        {
+                            <a href="/Home/Login">Вход </a><a href="/User/Register">/ Регистрация</a>
+                        }
+                        <a href="/SendMail/SendEmail">Обратная связь</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-in-box">
+                <div class="logo-box"><a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/")images/logo.png" height="76" width="400" alt=""></a></div>
+
+                <div class="work-time">
+                    <div class="admin-in1  shop_cart">
+                        <div class="basket3">
+                            <a href="@Url.Action("Index", "ShoppingCart")" class="baner" style="text-align: center;">
+                                <img src="@Url.Content("~/Content/")images/shopcart.jpg" height="60" width="60" alt="">
+                            </a>
+                        </div>
+                        <div class="basket3"> @Html.ActionLink("КОРЗИНА", "Index", "ShoppingCart")</div>
+                    </div>
+                    @if (Session["LogedUserFullName"] != null)
+                    {
+                        <div class="admin-in1">
+                            <div class="basket_all">
+                                <div class="basket">количество - <p class="basket_count">@Html.Action("CountCart", "Home", true)</p></div>
+                                <div class="basket"> сумма- <p class="basket_sum" id="basket_sum1">@Html.Action("SummCart", "Home", true)</p></div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="admin-in1">
+                            <div class="basket_all">
+                                <div class="basket">количество -<p class="basket_count">0</p></div>
+                                <div class="basket">сумма -<p class="basket_sum">0</p></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+    </header>
+
+
+
+    <div class="nav-box">
+        <div class="container">
+
+            <ul class="nav-ul">
+                <li>@Html.ActionLink("О компании", "AboutUs", "home")</li>
+
+
+                @if (Session["LogedUserFullName"] != null)
+                {
+                    <li>@Html.ActionLink("Личный кабинет", "Index", "PrivateOfficce")</li>}
+                else
+                {
+
+
+                }
+
+
+                <li>@Html.ActionLink("Новости", "Blog", "home")</li>
+
+                @if (Session["LogedUserFullName"] != null)
+                {
+                    <li>@Html.ActionLink("Распродажа", "Sales", "home")</li>}
+                else { }
+
+                @if (Session["LogedUserFullName"] != null)
+                {
+                    <li>@Html.ActionLink("Каталог", "Catalog", "home")</li>
+                }
+                else { }
+
+                <li>@Html.ActionLink("Контакты", "Contact", "home")</li>
+                <li>@Html.ActionLink("Вакансии", "Vacancy", "home")</li>
+                <li>@Html.ActionLink("Акции", "Aksii", "home")</li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="footer-logo-box">
+                <a href="#"><img src="@Url.Content("~/Content/")images/logo-footer.png" height="44" width="233" alt=""></a>
+                <span>© Alliance motors - лучшее для профессионалов.<div class="iprofi">Все права защищены 2016. Сайт разработан <a href="http://iprofi.kg/" class="iprofi_a">iProfi.kg</a></div></span>
+            </div>
+            <div class="footer-nav-box">
+                <div class="col-l">
+                    <a href="@Url.Action("Index","Home")">Главная</a>
+                    <a href="@Url.Action("AboutUs","Home")">О компании</a>
+                    <a href="@Url.Action("Blog","Home")">Новости</a>
+                    <a href="@Url.Action("Catalog","Home")">Каталог</a>
+
+                </div>
+                <div class="col-r">
+
+                    <a href="@Url.Action("Contact","Home")">Контакты</a>
+                    <a href="@Url.Action("Vacancy","Home")">Вакансии</a>
+                    <a href="/Home/Aksii">Акции</a>
+                </div>
+
+            </div>
+            <div class="footer-adress-box">
+                <span></span>
+                <span></span>
+                <p>720005, г. Бишкек, ул. Льва Толстого 19</p>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+    @{
+        if (Convert.ToString(myUri1).Split('?')[0] == urln2)
+        {
+
+        }
+        else
+        {
+
+            @Scripts.Render("~/bundles/bootstrap")
+            @Scripts.Render("~/bundles/Dialog")
+            @Scripts.Render("~/bundles/modernizr")
+        }
+
+    }
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

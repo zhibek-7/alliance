@@ -1,0 +1,111 @@
+﻿@model Car.Users
+
+@{
+    ViewBag.Title = "Sales";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-autocomplete-source]").each(function () {
+            var target = $(this);
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });
+        });
+    });
+</script>
+
+<div class="bg-box">
+    <div class="container">
+
+       
+        <ul class="tabs">
+            <li>
+                <input type="radio" name="tabs" id="tab-1" checked>
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+       
+
+    </div>
+</div>
+<section class="content-wrapper main-content clear-fix">
+
+
+
+    <div class="clear-fix">
+        <div class="float-left">
+            <div style="font-weight:bold;font-size:1.8em;color:red;">
+                Распродажа
+            </div>
+            <div>
+                Данные цены действительны до окончания запасов. Мы готовы рассматривать ваше встречное предложение по ценообразованию.
+            </div>
+        </div>
+        </div>
+    <br>
+   
+   
+    <table class="resultstable" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr class="trhover" style="font-size:1.2em;font-weight:bold;text-align:center;background-color:coral;">
+                <td>
+                    Бренд
+                </td>
+               
+                <td></td>
+            </tr>
+            @foreach (var prod in ViewBag.SearchParametersSales)
+              {
+                <tr><td colspan="8" name="brand" id="7e203e5e-5b73-11e1-b573-001517a1f012" brand="555" style="background-color:#9AFF9A;cursor:pointer;">
+                        @*<a href="javascript:collapsElement('identifikator')">@prod.Brend</a>*@</td></tr>
+                        <div id="identifikator" style="display: none">
+                            <a href="@Url.Action("GoSale", "PrivateOfficce", new {  Brend = prod}, null)">
+
+                                <tr class="trhover">
+                                    <td>@prod.Brend</td>
+                                   
+                                    <td class="tdbutton">
+                                        @Html.ActionLink("Перейти", "GoSale", "PrivateOfficce", new { Brend = prod.Brend }, null)
+                                    </td>
+                                </tr>
+                            </a>
+                        </div>
+              }
+            
+</tbody>
+    </table>
+
+</section>

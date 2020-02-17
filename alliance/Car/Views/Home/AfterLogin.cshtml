@@ -1,0 +1,31 @@
+﻿@model Car.Users
+
+@{
+    ViewBag.Title = "AfterLogin";
+}
+
+<div class="empty-box"></div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2><a href="about.html">Уважаемые клиенты!
+
+Доводим до Вашего сведения что с 20 сентября 2016 года на заказанные Вами стекла и бампера будет произведена специальная упаковка по требованию компании. В связи с этим с Вас будет списываться дополнительная плата в размере от 1000 до 3000 тг за одну упаковку.
+</a></h2>
+                   </div>
+        <div class="right-column">
+            <div class="login">
+                    @if (Session["LogedUserFullName"] != null)
+                    {
+                        <text>
+                            Добро пожаловать @Session["LogedUserFullName"].ToString();
+                        </text>
+
+                    }
+            </div>
+
+        </div>
+    </div>
+</div>
+

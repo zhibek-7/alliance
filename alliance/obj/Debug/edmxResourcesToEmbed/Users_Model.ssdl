@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CARS_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aksii">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BasePic" Type="varbinary(max)" />
+    <Property Name="TitleText" Type="nchar" MaxLength="100" />
+    <Property Name="ShortDescription" Type="nchar" MaxLength="500" />
+    <Property Name="FullPic" Type="varbinary(max)" />
+    <Property Name="FullDescription" Type="varchar" MaxLength="800" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BasePic" Type="varbinary(max)" />
+    <Property Name="TitleText" Type="varchar" MaxLength="50" />
+    <Property Name="ShortDescription" Type="varchar" MaxLength="500" />
+    <Property Name="FullPic" Type="varbinary(max)" />
+    <Property Name="FullDescription" Type="varchar" MaxLength="800" />
+  </EntityType>
+  <EntityType Name="Brends">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrendName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FamilyName" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contraagent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Contragent" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CurrancyCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+    <Property Name="Value" Type="float" />
+    <Property Name="ValueToSom" Type="float" />
+    <Property Name="CodeCur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DecoratedOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Discount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Contraget" Type="varchar" MaxLength="100" />
+    <Property Name="Name_Contragent" Type="varchar" MaxLength="100" />
+    <Property Name="Discount" Type="float" />
+    <Property Name="DateBegin" Type="date" />
+    <Property Name="DateEnd" Type="date" />
+    <Property Name="Name_Artikul" Type="varchar" MaxLength="100" />
+    <Property Name="Name_Sklad" Type="varchar" MaxLength="100" />
+    <Property Name="Name_Service" Type="varchar" MaxLength="100" />
+    <Property Name="LimitPrice" Type="float" />
+  </EntityType>
+  <EntityType Name="FeedBack">
+    <Key>
+      <PropertyRef Name="FeedBackId" />
+    </Key>
+    <Property Name="FeedBackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="MobilleNo" Type="varchar" MaxLength="50" />
+    <Property Name="StateID" Type="varchar" MaxLength="50" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="NameOriginalAuto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameAuto" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "allianc2_db.dbo.OnlinePay" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="OnlinePay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumOrder" Type="varchar(max)" />
+    <Property Name="Sum" Type="float" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "allianc2_db.dbo.OrderNowRemoteStore" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="OrderNowRemoteStore">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="500" />
+    <Property Name="Brend" Type="varchar" MaxLength="500" />
+    <Property Name="Articul" Type="varchar" MaxLength="500" />
+    <Property Name="NameGood" Type="varchar" MaxLength="500" />
+    <Property Name="Supplies" Type="int" />
+    <Property Name="MethodDelivery" Type="varchar" MaxLength="50" />
+    <Property Name="Existence" Type="int" />
+    <Property Name="Days" Type="varchar" MaxLength="50" />
+    <Property Name="V_P" Type="varchar" MaxLength="50" />
+    <Property Name="Min_Krat" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Clients" Type="int" />
+    <Property Name="NumOrder" Type="varchar" MaxLength="500" />
+    <Property Name="Category" Type="varchar" MaxLength="500" />
+    <Property Name="VIN" Type="varchar" MaxLength="500" />
+    <Property Name="CurrancyCode" Type="varchar" MaxLength="500" />
+    <Property Name="Date" Type="date" />
+    <Property Name="ViewOfContract" Type="varchar" MaxLength="150" />
+    <Property Name="Contragent" Type="nvarchar" MaxLength="150" />
+    <Property Name="Status" Type="varchar" MaxLength="150" />
+    <Property Name="Service" Type="varchar" MaxLength="150" />
+    <Property Name="ReleaseDate" Type="date" />
+    <Property Name="NameAuto" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="modProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="Options" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="Model" Type="varchar" MaxLength="500" />
+    <Property Name="catProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfSalon" Type="varchar" MaxLength="150" />
+    <Property Name="BrendAuto" Type="varchar" MaxLength="500" />
+    <Property Name="CodeOfBody" Type="varchar" MaxLength="50" />
+    <Property Name="Sklad" Type="varchar" MaxLength="50" />
+    <Property Name="Discount" Type="float" />
+    <Property Name="PriceAfterDiscount" Type="float" />
+    <Property Name="DateDiscount" Type="date" />
+  </EntityType>
+  <EntityType Name="Remnants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="500" />
+    <Property Name="Brend" Type="varchar" MaxLength="500" />
+    <Property Name="Articul" Type="varchar" MaxLength="500" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Supplies" Type="int" />
+    <Property Name="MethodDelivery" Type="varchar" MaxLength="50" />
+    <Property Name="Existence" Type="int" />
+    <Property Name="Days" Type="varchar" MaxLength="500" />
+    <Property Name="V_P" Type="varchar" MaxLength="500" />
+    <Property Name="Min_Krat" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="VIN" Type="varchar" MaxLength="50" />
+    <Property Name="CurrancyCode" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="ViewOfContract" Type="varchar" MaxLength="500" />
+    <Property Name="Contragent" Type="varchar" MaxLength="500" />
+    <Property Name="Status" Type="varchar" MaxLength="500" />
+    <Property Name="ReleaseDate" Type="date" />
+    <Property Name="NameAuto" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="modProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="Options" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="Model" Type="varchar" MaxLength="500" />
+    <Property Name="catProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfSalon" Type="varchar" MaxLength="500" />
+    <Property Name="BrendAuto" Type="varchar" MaxLength="500" />
+    <Property Name="CodeOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="NumberOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="Sklad" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="RemoteStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="500" />
+    <Property Name="Brend" Type="varchar" MaxLength="500" />
+    <Property Name="Articul" Type="varchar" MaxLength="500" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Supplies" Type="int" />
+    <Property Name="MethodDelivery" Type="varchar" MaxLength="150" />
+    <Property Name="Existence" Type="int" />
+    <Property Name="Days" Type="varchar" MaxLength="50" />
+    <Property Name="V_P" Type="varchar" MaxLength="50" />
+    <Property Name="Min_Krat" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="VIN" Type="varchar" MaxLength="500" />
+    <Property Name="CurrancyCode" Type="varchar" MaxLength="500" />
+    <Property Name="Date" Type="date" />
+    <Property Name="ViewOfContract" Type="varchar" MaxLength="150" />
+    <Property Name="Contragent" Type="varchar" MaxLength="150" />
+    <Property Name="Status" Type="varchar" MaxLength="150" />
+    <Property Name="Service" Type="varchar" MaxLength="150" />
+    <Property Name="Sklad" Type="varchar" MaxLength="150" />
+    <Property Name="Clients" Type="int" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Brend" Type="varchar" MaxLength="50" />
+    <Property Name="Articul" Type="varchar" MaxLength="50" />
+    <Property Name="NameGood" Type="varchar" MaxLength="50" />
+    <Property Name="Supplies" Type="int" />
+    <Property Name="MethodDelivery" Type="varchar" MaxLength="50" />
+    <Property Name="Existence" Type="int" />
+    <Property Name="Days" Type="varchar" MaxLength="50" />
+    <Property Name="V_P" Type="varchar" MaxLength="50" />
+    <Property Name="Min_Krat" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Clients" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="VIN" Type="varchar" MaxLength="50" />
+    <Property Name="CurrancyCode" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Adaptation" Type="varchar" MaxLength="500" />
+    <Property Name="Sales" Type="float" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfSection" Type="varchar(max)" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "allianc2_db.dbo.Session" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Created" Type="smalldatetime" />
+    <Property Name="Expires" Type="smalldatetime" />
+    <Property Name="LockDate" Type="smalldatetime" />
+    <Property Name="LockID" Type="int" />
+    <Property Name="Locked" Type="bit" />
+    <Property Name="ItemContent" Type="varbinary(max)" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StatusesL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsCheck" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FIO" Type="varchar" MaxLength="50" />
+    <Property Name="NameGood" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UrlAutoOriginal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrlAuto" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FamilyName" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPhone" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="UserRole" Type="varchar" MaxLength="50" />
+    <Property Name="Service" Type="varchar" MaxLength="50" />
+    <Property Name="Discount" Type="int" />
+  </EntityType>
+  <EntityType Name="Vacancies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Demands" Type="varchar(max)" />
+    <Property Name="Duties" Type="varchar(max)" />
+    <Property Name="WorkConditions" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ViewOfMade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ViewMade" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ViewOfReport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Contraagent_Contraagent">
+    <End Role="Contraagent" Type="Self.Contraagent" Multiplicity="1" />
+    <End Role="Contraagent1" Type="Self.Contraagent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contraagent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contraagent1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Orders">
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Clients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remnants_Supplies">
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="0..1" />
+    <End Role="Remnants" Type="Self.Remnants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Remnants">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sale_Supplies">
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="0..1" />
+    <End Role="Sale" Type="Self.Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sale">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CARS_ModelStoreContainer">
+    <EntitySet Name="Aksii" EntityType="Self.Aksii" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brends" EntityType="Self.Brends" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contraagent" EntityType="Self.Contraagent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrancyCode" EntityType="Self.CurrancyCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DecoratedOrder" EntityType="Self.DecoratedOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Discount" EntityType="Self.Discount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeedBack" EntityType="Self.FeedBack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NameOriginalAuto" EntityType="Self.NameOriginalAuto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Remnants" EntityType="Self.Remnants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RemoteStore" EntityType="Self.RemoteStore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusesL" EntityType="Self.StatusesL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplies" EntityType="Self.Supplies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UrlAutoOriginal" EntityType="Self.UrlAutoOriginal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vacancies" EntityType="Self.Vacancies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViewOfMade" EntityType="Self.ViewOfMade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ViewOfReport" EntityType="Self.ViewOfReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OnlinePay" EntityType="Self.OnlinePay" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OnlinePay].[Id] AS [Id], 
+    [OnlinePay].[NumOrder] AS [NumOrder], 
+    [OnlinePay].[Sum] AS [Sum]
+    FROM [dbo].[OnlinePay] AS [OnlinePay]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OrderNowRemoteStore" EntityType="Self.OrderNowRemoteStore" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OrderNowRemoteStore].[id] AS [id], 
+    [OrderNowRemoteStore].[name] AS [name]
+    FROM [dbo].[OrderNowRemoteStore] AS [OrderNowRemoteStore]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Session" EntityType="Self.Session" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Session].[Id] AS [Id], 
+    [Session].[Created] AS [Created], 
+    [Session].[Expires] AS [Expires], 
+    [Session].[LockDate] AS [LockDate], 
+    [Session].[LockID] AS [LockID], 
+    [Session].[Locked] AS [Locked], 
+    [Session].[ItemContent] AS [ItemContent], 
+    [Session].[UserId] AS [UserId]
+    FROM [dbo].[Session] AS [Session]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Contraagent_Contraagent" Association="Self.FK_Contraagent_Contraagent">
+      <End Role="Contraagent" EntitySet="Contraagent" />
+      <End Role="Contraagent1" EntitySet="Contraagent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Orders" Association="Self.FK_Orders_Orders">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remnants_Supplies" Association="Self.FK_Remnants_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Remnants" EntitySet="Remnants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sale_Supplies" Association="Self.FK_Sale_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Sale" EntitySet="Sale" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

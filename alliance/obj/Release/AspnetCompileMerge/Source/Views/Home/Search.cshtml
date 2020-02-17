@@ -1,0 +1,289 @@
+﻿@using Car.PhaetonService
+@using System.Web.Script.Services
+@using System.Web.UI
+@using System.ServiceModel.Web
+@using Car.ServicePhaeton1
+@using System.Data.Entity;
+@using System.Web.Caching;
+@using System;
+@using System.Collections.Generic;
+@using System.Web.Mvc;
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-autocomplete-source]").each(function () {
+            var target = $(this);
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });
+        });
+    });
+</script>
+<script src="/Scripts/jquery-ui-1.12.1.js"></script>
+<div class="bg-box">
+    <div class="container">
+       
+        <ul class="tabs">
+            <li>
+                <input type="radio" name="tabs" id="tab-1" checked>
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                      <div class="search-box1">
+                          @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                          @Html.DropDownList("SelectedCurrancyCode", new SelectList(ViewBag.UniqueCurrancyCode, "Value", "Text", "ViewBag.SelectedCurrancyCode"), new { onchange = "this.form.submit();" })
+                          <a href="#" class="btn">
+                            <input type="submit" @*name="SearchStore"*@ value="Поиск" />
+                          </a>
+                      </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+                <label for="tab-2">
+                    VIN запрос
+                </label>
+                <div class="tab-content">
+                   @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white">
+                                <input type="submit" name="SearchVin" value="Поиск" />
+                            </a>
+                        </div>
+                    }
+                </div>
+            </li>
+        </ul>
+     
+    </div>
+</div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="login">
+           @Html.AntiForgeryToken()
+            @if (ViewBag.Message != null)
+            {
+             <div style="border:1px solid  green">
+                @ViewBag.Message
+            0 </div>
+            }
+
+
+<section class="content-wrapper main-content clear-fix">
+                <div class="rounded search">
+
+                    <h2>Результат поиска</h2>
+                    <div id="photodiv" title="Фото" style="display: none; text-align: center; vertical-align: middle">
+                        <div id="rTextName"></div>
+                        <img alt="Фото" id="rImg" src="" style="max-width: 800px; max-height: 600px">
+                    </div>
+                    <div id="adaptabilitydiv" title="Применимость" style="display: none; text-align: left; vertical-align: middle; height:600px; overflow-y:">
+                        <div id="rText"></div>
+                        <div id="recordsAuto"></div>
+                    </div>
+
+                    <div class="float-right" id="ShowArtPricesHover" style="width: 200px; height: 50px; border: none;">
+
+                        <input type="hidden" id="showArtPrices">
+                    </div>
+                    <div class="findResultContainer">
+                        <table id="findresulttable" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="brand">@ViewBag.BrendName</td>
+                                    <td>
+                                        @ViewBag.ArtName
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                       <div class="clear-fix">
+                                       <div class="float-left" style="background-color:#9AFF9A">в наличии</div>
+                                         <div class="float-left" style="margin-left:10px;background-color:#fc8a01"> нет в наличии</div>
+                                       <div class="float-left" style="margin-left:20px;background-color:#ADD8E6">под заказ</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="OnePageSearch">
+                        <div name="panel" id="pnl_0" style="display:block;">
+                            <div>
+                          
+                                <div id="identifikator">
+                                    <div class="OnePageSearch">
+                                        <div name="panel" id="pnl_0" style="display:block;">
+                                            <table style="width: 100%" name="resultsTable">
+                                                <thead style="background-color: #f8f5f0; height: 50px; line-height:50px;" id="BILSTEIN">
+                                                    <tr>
+                                                        <th style="width: 10%">Бренд</th>
+                                                        <th style="width: 10%">Артикул</th>
+                                                        <th style="width: 180px;">Наименование</th>
+                                                        <th style="width: 5%">Склад</th>
+                                                        <th class="masterTooltip" style="width: 5%" title="Наличие">Нал.</th>
+                                                        <th style="width: 5%">Изм.</th>
+                                                        <th style="width: 5%">MK</th>
+                                                        <th style="width: 5%">Дни</th>
+                                                        
+                                                        <th style="width: 10%">Цена</th>
+                                                        <th style="width: 10%"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td colspan="9">
+                                                            <div class="groupstart">Искомый артикул</div>
+                                                        </td>
+                                                    </tr>
+
+                                                    @{  var Id = 1;}
+                                                    @{
+                                                        string searchstr1 = Request.Params["Part"];
+
+                                                        @(ViewContext.RouteData.Values["Part"])
+                                                        Uri myUri1 = new Uri(Request.Url.AbsoluteUri);
+                                                        string param2 = HttpUtility.ParseQueryString(myUri1.Query).Get("Part");
+                                                        if (param2 == null)
+                                                        {
+                                                            param2 = " ";
+                                                        }
+
+                                                        if (param2 == "")
+                                                        {
+                                                            param2 = " ";
+                                                        }
+                                                    }
+
+                                                    @if (ViewBag.AllBrends != null)
+                                                    {
+
+                                                    }
+                                                    else { ViewBag.AllBrends = ""; }
+
+                                                  @foreach (var item in ViewBag.AllBrends)
+                                                   {
+                                                       var itemBrend = "";
+                                                       if (item != null)
+                                                       {
+                                                           var splitProducer = item.Split(' ');
+                                                           itemBrend = splitProducer[0];
+                                                       }
+                                                        <tr style="background:#ADD8E6;" class="trspace">
+                                                            <td class="brand"><a href="@Url.Action("SearchDetail", "Home", new { producer = item, code = param2,SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item }, null)">@itemBrend</a></td>
+                                                            <td>
+                                                                <a href="@Url.Action("SearchDetail", "Home", new { producer = item, code = param2 ,SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item}, null)">@param2</a>
+                                                            </td>
+                                                            <td style="white-space: normal">
+                                                                <a href="@Url.Action("SearchDetail", "Home", new {producer = item, code = param2,SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item}, null)">   @item</a>
+                                                            </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                        </tr>
+                                                    }
+
+
+                                                  @if (ViewBag.ProducerPhaeton!=null) {
+
+                                                    }
+                                                    else { ViewBag.ProducerPhaeton = ""; }
+
+                                                   @foreach (var item in ViewBag.ProducerPhaeton)
+                                                    {
+                                                        Id++;
+                                                        <tr style="background:#ADD8E6;" class="trspace">
+                                                          <td class="brand">
+                                                            <a href="@Url.Action("SearchDetail", "Home", new { producer = item["producer"], code = item["code"],SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item["caption"] }, null)">@item["producer"]</a></td>
+                                                          <td>
+                                                              <a href="@Url.Action("SearchDetail", "Home", new { producer = item["producer"], code = item["code"] ,SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item["caption"]}, null)">@item["code"]</a>
+                                                          </td>
+                                                          <td style="white-space: normal">
+                                                              <a href="@Url.Action("SearchDetail", "Home", new { producer = item["producer"], code = item["code"],SelectedCurrancyCode=ViewBag.SelectedCurrancyCode ,caption=item["caption"]}, null)">   @item["caption"]</a>
+                                                          </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                       </tr>
+                                                    }
+
+                                                    @if (ViewBag.ProducersOfEmeks != null)
+                                                    {  }
+                                                    else {
+                                                        ViewBag.ProducersOfEmeks = "";
+                                                    }
+
+                                                 @foreach (var item in ViewBag.ProducersOfEmeks)
+                                                  {
+                                                      if (item != null)
+                                                      {
+                                                          Id++;
+                                                        <tr style="background:#ADD8E6;" class="trspace">
+                                                            <td class="brand">
+                                                                <a href="@Url.Action("SearchDetail", "Home", new { producer = item["producer"], code = item["code"],SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item["caption"] }, null)">@item["producer"]</a>
+                                                            </td>
+                                                            <td>
+                                                                <a href="@Url.Action("SearchDetail", "Home", new { producer = item["producer"], code = item["code"],SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item["caption"] }, null)">@item["code"]</a>
+                                                            </td>
+                                                            <td style="white-space: normal">
+                                                                <a href="@Url.Action("SearchDetail", "Home", new { producer = item["producer"], code = item["code"],SelectedCurrancyCode=ViewBag.SelectedCurrancyCode,caption=item["caption"] }, null)">  @item["caption"]</a>
+                                                            </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                        </tr>
+                                                      }
+
+                                                  }
+
+
+
+                                                    @if (ViewBag.AllArrayCaptionEmex!=null) {
+
+
+                                                    }
+                                                    else { ViewBag.AllArrayCaptionEmex = ""; }
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</section>
+      </div>
+    </div>
+
+ 
+
+
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

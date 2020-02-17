@@ -1,0 +1,22 @@
+﻿@model Car.Users
+
+@{
+    ViewBag.Title = "PriceList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PriceList</h2>
+@{
+    Html.RenderAction("CurrancyCodeNew", "ImportExportData");
+}
+
+
+@{  
+    Html.RenderAction("Success", "ImportExportData");
+}
+
+
+@{
+    Html.RenderAction("ExportXml", "ImportExportData");
+}
+

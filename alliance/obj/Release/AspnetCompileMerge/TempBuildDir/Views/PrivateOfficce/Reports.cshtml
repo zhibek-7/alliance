@@ -1,0 +1,103 @@
+﻿@model Car.ViewOfReport
+
+
+@{
+    ViewBag.Title = "AllOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="empty-box"></div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2>Отчеты</h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>
+        </div>
+        <div class="right-column">
+
+            <div class="login">
+
+                <table style="width:100%;">
+                    <tbody>
+                       @using (Html.BeginForm("SendReport", "SendMail", FormMethod.Post))
+                       {
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Вид Отчета - </td>
+                                        <td>
+                                    @Html.DropDownList("SelectedReporT",
+                                    new SelectList(ViewBag.UniqueReporT, "Value", "Text", "ViewBag.SelectedReporT"))
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <span>Дата заказа с </span>
+                                        @Html.TextBox("DateFrom", DateTime.Today.Date.GetDateTimeFormats()[3], new { @id = "txtdatepicker", @style = "width:150px;" })
+                                        <span>
+                                            по
+                                        </span>
+                                        @Html.TextBox("DateTo", DateTime.Today.Date.GetDateTimeFormats()[3], new { @id = "txtdatepicker", @style = "width:150px;" })
+                                     </tr>
+                                    
+                                    <tr>
+                                        <td style="width: 100px;">Контрагент - </td>
+                                        <td colspan="2">
+                                            @Html.DropDownList("SelectedContragent",
+new SelectList(ViewBag.UniqueContragent, "Value", "Text", "ViewBag.SelectedContragent"))
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 100px;">Вид договора - </td>
+                                        <td>
+
+                                            @Html.DropDownList("SelectedContract",
+                                 new SelectList(ViewBag.UniqueContract, "Value", "Text", "ViewBag.SelectedContract"))
+                                        </td>
+
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <input type="submit" value="Сформировать отчет"/>
+                       }
+
+
+                    </tbody>
+                </table>
+
+
+
+
+
+
+
+
+
+              
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+

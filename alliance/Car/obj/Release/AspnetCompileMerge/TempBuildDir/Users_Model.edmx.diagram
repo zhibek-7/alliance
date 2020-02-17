@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a3fa8036137b414d85671ce001c463df" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="CARS_Model.Clients" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="CARS_Model.FeedBack" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CARS_Model.Supplies" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="CARS_Model.Brends" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CARS_Model.ViewOfMade" Width="1.5" PointX="8.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CARS_Model.ViewOfReport" Width="1.5" PointX="8.375" PointY="6.75" />
+        <EntityTypeShape EntityType="CARS_Model.Contraagent" Width="1.5" PointX="9.375" PointY="0.75" />
+        <AssociationConnector Association="CARS_Model.FK_Contraagent_Contraagent" />
+        <EntityTypeShape EntityType="CARS_Model.Sale" Width="1.5" PointX="3" PointY="15.5" />
+        <AssociationConnector Association="CARS_Model.FK_Sale_Supplies" />
+        <EntityTypeShape EntityType="CARS_Model.StatusesL" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="CARS_Model.NameOriginalAuto" Width="1.5" PointX="5.375" PointY="10.75" />
+        <EntityTypeShape EntityType="CARS_Model.UrlAutoOriginal" Width="1.5" PointX="10.375" PointY="9.75" />
+        <EntityTypeShape EntityType="CARS_Model.DecoratedOrder" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="CARS_Model.Orders" Width="1.5" PointX="11.625" PointY="1" />
+        <AssociationConnector Association="CARS_Model.FK_Orders_Orders" />
+        <EntityTypeShape EntityType="CARS_Model.Discount" Width="1.5" PointX="9.375" PointY="12.75" />
+        <EntityTypeShape EntityType="CARS_Model.RemoteStore" Width="1.5" PointX="12.375" PointY="10.75" />
+        <EntityTypeShape EntityType="CARS_Model.CurrancyCode" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="CARS_Model.Aksii" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="CARS_Model.Blog" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CARS_Model.Section" Width="1.5" PointX="14.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CARS_Model.Users" Width="1.5" PointX="14.375" PointY="7" />
+        <AssociationConnector Association="CARS_Model.FK_Orders_Users" />
+        <EntityTypeShape EntityType="CARS_Model.State" Width="1.5" PointX="5.375" PointY="0.75" />
+        <AssociationConnector Association="CARS_Model.FK_Brends_Users" />
+        <EntityTypeShape EntityType="CARS_Model.sysdiagrams" Width="1.5" PointX="16.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CARS_Model.Vacancies" Width="1.5" PointX="16.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CARS_Model.PhaetonBrends" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="CARS_Model.Remnants" Width="1.5" PointX="3" PointY="21.625" />
+        <AssociationConnector Association="CARS_Model.FK_Remnants_Supplies" />
+        <EntityTypeShape EntityType="CARS_Model.Analogue" Width="1.5" PointX="14.375" PointY="11.75" />
+        <EntityTypeShape EntityType="CARS_Model.Analogs" Width="1.5" PointX="5.375" PointY="13.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

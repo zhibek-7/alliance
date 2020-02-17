@@ -1,0 +1,100 @@
+﻿﻿@model List<Car.Aksii>
+<div class="bg-box">
+    <div class="container">
+
+
+        <ul class="tabs">
+
+            <li>
+
+                <input type="radio" name="tabs" id="tab-1" checked>
+
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<div class="context-box">
+    <div class="container clearfix">
+        <section class="content-wrapper main-content clear-fix">
+            <div class="rounded">
+                <h2>Акции</h2>
+                <div class="horizontalseparator"></div>
+                <br>
+                @{
+
+                    if (Model != null)
+                    {
+                        int j = 0;
+                        for (int i = 0; i < Model.Count(); i += 4)
+                        {
+
+                            j = i;
+                            while (j < i + 4 && j < Model.Count())
+                            {
+                                <div>
+                                    <div class="float-left" style="width:20%;text-align:center;">
+                                        @if (Model[j].BasePic != null)
+                                        {
+                                            <img src="data:image/png;base64, @Convert.ToBase64String(Model[j].BasePic,0,Model[j].BasePic.Length)" class="logo_img" />
+                                        }
+                                    </div>
+                                    <div class="float-right" style="width:80%;">
+                                        <strong>@Model[j].TitleText</strong><br>
+                                        @Model[j].ShortDescription
+                                        <br>
+                                        @Html.ActionLink("Подробнее", "GoToAksii", "Home", new { NumAksii = @Model[j].Id }, null)
+                                    </div>
+                                    <div class="clear-fix"></div><br>
+                                    <div class="horizontalseparator"></div>
+                                    <br>
+                                </div>
+                                j++;
+                            }
+                        }
+                    }
+                }
+            </div>
+            <div class="clear-fix"></div>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

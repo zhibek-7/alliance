@@ -1,0 +1,15 @@
+{
+	"service"	: "provider",
+	"action"	: "getProducerList",
+	"user"		: "alliance.cl",
+	"password"	: "alliancemotors",
+	"timeLimit"	: 10,
+	"container"	: [
+		{
+			"provider"	: "phaeton_kz",
+			"login"		: "Alliance",
+			"password"	: "118e7ac8-edd3-11e2-b524-001517a1f012",
+			"code"		: "kl9"
+		}
+	]
+}

@@ -1,0 +1,88 @@
+﻿@model List<Car.Vacancies>
+@{
+    ViewBag.Title = "Vacancy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg-box">
+    <div class="container">
+
+      
+
+        <ul class="tabs">
+
+            <li>
+
+                <input type="radio" name="tabs" id="tab-1" checked>
+
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2><a href="about.html">Вакансии</a></h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            @*<a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>*@
+        </div>
+        <div class="right-column">
+            <div class="vacancy-box">
+               @foreach (var item in ViewBag.Vacancies)
+                {
+
+                    <div class="in-box">
+                        <h4>@item.Title</h4>
+                        <span>Требования</span>
+                        <p>@item.Demands</p>
+                        <span>Обязанности</span>
+                        <p>@item.Duties</p>
+                        <span>Условия работы</span>
+                        <p>@item.WorkConditions</p>
+                    </div>
+                }
+
+
+               
+               
+                @*<a href="#" class="baner-link"><img src="@Url.Content("~/Content/")upload/baner3.jpg" height="140" width="880" alt=""></a>*@
+            </div>
+        </div>
+    </div>
+</div>

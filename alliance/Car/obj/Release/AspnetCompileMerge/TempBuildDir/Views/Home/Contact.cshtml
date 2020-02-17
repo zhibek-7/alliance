@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="map-box">
+    <div class="layer"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1008.1170566690497!2d74.56839831267953!3d42.86521882854738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec847e8dfcd9f%3A0x455676d1985bd6e!2z0K3QktCYLdCQ0LLRgtC-0YbQtdC90YLRgA!5e0!3m2!1sru!2sru!4v1509072130661" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4018.139999178293!2d74.60167221213942!3d42.86209718987664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7d280891cbb%3A0x1a257f02cb6b66c6!2zMTkg0YPQuy4g0JvRjNCy0LAg0KLQvtC70YHRgtC-0LPQviwg0JHQuNGI0LrQtdC6LCDQmtC40YDQs9C40LfQuNGP!5e0!3m2!1sru!2s!4v1504863471896" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>*@
+   
+</div>
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2><a href="about.html">Наши контакты</a></h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            @*<a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>*@
+        </div>
+        <div class="right-column">
+            <div class="contacts-wrap">
+
+                @foreach (UrlAutoOriginal item in ViewBag.Contacts)
+                 {
+
+                            <p class="lvl-p">
+                                @item.UrlAuto
+                            </p>
+                            <br>
+                }
+
+              
+                <span> +996 312 35 18 56</span>
+                <p>720085, г. Бишкек, ул. Льва Толстого 19</p>
+                @*<a href="#" class="baner-link"><img src="@Url.Content("~/Content/")upload/baner3.jpg" height="140" width="880" alt=""></a>*@
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\bektemir_auto\ProjectsAuto\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\AlliancaMotors\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\ApplicationInsights.config
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll.config
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\SearchService.pdb
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Agent.Intercept.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.DependencyCollector.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.Web.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.AI.WindowsServer.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\bin\Microsoft.ApplicationInsights.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.csprojResolveAssemblyReference.cache
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\SearchService\obj\Release\SearchService.pdb

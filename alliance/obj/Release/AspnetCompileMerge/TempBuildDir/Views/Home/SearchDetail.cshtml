@@ -1,0 +1,1563 @@
+﻿
+
+<div id="pageloaddiv">
+
+
+</div>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(window).load(function () {
+
+            $("#pageloaddiv").fadeOut(5000);
+        });
+    });
+</script>
+
+<div class="bg-box">
+    <div class="container">
+        @{
+            string url = HttpContext.Current.Request.Url.AbsoluteUri;
+            string path = HttpContext.Current.Request.Url.AbsolutePath;
+            string searchstr1 = Request.Params["code"];
+
+            @(ViewContext.RouteData.Values["code"])
+            Uri myUri1 = new Uri(Request.Url.AbsoluteUri);
+            string param2 = HttpUtility.ParseQueryString(myUri1.Query).Get("code");
+            if (param2 == null)
+            {
+                param2 = " ";
+            }
+
+            if (param2 == "")
+            {
+                param2 = " ";
+            }
+
+
+            Uri myUri2 = new Uri(Request.Url.AbsoluteUri);
+            string param3 = HttpUtility.ParseQueryString(myUri2.Query).Get("producer");
+            if (param3 == null)
+            {
+                param3 = " ";
+            }
+
+            if (param3 == "")
+            {
+                param3 = " ";
+            }
+
+
+            Uri myUri3 = new Uri(Request.Url.AbsoluteUri);
+            string curCode = HttpUtility.ParseQueryString(myUri3.Query).Get("SelectedCurrancyCode");
+            if (curCode == null)
+            {
+                curCode = " ";
+            }
+
+            if (curCode == "")
+            {
+                curCode = " ";
+            }
+
+
+            Uri myUri4 = new Uri(Request.Url.AbsoluteUri);
+            string urlSearchStore = HttpUtility.ParseQueryString(myUri4.Query).Get("SearchStore");
+            if (urlSearchStore == null)
+            {
+                urlSearchStore = " ";
+            }
+
+            if (urlSearchStore == "")
+            {
+                urlSearchStore = " ";
+            }
+
+
+
+            string PagingPh = HttpUtility.ParseQueryString(myUri4.Query).Get("Pagination");
+            if (PagingPh == null)
+            {
+                PagingPh = " ";
+            }
+
+            if (PagingPh == "")
+            {
+                PagingPh = " ";
+            }
+
+
+
+            string PagingEmex = HttpUtility.ParseQueryString(myUri4.Query).Get("PageEmex");
+            if (PagingEmex == null)
+            {
+                PagingEmex = " ";
+            }
+
+            if (PagingEmex == "")
+            {
+                PagingEmex = " ";
+            }
+       }
+
+
+        <ul class="tabs">
+            <li>
+                <input type="radio" name="tabs" id="tab-1" checked>
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            @Html.DropDownList("SelectedCurrancyCode", new SelectList(ViewBag.UniqueCurrancyCode, "Value", "Text", "ViewBag.SelectedCurrancyCode"), new { part = param2, onchange = "this.form.submit();" })
+                            <a href="#" class="btn">
+                                <input type="submit" name="SearchStore" value="Поиск" />
+                            </a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+                <label for="tab-2">
+                    VIN запрос
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="context-box">
+    <div class="container clearfix searchDet">
+        <div class="login">
+            @Html.AntiForgeryToken()
+            @if (ViewBag.Message != null)
+            {
+                <div style="border:1px solid  green">
+                    @ViewBag.Message
+                </div>
+            }
+            <section class="content-wrapper main-content clear-fix">
+                <div class="rounded search">
+
+                    <h2>Результат поиска</h2>
+                    <div id="photodiv" title="Фото" style="display: none; text-align: center; vertical-align: middle">
+                        <div id="rTextName"></div>
+                        <img alt="Фото" id="rImg" src="" style="max-width: 800px; max-height: 600px">
+                    </div>
+                    <div id="adaptabilitydiv" title="Применимость" style="display: none; text-align: left; vertical-align: middle; height:600px; overflow-y:">
+                        <div id="rText"></div>
+                        <div id="recordsAuto"></div>
+                    </div>
+
+
+                    <div class="findResultContainer searchDetail">
+                        <table id="findresulttable" style="width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="brand">@ViewBag.BrendName</td>
+                                    <td>
+                                        @ViewBag.ArtName
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <div class="clear-fix">
+                                            <div class="float-left" style="background-color:#9AFF9A">в наличии</div>
+                                            <div class="float-left" style="margin-left:10px;background-color:#fc8a01"> нет в наличии</div>
+                                            <div class="float-left" style="margin-left:20px;background-color:#ADD8E6">под заказ</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="OnePageSearch">
+                        <div name="panel" id="pnl_0" style="display:block;">
+                            <table style="width: 100%" name="resultsTable">
+                                <thead style="background-color: #f8f5f0; height: 50px; line-height:50px;" id="BILSTEIN">
+                                    <tr>
+
+                                        <th style="width: 10%">Бренд</th>
+                                        <th style="width: 10%">Артикул</th>
+                                        <th style="width: 180px;">Наименование</th>
+                                        <th style="width: 5%">Склад</th>
+                                        <th class="masterTooltip" style="width: 5%" title="Наличие">Нал.</th>
+                                        <th style="width: 5%">Изм.</th>
+                                        <th style="width: 5%">MK</th>
+                                        <th style="width: 5%">Дни</th>
+                                        <th style="width: 10%">Вероятность поставки</th>
+                                        @if (urlSearchStore == " ")
+                                        {
+                                            <th style="width: 10%">
+                                                @Html.ActionLink("Цена", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price" })
+                                            </th>
+                                        }
+                                        else
+                                        {
+                                            <th style="width: 10%">
+                                                @Html.ActionLink("Цена", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", SearchStore = "на заказ с удаленных складов" })
+                                            </th>
+                                        }
+
+
+                                        <th style="width: 10%">
+                                            @if (urlSearchStore == " ")
+                                            {
+                                                <span class="sort_both">
+                                                    @Html.ActionLink(" ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", sort = "up" }, new { @class = "sort_up" })
+                                                    @Html.ActionLink("  ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", sort = "down" }, new { @class = "sort_down" })
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="sort_both">
+                                                    @Html.ActionLink("  ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", SearchStore = "на заказ с удаленных складов", sort = "up" }, new { @class = "sort_up" })
+                                                    @Html.ActionLink("  ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", SearchStore = "на заказ с удаленных складов", sort = "down" }, new { @class = "sort_down" })
+                                                </span>
+                                            }
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="9">
+                                            <div class="groupstart">Искомый артикул</div>
+                                        </td>
+                                    </tr>
+                                    @foreach (var product in ViewBag.SearchParameters)
+                                    {
+                                        string BgColor;
+                                        if (product.Existence == 0)
+                                        {
+                                            BgColor = "#fc8a01";
+                                        }
+                                        else
+                                        {
+                                            BgColor = "#9AFF9A";
+                                        }
+
+                                        string Mess = "";
+                                        if (product.Existence > 10)
+                                        {
+                                            product.Existence = 10;
+                                            Mess = "больше";
+                                        }
+                                        if (product.Sklad == "000000001")
+                                        {
+                                            ViewBag.Sklad = "Склад №1";
+
+                                        }
+                                        if (product.Sklad == "000000002")
+                                        {
+                                            ViewBag.Sklad = "Склад №2 (р-к Кудайберген)";
+
+                                        }
+                                        if (product.Sklad == "000000005")
+                                        {
+                                            ViewBag.Sklad = "Склад №3 (магазин 'Эви')";
+                                        }
+                                        if (product.Brend != null)
+                                        {
+                                            var splitProducer = product.Brend.Split(' ');
+                                            product.Brend = splitProducer[0];
+                                        }
+
+
+                                        <tr style="background:@BgColor;" class="trspace">
+                                            <td class="brand">@product.Brend   </td>
+                                            <td>
+                                                <a href="#">@product.Articul</a>
+                                            </td>
+                                            <td style="white-space: normal;display:block; width:180px">
+                                                @product.Name
+                                            </td>
+                                            <td>  @ViewBag.Sklad</td>
+                                            <td style="text-align:right;"> @Mess @product.Existence</td>
+                                            <td class="ed_izm">@product.MethodDelivery</td>
+                                            <td>@product.Min_Krat</td>
+                                            <td>
+                                                @product.Days
+                                            </td>
+                                            <td>
+
+                                                &nbsp; &nbsp;&nbsp;
+
+                                            </td>
+                                            <td style="width: 13%;">
+                                                @{
+                                                    decimal priceSum = 0;
+                                                    decimal priceAfterDiscount = 0;
+                                                    if (ViewBag.Discounts == null)
+                                                    {
+                                                        ViewBag.Discounts = 0;
+                                                    }
+
+                                                    if (ViewBag.Discounts == 0)
+                                                    {
+
+                                                        if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                        {
+                                                            <span style="display:inline" class="price">@(Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span style="display:inline" class="price">@(Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                        if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                        {
+                                                            priceSum = (Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD);
+                                                            priceAfterDiscount = (priceSum * ViewBag.Discounts) / 100;
+                                                            <span style="display:inline" class="price">
+                                                                <strike>@(Math.Round(priceSum, 0, MidpointRounding.AwayFromZero))</strike><br>
+                                                                @(Math.Round(priceSum - priceAfterDiscount, 0, MidpointRounding.AwayFromZero)) &nbsp;&nbsp;@ViewBag.SelectedCurrancyCode<span>&nbsp;&nbsp;</span> (-@ViewBag.Discounts %)
+                                                            </span>
+                                                        }
+                                                        else
+                                                        {
+                                                            priceSum = (Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur);
+                                                            priceAfterDiscount = (priceSum * ViewBag.Discounts) / 100;
+                                                            <span style="display:inline" class="price">
+                                                                <strike>@(Math.Round(priceSum, 2, MidpointRounding.AwayFromZero))</strike><br>
+                                                                @(Math.Round(priceSum - priceAfterDiscount, 2, MidpointRounding.AwayFromZero)) &nbsp;&nbsp;@ViewBag.SelectedCurrancyCode<span>&nbsp;&nbsp;</span> (-@ViewBag.Discounts %)
+                                                            </span>
+                                                        }
+
+                                                    }
+                                                }
+                                            </td>
+                                            <td>
+                                                <div name="shoppingCartNormalPrice" style="display:inline">
+                                                    @{
+                                                        Decimal PriceForCart = 0;
+
+                                                        if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                        {
+                                                            PriceForCart = (Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD), 0, MidpointRounding.AwayFromZero));
+                                                        }
+                                                        else
+                                                        {
+                                                            PriceForCart = (Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur), 2, MidpointRounding.AwayFromZero));
+                                                        }
+
+                                                        if (ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "")
+                                                        {
+                                                            <span class="btn">
+                                                                @Html.ActionLink("В корзину", "AddToCart", "Home", new { url = url, priceForCart = PriceForCart, id = product.Id, currancy = "USD", currancyCode = ViewBag.CurNull, producer = ViewBag.Producer }, new
+                                                                {
+                                                                    data_dialog_id = "dialog1",
+                                                                    data_dialog_title = "Добавить в корзину",
+                                                                    data_dialog_width = "auto",
+                                                                    data_dialog_height = "auto",
+
+                                                                    @class = "openDialog"
+                                                                })
+                                                            </span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="btn">
+                                                                @Html.ActionLink("В корзину", "AddToCart", "Home", new { url = url, priceForCart = PriceForCart, id = product.Id, currancy = "USD", currancyCode = ViewBag.cur, producer = ViewBag.Producer }, new
+                                                                {
+                                                                    data_dialog_id = "dialog2",
+                                                                    data_dialog_title = "Добавить в корзину",
+                                                                    data_dialog_width = "auto",
+                                                                    data_dialog_height = "auto",
+                                                                    @class = "openDialog"
+                                                                })
+                                                            </span>
+                                                        }
+                                                    }
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                    @if (ViewBag.SearchParametersOsh != null)
+                                    {
+
+                                        foreach (var product in ViewBag.SearchParametersOsh)
+                                        {
+
+
+                                            string BgColor;
+                                            if (product.Existence == 0)
+                                            {
+                                                BgColor = "#fc8a01";
+                                            }
+                                            else
+                                            {
+                                                BgColor = "#9AFF9A";
+                                            }
+
+                                            string Mess = "";
+                                            if (product.Existence > 10)
+                                            {
+                                                product.Existence = 10;
+                                                Mess = "больше";
+                                            }
+
+                                            if (product.Sklad == "000000001")
+                                            {
+                                                ViewBag.Sklad = "Склад №1";
+
+                                            }
+
+                                            if (product.Sklad == "000000002")
+                                            {
+                                                ViewBag.Sklad = "Склад №2  (р - к Кудайберген)";
+
+                                            }
+                                            if (product.Sklad == "000000005")
+                                            {
+                                                ViewBag.Sklad = "Склад №3 (магазин 'Эви')";
+
+                                            }
+                                            if (product.Brend != null)
+                                            {
+                                                var splitProducer = product.Brend.Split(' ');
+                                                product.Brend = splitProducer[0];
+                                            }
+                                            <tr style="background:@BgColor;" class="trspace">
+                                                <td class="brand">@product.Brend</td>
+                                                <td>
+                                                    <a href="#">@product.Articul</a>
+                                                </td>
+                                                <td style="white-space: normal;display:block; width:180px">
+                                                    @product.Name
+                                                </td>
+                                                <td>Филиал г.ОШ</td>
+                                                <td style="text-align:right;"> @Mess @product.Existence</td>
+                                                <td class="ed_izm">@product.MethodDelivery</td>
+                                                <td>@product.Min_Krat</td>
+                                                <td>
+                                                    @product.Days
+                                                </td>
+                                                <td>
+
+                                                    &nbsp; &nbsp;&nbsp;
+
+                                                </td>
+                                                <td style="width: 13%;">
+                                                    @{
+                                                        decimal priceSum = 0;
+                                                        decimal priceAfterDiscount = 0;
+                                                        if (ViewBag.Discounts == null)
+                                                        {
+                                                            ViewBag.Discounts = 0;
+                                                        }
+
+                                                        if (ViewBag.Discounts == 0)
+                                                        {
+
+                                                            if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                            {
+                                                                <span style="display:inline" class="price">  @(Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span style="display:inline" class="price">@(Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+
+
+                                                            if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                            {
+                                                                priceSum = (Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD);
+                                                                priceAfterDiscount = (priceSum * ViewBag.Discounts) / 100;
+
+                                                                <span style="display:inline" class="price">
+                                                                    <strike>@(Math.Round(priceSum, 0, MidpointRounding.AwayFromZero))</strike><br>
+                                                                    @(Math.Round(priceSum - priceAfterDiscount, 0, MidpointRounding.AwayFromZero)) &nbsp;&nbsp;@ViewBag.SelectedCurrancyCode<span>&nbsp;&nbsp;</span> (-@ViewBag.Discounts %)
+                                                                </span>
+                                                            }
+                                                            else
+                                                            {
+                                                                priceSum = (Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur);
+                                                                priceAfterDiscount = (priceSum * ViewBag.Discounts) / 100;
+                                                                <span style="display:inline" class="price">
+                                                                    <strike>@(Math.Round(priceSum, 2, MidpointRounding.AwayFromZero))</strike><br>
+                                                                    @(Math.Round(priceSum - priceAfterDiscount, 2, MidpointRounding.AwayFromZero)) &nbsp;&nbsp;@ViewBag.SelectedCurrancyCode<span>&nbsp;&nbsp;</span> (-@ViewBag.Discounts %)
+                                                                </span>
+                                                            }
+
+                                                        }
+                                                    }
+
+
+                                                </td>
+                                                <td>
+                                                    <div name="shoppingCartNormalPrice" style="display:inline">
+                                                        @{
+                                                            Decimal PriceForCart = 0;
+
+                                                            if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                            {
+                                                                PriceForCart = (Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD), 0, MidpointRounding.AwayFromZero));
+                                                            }
+                                                            else
+                                                            {
+                                                                PriceForCart = (Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur), 2, MidpointRounding.AwayFromZero));
+                                                            }
+
+                                                            if (ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "")
+                                                            {
+                                                                <span class="btn">
+                                                                    @Html.ActionLink("В корзину", "AddToCart", "Home", new { url = url, producer = ViewBag.Producer, priceForCart = PriceForCart, id = product.Id, currancy = "USD", currancyCode = ViewBag.CurNull }, new
+                                                                    {
+                                                                        data_dialog_id = "dialog1",
+                                                                        data_dialog_title = "Добавить в корзину",
+                                                                        data_dialog_width = "auto",
+                                                                        data_dialog_height = "auto",
+                                                                        @class = "openDialog"
+                                                                    })
+                                                                </span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="btn">
+                                                                    @Html.ActionLink("В корзину", "AddToCart", "Home", new { url = url, producer = ViewBag.Producer, priceForCart = PriceForCart, id = product.Id, currancy = "USD", currancyCode = ViewBag.cur }, new
+                                                                    {
+                                                                        data_dialog_id = "dialog2",
+                                                                        data_dialog_title = "Добавить в корзину",
+                                                                        data_dialog_width = "auto",
+                                                                        data_dialog_height = "auto",
+                                                                        @class = "openDialog"
+                                                                    })
+                                                                </span>
+                                                            }
+                                                        }
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+
+
+                                    @if (ViewBag.arrAnalog != null)
+                                    {
+
+                                        foreach (var product in ViewBag.arrAnalog)
+                                        {
+                                            if (product.Brend != null)
+                                            {
+                                                var splitProducer = product.Brend.Split(' ');
+                                                product.Brend = splitProducer[0];
+                                            }
+
+                                            string BgColor;
+                                            if (product.Existence == 0)
+                                            {
+                                                BgColor = "#fc8a01";
+                                            }
+                                            else
+                                            {
+                                                BgColor = "#9AFF9A";
+                                            }
+
+                                            string Mess = "";
+                                            if (product.Existence > 10)
+                                            {
+                                                product.Existence = 10;
+                                                Mess = "больше";
+                                            }
+
+                                            if (product.Sklad == "000000001")
+                                            {
+                                                ViewBag.Sklad1 = "Склад №1";
+
+                                            }
+                                            if (product.Sklad == "000000002")
+                                            {
+                                                ViewBag.Sklad1 = "Склад №2 (р - к Кудайберген)";
+                                            }
+                                            if (product.Sklad == "000000005")
+                                            {
+                                                ViewBag.Sklad1 = "Склад №3 (магазин 'Эви')";
+                                            }
+
+
+
+
+
+
+                                            <tr style="background:@BgColor;" class="trspace  withoutsklad">
+                                                <td class="brand">@product.Brend</td>
+                                                <td>
+                                                    <a href="#">@product.Articul</a>
+                                                </td>
+                                                <td style="white-space: normal;display:block; width:180px">
+                                                    @product.Name
+                                                </td>
+                                                <td>@ViewBag.Sklad1</td>
+                                                <td style="text-align:right;"> @Mess @product.Existence</td>
+                                                <td class="ed_izm">@product.MethodDelivery</td>
+                                                <td>@product.Min_Krat</td>
+                                                <td>
+                                                    @product.Days
+                                                </td>
+                                                <td>
+                                                    &nbsp; &nbsp;&nbsp;
+                                                </td>
+                                                <td style="width: 13%;">
+                                                    @{
+                                                        decimal priceSum = 0;
+                                                        decimal priceAfterDiscount = 0;
+
+                                                        if (product.NumberOfBody == "0")
+                                                        {
+
+                                                            if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                            {
+                                                                <span style="display:inline" class="price">  @(Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span style="display:inline" class="price">@(Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                            }
+
+                                                        }
+                                                        else
+                                                        {
+
+                                                            if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                            {
+                                                                priceSum = (Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD);
+                                                                priceAfterDiscount = (priceSum * Convert.ToDecimal(product.NumberOfBody)) / 100;
+
+                                                                <span style="display:inline" class="price">
+                                                                    <strike>@(Math.Round(priceSum, 0, MidpointRounding.AwayFromZero))</strike><br>
+                                                                    @(Math.Round(priceSum - priceAfterDiscount, 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode <span>&nbsp;&nbsp;</span> (-@priceAfterDiscount %)
+                                                                </span>
+                                                            }
+                                                            else
+                                                            {
+                                                                priceSum = (Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur);
+                                                                priceAfterDiscount = (priceSum * Convert.ToDecimal(product.NumberOfBody)) / 100;
+                                                                <span style="display:inline" class="price">
+                                                                    <strike>@(Math.Round(priceSum, 2, MidpointRounding.AwayFromZero))</strike><br>
+                                                                    @(Math.Round(priceSum - priceAfterDiscount, 2, MidpointRounding.AwayFromZero)) &nbsp;&nbsp;@ViewBag.SelectedCurrancyCode<span>&nbsp;&nbsp;</span> (-@priceAfterDiscount %)
+                                                                </span>
+                                                            }
+                                                        }
+                                                    }
+
+
+                                                </td>
+                                                <td>
+                                                    <div name="shoppingCartNormalPrice" style="display:inline">
+                                                        @{
+                                                            Decimal PriceForCart = 0;
+
+                                                            if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                            {
+                                                                PriceForCart = (Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD), 0, MidpointRounding.AwayFromZero));
+                                                            }
+                                                            else
+                                                            {
+                                                                PriceForCart = (Math.Round((Decimal)((Decimal)product.Price * (Decimal)ViewBag.USD * (Decimal)ViewBag.cur), 2, MidpointRounding.AwayFromZero));
+                                                            }
+
+                                                            if (ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "")
+                                                            {
+                                                                <span class="btn">
+                                                                    @Html.ActionLink("В корзину", "AddToCart", "Home", new { url = url, producer = ViewBag.Producer, priceForCart = PriceForCart, id = product.Id, currancy = "USD", currancyCode = ViewBag.CurNull }, new
+                                                                    {
+                                                                        data_dialog_id = "dialog1",
+                                                                        data_dialog_title = "Добавить в корзину",
+                                                                        data_dialog_width = "auto",
+                                                                        data_dialog_height = "auto",
+                                                                        @class = "openDialog"
+                                                                    })
+                                                                </span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="btn">
+                                                                    @Html.ActionLink("В корзину", "AddToCart", "Home", new { url = url, producer = ViewBag.Producer, priceForCart = PriceForCart, id = product.Id, currancy = "USD", currancyCode = ViewBag.cur }, new
+                                                                    {
+                                                                        data_dialog_id = "dialog2",
+                                                                        data_dialog_title = "Добавить в корзину",
+                                                                        data_dialog_width = "auto",
+                                                                        data_dialog_height = "auto",
+                                                                        @class = "openDialog"
+                                                                    })
+                                                                </span>
+                                                            }
+                                                        }
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+
+                            <div>
+                                @using (Html.BeginForm("SearchDetail", "Home", FormMethod.Get))
+                                {
+                                    <div style="display:none">
+                                        @{
+                                            string searchstr = Request.Params["code"];
+
+                                            @(ViewContext.RouteData.Values["code"])
+                                            Uri myUri = new Uri(Request.Url.AbsoluteUri);
+                                            string param1 = HttpUtility.ParseQueryString(myUri.Query).Get("code");
+                                            if (param1 == null)
+                                            {
+                                                param1 = " ";
+                                            }
+
+                                            if (param1 == "")
+                                            {
+                                                param1 = " ";
+                                            }
+
+                                            string searchstrProducer = Request.Params["producer"];
+
+                                            @(ViewContext.RouteData.Values["producer"])
+                                            Uri myUriProducer = new Uri(Request.Url.AbsoluteUri);
+                                            string param1Producer = HttpUtility.ParseQueryString(myUriProducer.Query).Get("producer");
+                                            if (param1Producer == null)
+                                            {
+                                                param1Producer = " ";
+                                            }
+
+                                            if (param1Producer == "")
+                                            {
+                                                param1Producer = " ";
+                                            }
+                                        }
+
+                                        @Html.TextBox("code", param1)
+                                        @Html.TextBox("producer", param1Producer)
+                                        @Html.DropDownList("SelectedCurrancyCode", new SelectList(ViewBag.UniqueCurrancyCode, "Value", "Text", "ViewBag.SelectedCurrancyCode"), "All", new { onchange = "form.submit();" })
+                                    </div>
+                                }
+                                <div id="identifikator">
+                                    <div class="OnePageSearch">
+                                        <div name="panel" id="pnl_0" style="display:block;">
+                                            <table style="width: 100%" name="resultsTable">
+                                                <thead style="background-color: #f8f5f0; height: 50px; line-height:50px;" id="BILSTEIN">
+                                                    <tr>
+                                                        <th style="width: 10%">Бренд</th>
+                                                        <th style="width: 10%">Артикул</th>
+                                                        <th style="width: 180px;">Наименование</th>
+                                                        <th style="width: 5%">Склад</th>
+                                                        <th class="masterTooltip" style="width: 5%" title="Наличие">Нал.</th>
+                                                        <th style="width: 5%">Изм.</th>
+                                                        <th style="width: 5%">MK</th>
+                                                        <th style="width: 5%">Дни</th>
+                                                        <th style="width: 10%">Вероятность поставки</th>
+
+                                                        @if (urlSearchStore == " ")
+                                                        {
+                                                            <th style="width: 10%">
+                                                                @Html.ActionLink("Цена", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price" })
+                                                            </th>
+                                                        }
+                                                        else
+                                                        {
+                                                            <th style="width: 10%">
+                                                                @Html.ActionLink("Цена", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", SearchStore = "на заказ с удаленных складов" })
+                                                            </th>
+                                                        }
+
+
+                                                        <th style="width: 10%">
+
+
+
+                                                            @if (urlSearchStore == " ")
+                                                            {
+
+                                                                <span class="sort_both">
+                                                                    @Html.ActionLink(" ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", sort = "up" }, new { @class = "sort_up" })
+                                                                    @Html.ActionLink("  ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", sort = "down" }, new { @class = "sort_down" })
+                                                                </span>
+
+                                                            }
+                                                            else
+                                                            {
+                                                                <span class="sort_both">
+                                                                    @Html.ActionLink("  ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", SearchStore = "на заказ с удаленных складов", sort = "up" }, new { @class = "sort_up" })
+                                                                    @Html.ActionLink("  ", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SortOrder = "Price", SearchStore = "на заказ с удаленных складов", sort = "down" }, new { @class = "sort_down" })
+                                                                </span>
+
+                                                            }
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td colspan="9">
+                                                            <div class="groupstart">Искомый артикул</div>
+                                                        </td>
+                                                    </tr>
+
+                                                    @{ var Id = 1;
+                                                        if (ViewBag.BothService != null)
+                                                        {
+                                                        }
+                                                        else
+                                                        {
+                                                            ViewBag.BothService = "";
+                                                        }
+
+                                                    }
+
+
+                                                    @foreach (var st in ViewBag.orderedPhaetonCode)
+                                                    {
+
+                                                        if (Convert.ToString(st["direction"]) == "Алматы" ||
+                                                          Convert.ToString(st["direction"]) == "Auto City" ||
+                                                          Convert.ToString(st["direction"]) == "Астана" ||
+                                                          Convert.ToString(st["direction"]) == "Бишкек")
+                                                        {
+                                                            st["price"] = Math.Round((Decimal)(st["price"] * ViewBag.Procent), 0, MidpointRounding.AwayFromZero);
+
+                                                        }
+                                                        else
+                                                        {
+                                                            st["price"] = Math.Round((Decimal)(st["price"] * ViewBag.Procent * ViewBag.KZT), 0, MidpointRounding.AwayFromZero);
+                                                        }
+                                                        Id++;
+                                                        if (Convert.ToString(st["direction"]) != "Алматы ADM" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы AAX" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы APR" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ACV" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ABD" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы AAL" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ADG" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ACO" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ABV" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ACA")
+                                                        {
+
+                                                            <tr style="background:#ADD8E6;" class="trspace">
+
+                                                                <td class="brand">@st["producer"]</td>
+                                                                <td>
+                                                                    @st["code"]
+                                                                </td>
+                                                                <td style="white-space: normal; display:block; width:180px">
+                                                                    @st["caption"]
+                                                                </td>
+                                                                <td> @st["direction"]</td>
+                                                                <td style="text-align:right;">@st["rest"]</td>
+                                                                <td class="ed_izm">шт</td>
+                                                                <td>@st["minquantity"]</td>
+                                                                <td>
+                                                                    @st["deliverydays"]
+                                                                </td>
+                                                                <td>
+                                                                    &nbsp; &nbsp; &nbsp;
+                                                                </td>
+                                                                <td>
+                                                                    @{
+                                                                        Decimal PriceForCart = 0;
+
+                                                                        if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                        {
+
+                                                                        }
+                                                                        if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                        {
+                                                                            ViewBag.Procent = 1;
+                                                                        }
+
+
+                                                                    }
+                                                                    @if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                                    {
+                                                                        if (st["price"] != null || st["price"] != 0)
+                                                                        {
+                                                                            <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"]), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                            <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                            PriceForCart = (Math.Round((Decimal)(st["price"]), 0, MidpointRounding.AwayFromZero));
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"] * ViewBag.cur), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                        <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                        PriceForCart = (Math.Round((Decimal)(st["price"] * ViewBag.cur), 2, MidpointRounding.AwayFromZero));
+                                                                    }
+                                                                </td>
+                                                                <td>
+                                                                    <div name="shoppingCartNormalPrice" style="display:inline">
+                                                                        @{
+                                                                            var ItemID = "";
+                                                                            if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                            {
+                                                                                ViewBag.curService = "Phaeton";
+                                                                                ViewBag.currancyCodes = ViewBag.KZT;
+                                                                                ItemID = "Phaeton";
+                                                                            }
+                                                                            if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                            {
+                                                                                ViewBag.curService = "Emex";
+                                                                                ViewBag.currancyCodes = ViewBag.RUB;
+                                                                                ItemID = Convert.ToString(st["itemId"]);
+                                                                            }
+                                                                            if (ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "")
+                                                                            {
+
+
+
+
+                                                                            }
+                                                                            <span class="btn">
+
+                                                                                @Html.ActionLink("В корзину", "AddToCartRS", "Home", new
+                                                                                {
+                                                                                    url = url,
+                                                                                    idRS = Id,
+                                                                                    currancy = "USD",
+                                                                                    currancyCode = ViewBag.USD,
+                                                                                    currancySklad = ViewBag.currancyCodes,
+                                                                                    Code = Convert.ToString(st["code"]),
+                                                                                    Brend = Convert.ToString(st["producer"]),
+                                                                                    Articul = Convert.ToString(st["code"]),
+                                                                                    Name = Convert.ToString(st["caption"]),
+                                                                                    Supplies = 0,
+                                                                                    Days = Convert.ToString(st["deliverydays"]),
+                                                                                    Price = Convert.ToDouble(st["price"]),
+                                                                                    CurrancyCodeRS = Convert.ToString(st["currencycode"]),
+                                                                                    Service = ViewBag.curService,
+                                                                                    Sklad = Convert.ToString(st["direction"]),
+                                                                                    Client = Convert.ToInt32(Session["LogedUserId"]),
+                                                                                    ItemID = ItemID,
+                                                                                    PriceForCart = PriceForCart,
+                                                                                    procent = ViewBag.Procent
+                                                                                },
+new
+{
+data_dialog_id = "dialogRS",
+data_dialog_title = "Добавить в корзину",
+data_dialog_width = "auto",
+data_dialog_height = "auto",
+@class = "openDialog"
+})
+                                                                            </span>
+                                                                        }
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        }
+
+                                                    }
+
+                                                    @foreach (var st in ViewBag.orderedPhaeton)
+                                                    {
+
+                                                        if (Convert.ToString(st["direction"]) == "Алматы" ||
+                                                          Convert.ToString(st["direction"]) == "Auto City" ||
+                                                          Convert.ToString(st["direction"]) == "Астана" ||
+                                                          Convert.ToString(st["direction"]) == "Бишкек")
+                                                        {
+                                                            st["price"] = Math.Round((Decimal)(st["price"] * ViewBag.Procent), 0, MidpointRounding.AwayFromZero);
+
+                                                        }
+                                                        else
+                                                        {
+                                                            st["price"] = Math.Round((Decimal)(st["price"] * ViewBag.Procent * ViewBag.KZT), 0, MidpointRounding.AwayFromZero);
+                                                        }
+                                                        Id++;
+                                                        if (Convert.ToString(st["direction"]) != "Алматы ADM" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы AAX" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы APR" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ACV" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ABD" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы AAL" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ADG" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ACO" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ABV" ||
+                                                               Convert.ToString(st["direction"]) != "Алматы ACA")
+                                                        {
+
+                                                            <tr style="background:#ADD8E6;" class="trspace">
+
+                                                                <td class="brand">@st["producer"]</td>
+                                                                <td>
+                                                                    @st["code"]
+                                                                </td>
+                                                                <td style="white-space: normal; display:block; width:180px">
+                                                                    @st["caption"]
+                                                                </td>
+                                                                <td> @st["direction"]</td>
+                                                                <td style="text-align:right;">@st["rest"]</td>
+                                                                <td class="ed_izm">шт</td>
+                                                                <td>@st["minquantity"]</td>
+                                                                <td>
+                                                                    @st["deliverydays"]
+                                                                </td>
+                                                                <td>
+                                                                    &nbsp; &nbsp; &nbsp;
+                                                                </td>
+                                                                <td>
+                                                                    @{
+                                                                        Decimal PriceForCart = 0;
+
+                                                                        if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                        {
+
+                                                                        }
+                                                                        if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                        {
+                                                                            ViewBag.Procent = 1;
+                                                                        }
+
+
+                                                                    }
+                                                                    @if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                                    {
+                                                                        if (st["price"] != null || st["price"] != 0)
+                                                                        {
+                                                                            <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"]), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                            <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                            PriceForCart = (Math.Round((Decimal)(st["price"]), 0, MidpointRounding.AwayFromZero));
+                                                                        }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"] * ViewBag.cur), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                        <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                        PriceForCart = (Math.Round((Decimal)(st["price"] * ViewBag.cur), 2, MidpointRounding.AwayFromZero));
+                                                                    }
+                                                                </td>
+                                                                <td>
+                                                                    <div name="shoppingCartNormalPrice" style="display:inline">
+                                                                        @{
+                                                                            var ItemID = "";
+                                                                            if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                            {
+                                                                                ViewBag.curService = "Phaeton";
+                                                                                ViewBag.currancyCodes = ViewBag.KZT;
+                                                                                ItemID = "Phaeton";
+                                                                            }
+                                                                            if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                            {
+                                                                                ViewBag.curService = "Emex";
+                                                                                ViewBag.currancyCodes = ViewBag.RUB;
+                                                                                ItemID = Convert.ToString(st["itemId"]);
+                                                                            }
+                                                                            if (ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "")
+                                                                            {
+
+
+
+
+                                                                            }
+                                                                            <span class="btn">
+
+                                                                                @Html.ActionLink("В корзину", "AddToCartRS", "Home", new
+                                                                                {
+                                                                                    url = url,
+                                                                                    idRS = Id,
+                                                                                    currancy = "USD",
+                                                                                    currancyCode = ViewBag.USD,
+                                                                                    currancySklad = ViewBag.currancyCodes,
+                                                                                    Code = Convert.ToString(st["code"]),
+                                                                                    Brend = Convert.ToString(st["producer"]),
+                                                                                    Articul = Convert.ToString(st["code"]),
+                                                                                    Name = Convert.ToString(st["caption"]),
+                                                                                    Supplies = 0,
+                                                                                    Days = Convert.ToString(st["deliverydays"]),
+                                                                                    Price = Convert.ToDouble(st["price"]),
+                                                                                    CurrancyCodeRS = Convert.ToString(st["currencycode"]),
+                                                                                    Service = ViewBag.curService,
+                                                                                    Sklad = Convert.ToString(st["direction"]),
+                                                                                    Client = Convert.ToInt32(Session["LogedUserId"]),
+                                                                                    ItemID = ItemID,
+                                                                                    PriceForCart = PriceForCart,
+                                                                                    procent = ViewBag.Procent
+                                                                                },
+new
+{
+data_dialog_id = "dialogRS",
+data_dialog_title = "Добавить в корзину",
+data_dialog_width = "auto",
+data_dialog_height = "auto",
+@class = "openDialog"
+})
+                                                                            </span>
+                                                                        }
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        }
+
+                                                    }
+
+
+
+                                                    <tr style="background:#ADD8E6;" class="trspace">
+                                                        @if (PagingPh != " " && PagingEmex != " ")
+                                                        {
+                                                            <td colspan="11">
+                                                                <div class="groupstart">@Html.ActionLink("Показать больше", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SearchStore = "на заказ с удаленных складов", Pagination = "page", PageEmex = "page" }, new { @class = "pagination" })</div>
+                                                            </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td colspan="11">
+                                                                <div class="groupstart">@Html.ActionLink("Показать больше", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SearchStore = "на заказ с удаленных складов", Pagination = "page", PageEmex = "" }, new { @class = "pagination" })</div>
+                                                            </td>
+                                                        }
+                                                    </tr>
+
+                                                    @{
+                                                        Decimal dicountEmex = 0;
+                                                        decimal dicountOfE = 0;
+                                                        if (ViewBag.discountOfEmex != null)
+                                                        {
+                                                            dicountOfE = ViewBag.discountOfEmex;
+                                                            dicountEmex = dicountOfE / 100;
+                                                        }
+                                                        else
+                                                        {
+                                                            dicountEmex = 0;
+                                                        }
+
+
+                                                    }
+
+
+
+                                                    @foreach (var st in ViewBag.orderedEmexCode)
+                                                    {
+                                                        Id++;
+                                                        st["price"] = Math.Round((Decimal)(st["price"] * ViewBag.RUB), 0, MidpointRounding.AwayFromZero);
+
+                                                        <tr style="background:#ADD8E6;" class="trspace">
+
+                                                            <td class="brand">@st["producer"]</td>
+                                                            <td>
+                                                                @st["code"]
+                                                            </td>
+                                                            <td style="white-space: normal; display:block; width:180px">
+                                                                @st["caption"]
+                                                            </td>
+                                                            <td> @st["direction"]</td>
+                                                            <td style="text-align:right;">@st["rest"]</td>
+                                                            <td class="ed_izm">шт</td>
+                                                            <td>@st["minquantity"]</td>
+                                                            <td>
+                                                                @st["deliverydays"]
+                                                            </td>
+                                                            <td>
+                                                                @{
+                                                                    //вероятность поставки
+                                                                    string rating1 = "rat";
+                                                                    string rating2 = "rat";
+                                                                    string rating3 = "rat";
+                                                                    string rating4 = "rat";
+                                                                    string rating5 = "rat";
+
+                                                                    string rat = Convert.ToString(st["war_provider_rating"]);
+                                                                    if (rat == "1")
+                                                                    {
+                                                                        rating5 = "rating_span";
+                                                                    }
+                                                                    else
+                                                                    {
+
+                                                                        if (rat == "2")
+                                                                        {
+                                                                            rating5 = "rating_span";
+                                                                            rating4 = "rating_span";
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            if (rat == "3")
+                                                                            {
+                                                                                rating5 = "rating_span";
+                                                                                rating4 = "rating_span";
+                                                                                rating3 = "rating_span";
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                if (rat == "4")
+                                                                                {
+                                                                                    rating5 = "rating_span";
+                                                                                    rating4 = "rating_span";
+                                                                                    rating3 = "rating_span";
+                                                                                    rating2 = "rating_span";
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    if (rat == "5")
+                                                                                    {
+                                                                                        rating1 = "rating_span";
+                                                                                        rating2 = "rating_span";
+                                                                                        rating3 = "rating_span";
+                                                                                        rating4 = "rating_span";
+                                                                                        rating5 = "rating_span";
+                                                                                    }
+                                                                                }
+
+                                                                            }
+
+                                                                        }
+
+                                                                    }
+
+
+                                                                }
+
+                                                                <div class="rating">
+                                                                    <span class=@rating1>&#9734</span><span class=@rating2>&#9734</span><span class=@rating3>&#9734</span><span class=@rating4>&#9734</span><span class=@rating5>&#9734</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                @{
+                                                                    Decimal PriceForCart = 0;
+
+                                                                    if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                    {
+
+                                                                    }
+                                                                    if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                    {
+                                                                        ViewBag.Procent = 1;
+                                                                    }
+
+
+                                                                }
+                                                                @if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                                {
+                                                                    if (st["price"] != null || st["price"] != 0)
+                                                                    {
+                                                                        Decimal PriceDiscount = (Math.Round((Decimal)(st["price"] * dicountEmex), 2, MidpointRounding.AwayFromZero));
+                                                                        <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"] - PriceDiscount), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                        <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                        PriceForCart = (Math.Round((Decimal)(st["price"] - PriceDiscount), 0, MidpointRounding.AwayFromZero));
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    Decimal PriceDiscount = (Math.Round((Decimal)(st["price"] * ViewBag.cur * dicountEmex), 2, MidpointRounding.AwayFromZero));
+                                                                    <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"] * ViewBag.cur - PriceDiscount), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                    <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                    PriceForCart = (Math.Round((Decimal)(st["price"] * ViewBag.cur - PriceDiscount), 2, MidpointRounding.AwayFromZero));
+                                                                }
+                                                            </td>
+                                                            <td>
+                                                                <div name="shoppingCartNormalPrice" style="display:inline">
+                                                                    @{
+                                                                        var ItemID = "";
+                                                                        if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                        {
+                                                                            ViewBag.curService = "Phaeton";
+                                                                            ViewBag.currancyCodes = ViewBag.KZT;
+                                                                            ItemID = "Phaeton";
+                                                                        }
+                                                                        if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                        {
+                                                                            ViewBag.curService = "Emex";
+                                                                            ViewBag.currancyCodes = ViewBag.RUB;
+                                                                            ItemID = Convert.ToString(st["itemId"]);
+                                                                        }
+
+                                                                        <span class="btn">
+
+                                                                            @Html.ActionLink("В корзину", "AddToCartRS", "Home", new
+                                                                            {
+                                                                                url = url,
+                                                                                idRS = Id,
+                                                                                currancy = "USD",
+                                                                                currancyCode = ViewBag.USD,
+                                                                                currancySklad = ViewBag.currancyCodes,
+                                                                                Code = Convert.ToString(st["code"]),
+                                                                                Brend = Convert.ToString(st["producer"]),
+                                                                                Articul = Convert.ToString(st["code"]),
+                                                                                Name = Convert.ToString(st["caption"]),
+                                                                                Supplies = 0,
+                                                                                Days = Convert.ToString(st["deliverydays"]),
+                                                                                Price = Convert.ToDouble(st["price"]),
+                                                                                CurrancyCodeRS = Convert.ToString(st["currencycode"]),
+                                                                                Service = ViewBag.curService,
+                                                                                Sklad = Convert.ToString(st["direction"]),
+                                                                                Client = Convert.ToInt32(Session["LogedUserId"]),
+                                                                                ItemID = ItemID,
+                                                                                PriceForCart = PriceForCart,
+                                                                                procent = ViewBag.Procent
+                                                                            },
+new
+{
+data_dialog_id = "dialogRS",
+data_dialog_title = "Добавить в корзину",
+data_dialog_width = "auto",
+data_dialog_height = "auto",
+@class = "openDialog"
+})
+                                                                        </span>
+                                                                    }
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                    }
+                                                    @foreach (var st in ViewBag.orderedEmex)
+                                                    {
+                                                        Id++;
+                                                        st["price"] = Math.Round((Decimal)(st["price"] * ViewBag.RUB), 0, MidpointRounding.AwayFromZero);
+
+                                                        <tr style="background:#ADD8E6;" class="trspace">
+
+                                                            <td class="brand">@st["producer"]</td>
+                                                            <td>
+                                                                @st["code"]
+                                                            </td>
+                                                            <td style="white-space: normal; display:block; width:180px">
+                                                                @st["caption"]
+                                                            </td>
+                                                            <td> @st["direction"]</td>
+                                                            <td style="text-align:right;">@st["rest"]</td>
+                                                            <td class="ed_izm">шт</td>
+                                                            <td>@st["minquantity"]</td>
+                                                            <td>
+                                                                @st["deliverydays"]
+                                                            </td>
+                                                            <td>
+                                                                @{
+                                                                    //вероятность поставки
+                                                                    string rating1 = "rat";
+                                                                    string rating2 = "rat";
+                                                                    string rating3 = "rat";
+                                                                    string rating4 = "rat";
+                                                                    string rating5 = "rat";
+
+                                                                    string rat = Convert.ToString(st["war_provider_rating"]);
+                                                                    if (rat == "1")
+                                                                    {
+                                                                        rating5 = "rating_span";
+                                                                    }
+                                                                    else
+                                                                    {
+
+                                                                        if (rat == "2")
+                                                                        {
+                                                                            rating5 = "rating_span";
+                                                                            rating4 = "rating_span";
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            if (rat == "3")
+                                                                            {
+                                                                                rating5 = "rating_span";
+                                                                                rating4 = "rating_span";
+                                                                                rating3 = "rating_span";
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                if (rat == "4")
+                                                                                {
+                                                                                    rating5 = "rating_span";
+                                                                                    rating4 = "rating_span";
+                                                                                    rating3 = "rating_span";
+                                                                                    rating2 = "rating_span";
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    if (rat == "5")
+                                                                                    {
+                                                                                        rating1 = "rating_span";
+                                                                                        rating2 = "rating_span";
+                                                                                        rating3 = "rating_span";
+                                                                                        rating4 = "rating_span";
+                                                                                        rating5 = "rating_span";
+                                                                                    }
+                                                                                }
+
+                                                                            }
+
+                                                                        }
+
+                                                                    }
+
+
+                                                                }
+
+                                                                <div class="rating">
+                                                                    <span class=@rating1>&#9734</span><span class=@rating2>&#9734</span><span class=@rating3>&#9734</span><span class=@rating4>&#9734</span><span class=@rating5>&#9734</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                @{
+                                                                    Decimal PriceForCart = 0;
+
+                                                                    if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                    {
+
+                                                                    }
+                                                                    if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                    {
+                                                                        ViewBag.Procent = 1;
+                                                                    }
+
+
+                                                                }
+                                                                @if ((ViewBag.SelectedCurrancyCode == "" || ViewBag.SelectedCurrancyCode == null || ViewBag.SelectedCurrancyCode == "KGS"))
+                                                                {
+                                                                    if (st["price"] != null || st["price"] != 0)
+                                                                    {
+                                                                        Decimal PriceDiscount = (Math.Round((Decimal)(st["price"] * dicountEmex), 2, MidpointRounding.AwayFromZero));
+                                                                        <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"] - PriceDiscount), 0, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                        <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                        PriceForCart = (Math.Round((Decimal)(st["price"] - PriceDiscount), 0, MidpointRounding.AwayFromZero));
+                                                                    }
+                                                                }
+                                                                else
+                                                                {
+                                                                    Decimal PriceDiscount = (Math.Round((Decimal)(st["price"] * ViewBag.cur * dicountEmex), 2, MidpointRounding.AwayFromZero));
+                                                                    <span style="display:inline" class="price">@( Math.Round((Decimal)(st["price"] * ViewBag.cur - PriceDiscount), 2, MidpointRounding.AwayFromZero))&nbsp;&nbsp;@ViewBag.SelectedCurrancyCode</span>
+                                                                    <span name="newCompPrice" article="19020068" brand="BILSTEIN" packing="шт"></span>
+                                                                    PriceForCart = (Math.Round((Decimal)(st["price"] * ViewBag.cur - PriceDiscount), 2, MidpointRounding.AwayFromZero));
+                                                                }
+                                                            </td>
+                                                            <td>
+                                                                <div name="shoppingCartNormalPrice" style="display:inline">
+                                                                    @{
+                                                                        var ItemID = "";
+                                                                        if (Convert.ToString(st["currencycode"]) == "KZT")
+                                                                        {
+                                                                            ViewBag.curService = "Phaeton";
+                                                                            ViewBag.currancyCodes = ViewBag.KZT;
+                                                                            ItemID = "Phaeton";
+                                                                        }
+                                                                        if (Convert.ToString(st["currencycode"]) == "RUB")
+                                                                        {
+                                                                            ViewBag.curService = "Emex";
+                                                                            ViewBag.currancyCodes = ViewBag.RUB;
+                                                                            ItemID = Convert.ToString(st["itemId"]);
+                                                                        }
+
+                                                                        <span class="btn">
+
+                                                                            @Html.ActionLink("В корзину", "AddToCartRS", "Home", new
+                                                                            {
+                                                                                url = url,
+                                                                                idRS = Id,
+                                                                                currancy = "USD",
+                                                                                currancyCode = ViewBag.USD,
+                                                                                currancySklad = ViewBag.currancyCodes,
+                                                                                Code = Convert.ToString(st["code"]),
+                                                                                Brend = Convert.ToString(st["producer"]),
+                                                                                Articul = Convert.ToString(st["code"]),
+                                                                                Name = Convert.ToString(st["caption"]),
+                                                                                Supplies = 0,
+                                                                                Days = Convert.ToString(st["deliverydays"]),
+                                                                                Price = Convert.ToDouble(st["price"]),
+                                                                                CurrancyCodeRS = Convert.ToString(st["currencycode"]),
+                                                                                Service = ViewBag.curService,
+                                                                                Sklad = Convert.ToString(st["direction"]),
+                                                                                Client = Convert.ToInt32(Session["LogedUserId"]),
+                                                                                ItemID = ItemID,
+                                                                                PriceForCart = PriceForCart,
+                                                                                procent = ViewBag.Procent
+                                                                            },
+new
+{
+data_dialog_id = "dialogRS",
+data_dialog_title = "Добавить в корзину",
+data_dialog_width = "auto",
+data_dialog_height = "auto",
+@class = "openDialog"
+})
+                                                                        </span>
+                                                                    }
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                    }
+                                                    <tr style="background:#ADD8E6;" class="trspace">
+
+                                                        @if ((PagingPh != " " && PagingEmex != " ") || (PagingPh != " " && PagingEmex == " "))
+                                                        {
+                                                            <td colspan="11">
+                                                                <div class="groupstart">@Html.ActionLink("Показать больше", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SearchStore = "на заказ с удаленных складов", Pagination = "page", PageEmex = "page" }, new { @class = "pagination" })</div>
+                                                            </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td colspan="11">
+                                                                <div class="groupstart">@Html.ActionLink("Показать больше", "SearchDetail", new { producer = param3, code = param2, SelectedCurrancyCode = "", SearchStore = "на заказ с удаленных складов", Pagination = "", PageEmex = "page" }, new { @class = "pagination" })</div>
+                                                            </td>
+                                                        }
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+<script src="/Scripts/jquery-ui-1.12.1.js"></script>
+
+<div id="script_block_0" class="script_block_0"></div>
+
+<div id="script_ad_0" class="script_ad_0" style="display:none;">
+
+    <script src="/Scripts/jquery-ui-1.12.1.js"></script>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+    // переместить его в реальную позицию отображения
+    document.getElementById('script_block_0').appendChild(document.getElementById('script_ad_0'));
+    // показать
+    document.getElementById('script_ad_0').style.display = 'block';
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

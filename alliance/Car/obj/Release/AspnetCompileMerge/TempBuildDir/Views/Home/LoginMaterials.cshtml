@@ -1,0 +1,152 @@
+﻿@model Car.Users
+
+@{
+    ViewBag.Title = "LoginMaterials";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width = 1200">
+<div class="bg-box">
+    <div class="container">
+
+
+
+        <ul class="tabs">
+
+            <li>
+
+                <input type="radio" name="tabs" id="tab-1" checked>
+
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                         <span style="display:none"> 
+                             @Html.DropDownList("SelectedCurrancyCode", new SelectList(ViewBag.UniqueCurrancyCode, "Value", "Text", "ViewBag.SelectedCurrancyCode"), new { onchange = "this.form.submit();" })
+                         </span>
+
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+
+<div class="context-box">
+    <div class="container clearfix">
+
+        <div class="right-column">
+            <div class="login">
+                <h2><a href="about.html">Вход</a></h2>
+                <div class="form-horizontal forgot_password">
+                    @using (Html.BeginForm("LoginMaterials", "Home", FormMethod.Post))
+                    {
+                        //this is for create form tag
+                        @Html.AntiForgeryToken()     //this is for prevent CSRF attack
+                                                    @Html.ValidationSummary(true)
+
+                        if (ViewBag.Message != null)
+                        {
+
+                            <div style="border:1px solid red">
+                                @ViewBag.Message
+                            </div>
+
+                        }
+                        if (ViewBag.MessagePC != null)
+                        {
+
+                            <div style="border:1px solid red">
+                                @ViewBag.MessagePC
+                            </div>
+
+                        }
+
+
+                        if (ViewBag.MessageLogin != null)
+                        {
+                            <div class="login_mes" style="border:1px solid red">
+                                @ViewBag.MessageLogin
+                            </div>
+                        }
+
+                        <div class="form-group">
+
+                            @Html.LabelFor(a => a.UserName, "Логин", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(a => a.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(a => a.UserName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(a => a.Password, "Пароль", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(a => a.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(a => a.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="forgot_password">
+                            @Html.ActionLink("Забыли пароль?", "ForgotPassword", "User")
+
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Войти" class="btn btn-default" style="
+    margin-top: -8%; float: right;" />
+                            </div>
+                        </div>
+
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@* This below line is for create javascript section*@
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

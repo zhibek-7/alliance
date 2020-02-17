@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tempdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_Remnants___________________________________________________________________________________________________________000000000004">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sale" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="C_Remnants___________________________________________________________________________________________________________00000000000A">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sale" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="tempdbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_Remnants___________________________________________________________________________________________________________000000000004" EntityType="Self.C_Remnants___________________________________________________________________________________________________________000000000004" />
+    <EntitySet Name="C_Remnants___________________________________________________________________________________________________________00000000000A" EntityType="Self.C_Remnants___________________________________________________________________________________________________________00000000000A" />
+  </EntityContainer>
+</Schema>

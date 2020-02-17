@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Core.Classes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Core.Classes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws.phaeton.kz/SearchService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="SearchArticleResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SearchArticleResults" nillable="true" type="tns:ArrayOfSearchArticleResults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchArticleResult" nillable="true" type="tns:SearchArticleResult" />
+  <xs:complexType name="ArrayOfSearchArticleResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchArticleResults" nillable="true" type="tns:SearchArticleResults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchArticleResults" nillable="true" type="tns:ArrayOfSearchArticleResults" />
+  <xs:complexType name="SearchArticleResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Article" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CleanArticle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchArticleResults" nillable="true" type="tns:SearchArticleResults" />
+  <xs:complexType name="SearchProductResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SearchProductResults" nillable="true" type="tns:ArrayOfSearchProductResults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchProductResult" nillable="true" type="tns:SearchProductResult" />
+  <xs:complexType name="ArrayOfSearchProductResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchProductResults" nillable="true" type="tns:SearchProductResults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchProductResults" nillable="true" type="tns:ArrayOfSearchProductResults" />
+  <xs:complexType name="SearchProductResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Article" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CleanArticle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountInPack" type="xs:int" />
+      <xs:element minOccurs="0" name="ExpectedShipmentDays" type="xs:int" />
+      <xs:element minOccurs="0" name="GuaranteedShipmentDays" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLocal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Presence" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" type="xs:short" />
+      <xs:element minOccurs="0" name="SupplierId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Warehouse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchProductResults" nillable="true" type="tns:SearchProductResults" />
+</xs:schema>

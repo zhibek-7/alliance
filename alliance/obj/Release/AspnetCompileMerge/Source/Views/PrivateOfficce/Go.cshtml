@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Car.Controllers;
+
+<div class="empty-box"></div>
+<script src="/Scripts/Dialog.js" type="text/javascript"></script>
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+
+        </div>
+        <div class="right-column">
+        </div>
+
+        <div class="login">
+
+            <section class="content-wrapper main-content clear-fix">
+
+
+                <div class="rounded">
+
+
+                    <h2>Заказ</h2>
+
+                    
+                    <table class="resultstable">
+                        <tbody>
+                            <tr>
+                                <td style="width: 70px; font-weight: bold;">Бренд</td>
+                                <td style="width: 70px;"><b>Артикул</b></td>
+                                <td style="width: 200px;"><b>Наименование</b></td>
+                                <td style="width: 20px;"><b>Количество</b></td>
+                                <td style="width: 20px;"><b>Изм..</b></td>
+                                <td style="width: 30px;"><b>Цена</b></td>
+                                <td style="width: 20px;"><b>Скидка</b></td>
+                                <td style="width: 30px;"><b>Сумма</b></td>
+                                <td style="width: 170px;"><b>Статус</b></td>
+                                <td><b>Комментарий</b></td>
+                            </tr>
+
+
+                            @foreach (var ordCart in ViewBag.OrdersBByNumOrder)
+                            {
+                                <tr class="trhover">
+                                    <td>@ordCart.Brend</td>
+                                    <td>@ordCart.Articul</td>
+                                    <td>@ordCart.NameGood</td>
+                                    <td style="text-align: right;">@ordCart.Existence</td>
+                                    <td style="text-align: center;">@ordCart.MethodDelivery</td>
+                                    <td style="text-align: right;">@ordCart.Price</td>
+                                    <td style="text-align: right;"></td>
+                                    <td style="text-align: right;">@(ordCart.Price * ordCart.Existence)</td>
+                                    <td>@ordCart.Status<br></td>
+                                    <td></td>
+                                </tr>
+                            }
+
+                            <tr>
+                                <td class="tdrigthware" style="width: 110px;">
+                                    @Html.ActionLink("Назад", "AllOrders", "PrivateOfficce")
+                                </td>
+                              
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+                <div class="clear-fix"></div>
+
+            </section>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/Dialog")
+}
+
+

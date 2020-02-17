@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CARS_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UsersCARSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="CARS_Model.Clients" />
+    <EntitySet Name="FeedBack" EntityType="CARS_Model.FeedBack" />
+    <EntitySet Name="State" EntityType="CARS_Model.State" />
+    <EntitySet Name="Supplies" EntityType="CARS_Model.Supplies" />
+    <EntitySet Name="Brends" EntityType="CARS_Model.Brends" />
+    <EntitySet Name="ViewOfMade" EntityType="CARS_Model.ViewOfMade" />
+    <EntitySet Name="ViewOfReport" EntityType="CARS_Model.ViewOfReport" />
+    <EntitySet Name="Contraagent" EntityType="CARS_Model.Contraagent" />
+    <AssociationSet Name="FK_Contraagent_Contraagent" Association="CARS_Model.FK_Contraagent_Contraagent">
+      <End Role="Contraagent" EntitySet="Contraagent" />
+      <End Role="Contraagent1" EntitySet="Contraagent" />
+    </AssociationSet>
+    <EntitySet Name="Sale" EntityType="CARS_Model.Sale" />
+    <AssociationSet Name="FK_Sale_Supplies" Association="CARS_Model.FK_Sale_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Sale" EntitySet="Sale" />
+    </AssociationSet>
+    <EntitySet Name="StatusesL" EntityType="CARS_Model.StatusesL" />
+    <EntitySet Name="NameOriginalAuto" EntityType="CARS_Model.NameOriginalAuto" />
+    <EntitySet Name="UrlAutoOriginal" EntityType="CARS_Model.UrlAutoOriginal" />
+    <EntitySet Name="DecoratedOrder" EntityType="CARS_Model.DecoratedOrder" />
+    <EntitySet Name="Orders" EntityType="CARS_Model.Orders" />
+    <AssociationSet Name="FK_Orders_Orders" Association="CARS_Model.FK_Orders_Orders">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <EntitySet Name="Discount" EntityType="CARS_Model.Discount" />
+    <EntitySet Name="RemoteStore" EntityType="CARS_Model.RemoteStore" />
+    <EntitySet Name="CurrancyCode" EntityType="CARS_Model.CurrancyCode" />
+    <EntitySet Name="Aksii" EntityType="CARS_Model.Aksii" />
+    <EntitySet Name="Vacancies" EntityType="CARS_Model.Vacancies" />
+    <EntitySet Name="Blog" EntityType="CARS_Model.Blog" />
+    <EntitySet Name="Section" EntityType="CARS_Model.Section" />
+    <EntitySet Name="Remnants" EntityType="CARS_Model.Remnants" />
+    <AssociationSet Name="FK_Remnants_Supplies" Association="CARS_Model.FK_Remnants_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Remnants" EntitySet="Remnants" />
+    </AssociationSet>
+    <EntitySet Name="Users" EntityType="CARS_Model.Users" />
+    <EntitySet Name="OnlinePay" EntityType="CARS_Model.OnlinePay" />
+    <EntitySet Name="OrderNowRemoteStore" EntityType="CARS_Model.OrderNowRemoteStore" />
+    <EntitySet Name="Session" EntityType="CARS_Model.Session" />
+    <AssociationSet Name="FK_Orders_Users" Association="CARS_Model.FK_Orders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FeedBack">
+    <Key>
+      <PropertyRef Name="FeedBackId" />
+    </Key>
+    <Property Name="FeedBackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobilleNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Supplies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameGood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sale" Relationship="CARS_Model.FK_Sale_Supplies" FromRole="Supplies" ToRole="Sale" />
+    <NavigationProperty Name="Orders" Relationship="CARS_Model.FK_Orders_Orders" FromRole="Supplies" ToRole="Orders" />
+    <NavigationProperty Name="Remnants" Relationship="CARS_Model.FK_Remnants_Supplies" FromRole="Supplies" ToRole="Remnants" />
+  </EntityType>
+  <EntityType Name="Brends">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrendName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ViewOfMade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ViewMade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewOfReport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Contraagent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Contragent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contraagent1" Relationship="CARS_Model.FK_Contraagent_Contraagent" FromRole="Contraagent" ToRole="Contraagent1" />
+    <NavigationProperty Name="Contraagent2" Relationship="CARS_Model.FK_Contraagent_Contraagent" FromRole="Contraagent1" ToRole="Contraagent" />
+  </EntityType>
+  <Association Name="FK_Contraagent_Contraagent">
+    <End Type="CARS_Model.Contraagent" Role="Contraagent" Multiplicity="1" />
+    <End Type="CARS_Model.Contraagent" Role="Contraagent1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contraagent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contraagent1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameGood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Clients" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Adaptation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sales" Type="Double" />
+    <NavigationProperty Name="Supplies1" Relationship="CARS_Model.FK_Sale_Supplies" FromRole="Sale" ToRole="Supplies" />
+  </EntityType>
+  <Association Name="FK_Sale_Supplies">
+    <End Type="CARS_Model.Supplies" Role="Supplies" Multiplicity="0..1" />
+    <End Type="CARS_Model.Sale" Role="Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sale">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StatusesL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsCheck" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NameOriginalAuto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameAuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UrlAutoOriginal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrlAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DecoratedOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NameGood" Type="String" MaxLength="500" FixedLength="false" Unicode="false" ConcurrencyMode="None" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Clients" Type="Int32" />
+    <Property Name="NumOrder" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="VIN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Service" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Supplies1" Relationship="CARS_Model.FK_Orders_Orders" FromRole="Orders" ToRole="Supplies" />
+    <Property Name="Sklad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="PriceAfterDiscount" Type="Double" />
+    <Property Name="DateDiscount" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Users" Relationship="CARS_Model.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Orders_Orders">
+    <End Type="CARS_Model.Supplies" Role="Supplies" Multiplicity="0..1" />
+    <End Type="CARS_Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Discount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Contraget" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name_Contragent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Discount1" Type="Double" />
+    <Property Name="DateBegin" Type="DateTime" Precision="0" />
+    <Property Name="DateEnd" Type="DateTime" Precision="0" />
+    <Property Name="Name_Artikul" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name_Sklad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name_Service" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LimitPrice" Type="Double" />
+  </EntityType>
+  <EntityType Name="RemoteStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Service" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Client" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CurrancyCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="Double" />
+    <Property Name="ValueToSom" Type="Double" />
+    <Property Name="CodeCur" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aksii">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BasePic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TitleText" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ShortDescription" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="FullPic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FullDescription" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Vacancies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Demands" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Duties" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WorkConditions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BasePic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TitleText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FullPic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FullDescription" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameOfSection" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Remnants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Supplies1" Relationship="CARS_Model.FK_Remnants_Supplies" FromRole="Remnants" ToRole="Supplies" />
+  </EntityType>
+  <Association Name="FK_Remnants_Supplies">
+    <End Type="CARS_Model.Supplies" Role="Supplies" Multiplicity="0..1" />
+    <End Type="CARS_Model.Remnants" Role="Remnants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Remnants">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Service" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Discount" Type="Int32" />
+    <NavigationProperty Name="Orders" Relationship="CARS_Model.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="OnlinePay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sum" Type="Double" />
+  </EntityType>
+  <EntityType Name="OrderNowRemoteStore">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Precision="0" />
+    <Property Name="Expires" Type="DateTime" Precision="0" />
+    <Property Name="LockDate" Type="DateTime" Precision="0" />
+    <Property Name="LockID" Type="Int32" />
+    <Property Name="Locked" Type="Boolean" />
+    <Property Name="ItemContent" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="UserId" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Orders_Users">
+    <End Type="CARS_Model.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="CARS_Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Clients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

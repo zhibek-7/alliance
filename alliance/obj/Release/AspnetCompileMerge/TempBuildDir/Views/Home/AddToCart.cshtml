@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+}
+@{
+    var countOfJs = 1;
+}
+<script type="text/javascript">
+    var countOfJs = 1;
+    $(function () {
+        $('.qtyplus').click(function (e) {
+            e.preventDefault();
+            fieldName = $(this).attr('field');
+
+            //Fetch qty in the current elements context and since you have used class selector use it.
+            var qty = $(this).closest('tr').find('.qty');
+            //var qty = $(this).closest('tr').find('input[name='+fieldName+']');
+
+            var currentVal = parseInt(qty.val());
+            if (!isNaN(currentVal)) {
+                qty.val(currentVal + 1);
+            } else {
+                qty.val(0);
+            }
+
+            //Trigger change event
+            qty.trigger('change');
+        });
+
+        $(".qtyminus").click(function (e) {
+            e.preventDefault();
+            fieldName = $(this).attr('field');
+
+            //Fetch qty in the current elements context and since you have used class selector use it.
+            var qty = $(this).closest('tr').find('.qty');
+            //var qty = $(this).closest('tr').find('input[name='+fieldName+']');
+
+            var currentVal = parseInt(qty.val());
+            if (!isNaN(currentVal) && currentVal > 0) {
+                qty.val(currentVal - 1);
+            } else {
+                qty.val(0);
+            }
+
+            //Trigger change event
+            qty.trigger('change');
+        });
+
+        //Bind the change event
+        $(".qty").change(function () {
+            var sum = 0;
+            var total = 0;
+            var countTotal = 0;
+            $('.price_jq').each(function () {
+                var price = $(this);
+                var count = price.closest('tr').find('.qty');
+                sum = (price.html() * count.val());
+                total = total + sum;
+                countTotal = count.val();
+                price.closest('tr').find('.cart_total_price').html(sum + "");
+
+            });
+            $('#total').html("<h3>" + total + "</h3>");
+
+            $('a[quntity]').attr('quntity', countTotal);
+
+            $("#quantity_d1").val(countTotal);
+            document.getElementById("quantity_d").innerHTML = countTotal;
+
+        }).change(); //trigger change event on page load
+    });
+</script>
+
+<script>
+ @*window.document.write('<div id="qua"> @{var conts=}' + countOfJs + '</div>');*@
+</script>
+
+@using Car.Controllers;
+<div class="left-column">
+
+</div>
+<div class="login">
+    <table>
+        <tr>
+            <td class="cart_price">
+                <p style="font-size: larger; margin-right: 15px;">Количество</p>
+            </td>
+            <td class="cart_price" style="display:none">
+                <p class="price_jq">@ViewBag.PriceForCart</p>
+            </td>
+            <td class="cart_quantity">
+                <input type='button' value='-' class='qtyminus' field='quantity' />
+                <input type='text' name='quantity' value='1' class='qty' style=" width: 50px;" />
+                <input type='button' value='+' class='qtyplus' field='quantity' />
+            </td>
+        </tr>
+
+    </table>
+
+    <div class="summDialog">Сумма</div>   <div class="summDialog" id="total"></div>
+
+    <div id="quantity_d" style="display:none"> </div>
+    <div name="shoppingCartNormalPrice" style="float: right; display:inline;    margin-top: 19%;">
+        @using (Html.BeginForm("OrderNow", "ShoppingCart", FormMethod.Get))
+        {
+            <span class="btn" style=" display: none;">
+                <input type='text' name='quantity_d1' value='1' class='pp' id='quantity_d1' />
+                @Html.TextBox("id", new { ViewBag.Id })
+                @Html.TextBox("currancy", new { ViewBag.Currancy })
+                @Html.TextBox("currancyCode", new { ViewBag.CurrancyCode })
+                @Html.TextBox("producer", new { ViewBag.Producer })
+                @Html.TextBox("url", new { ViewBag.UrlAbsolute })
+            </span>
+            <input type="submit" id="SearchCart" name="SearchVin" value="Добавить" />
+        }
+    </div>
+</div>
+
+

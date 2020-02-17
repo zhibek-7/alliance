@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7375df02-775e-4a6f-95ee-d848e9c68be4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws.phaeton.kz/SearchService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchService.xsd" MetadataType="Schema" ID="a249325f-1a6a-4bba-84f1-69cdd448467c" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SearchService1.xsd" MetadataType="Schema" ID="998c5123-67ac-484f-af3b-05d9846b7483" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SearchService.wsdl" MetadataType="Wsdl" ID="1202e940-c399-4373-848c-e750967c2836" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?wsdl" />
+    <MetadataFile FileName="SearchService2.xsd" MetadataType="Schema" ID="ab8e0410-26a7-41b8-9259-197e67300e67" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

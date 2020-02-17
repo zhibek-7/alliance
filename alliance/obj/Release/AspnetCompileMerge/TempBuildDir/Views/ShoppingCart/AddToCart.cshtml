@@ -1,0 +1,59 @@
+﻿@{
+   Layout = null;
+}
+<script type="text/javascript">
+        function calc(A,B,SUM) {
+          var one = Number(A);
+          if (isNaN(one)) { alert('Invalid entry: '+A); one=0; }
+          var two = Number(document.getElementById(B).value);
+          if (isNaN(two)) { alert('Invalid entry: '+B); two=0; }
+          document.getElementById(SUM).value = (one + two).toFixed(2);
+        }
+</script>
+
+
+@using Car.Controllers;
+
+
+        <div class="left-column">
+            <h1>Добавить в корзину</h1>
+        </div>
+         <div class="login">
+
+             <table class="basketstable">
+                 <tr class="trhoverbasket trhoveronbasket" dataid="">
+                     <td style="padding: 0;">
+                         @using (Html.BeginForm("EditRS", "ShoppingCart", FormMethod.Post, new { @class = "quant_edit" }))
+                         {
+                            @Html.Editor("quant", new { htmlAttributes = new { onChange = "calc(this.value,'op2','result')",  @min = "1", @type = "number" } })
+                         }
+                     </td>
+                     <td>
+                         <div name="discoprice" class="masterTooltip" title="3,00 %">
+                             <span class="itemsumm" name="itemDiscountSumm" dataid=""> </span>
+                         </div>
+                    </td>
+
+                     <td>
+                        <div name="shoppingCartNormalPrice" style="display:inline">
+                             @{
+
+                                <span class="btn">
+                                 @Html.ActionLink("В корзину", "OrderNow", "ShoppingCart", new { id = ViewBag.Id, currancy = ViewBag.Currancy, currancyCode = ViewBag.CurrancyCode }, new
+                                    {
+                                        data_dialog_id = "MyFirstDialog2",
+                                        data_dialog_title = "Мой диалог",
+                                        data_dialog_width = "auto",
+                                        data_dialog_height = "auto",
+                                        @class = "openDialog"
+                                    })
+                                 </span>
+                             }
+                        </div>
+                     </td>
+
+                 </tr>
+           </table>
+        </div>
+        
+

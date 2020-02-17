@@ -1,0 +1,504 @@
+﻿
+@using Car.Controllers;
+
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(window).load(function () {
+
+            $("#pageloaddiv").fadeOut(5000);
+        });
+    });
+   $(document).ready(function () {
+   });
+
+
+</script>
+
+
+<div class="empty-box"></div>
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h1>Корзина</h1>
+        </div>
+        <div class="right-column">
+        </div>      <div class="login">
+
+           @{int iCart = 1;}
+           @{double sum = 0; }
+
+
+            @if (Session["cart"] == null)
+            {
+                sum = 0;
+            }
+            else
+            {
+                foreach (Item item in (List<Item>)Session["cart"])
+                {
+                    sum = (double)(item.Pr.Price * item.Quantity) + sum;
+                }
+            }
+
+           @{
+               double sumRS = 0;
+               double sumEmex = 0;
+               double sumPhaeton = 0;
+               string EmexService = "";
+               string PhaetonService="";
+               }
+           @if (Session["OrderNowRemoteStore"] == null)
+           {
+               sumRS = 0;
+           }
+           else
+           {
+               foreach (ItemRemoteStore item in (List<ItemRemoteStore>)Session["OrderNowRemoteStore"])
+                {
+                   sumRS = (double)(item.Pr.Price * item.Quantity) + sumRS;
+
+                   if (item.Pr.Service=="Emex") {
+                       EmexService = item.Pr.Service;
+                       sumEmex = (double)(item.Pr.Price * item.Quantity) + sumEmex;
+                   }
+                   if (item.Pr.Service == "Phaeton")
+                    {
+                      PhaetonService= item.Pr.Service;
+                      sumPhaeton = (double)(item.Pr.Price * item.Quantity) + sumPhaeton;
+                    }
+                }
+           }
+
+
+        @{
+          if (Session["OrderNowRemoteStore"] == null) {
+                sumRS = 0;
+            }
+        }
+                      @{
+                            double sum2Store = 0;
+                            sum2Store = sumRS + sum;
+                        }
+
+@if (Session["cart"] != null) {
+
+            <table class="basketstable">
+                <tbody>
+                    <tr dataid="f6d3abde-5eab-11e1-b573-001517a1f012" class="category">
+                        <td colspan="11">
+                            <div class="ware">
+                                <div class="waretitle">Автозапчасти</div>
+                                <div class="waresecond">
+                                    <div class="float-left" style="margin-top: 7px;">
+                                        Сумма заказов:
+                                    </div>
+                                    <div class="float-right" style="text-align: right;">
+                                        <span class="waresumm" catsummid="">
+                                            @(Math.Round((decimal)(sum), 2, MidpointRounding.AwayFromZero))
+                                        </span>
+                                    </div>
+                                    <div class="clear-fix"></div>
+                                </div>
+                                <div class="clear"></div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr dataid="f6d3abde-5eab-11e1-b573-001517a1f012">
+                        <td class="tdhiddencatboth" colspan="11">&nbsp;</td>
+                    </tr>
+                    <tr dataid="3a33371e-591f-11e1-bb90-001517a1f012" class="warehouse">
+                        <td class="tdhiddencat">&nbsp;<input type="hidden" name="CatWh" categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012"></td>
+                        <td class="tdware" colspan="9">
+                            <div class="clear-fix">
+                                <div class="float-left">
+                                    <div style="margin-left:60px;" class="float-left">
+
+                                           Склад Alliance Motors
+
+                                    </div>
+                                    <div style="margin-left:600px;" class="float-right">
+                                        Сумма заказа - <span style="text-align:right;" class="waresumm" whsummid="f6d3abde-5eab-11e1-b573-001517a1f012|3a33371e-591f-11e1-bb90-001517a1f012">
+                                            @sum
+                                        </span>
+                                    </div>
+                                    <div style="width: 80px; padding-top: 20px;margin-left:895px;">
+                                        <span style="display: inline-block;">
+                                            <img categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012" src="~/Content/images/selectall.gif" name="selectall" style="cursor:pointer;">&nbsp;<img categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012" src="~/Content/images/deselectall.gif" name="deselectall" style="cursor:pointer;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="tdhiddencatright"></td>
+                    </tr>
+                    <tr dataid="0" style="font-weight: bold; font-size: 0.9em;">
+                        <td class="tdhiddencat">&nbsp;</td>
+                        <td class="tdhiddenware">Бренд</td>
+                        <td style="width: 100px;">Артикул</td>
+                        <td style="width: 200px;">Наименование</td>
+                      
+                        <td style="width: 50px;">Количество</td>
+                        <td>Изм.</td>
+                        <td>Цена</td>
+                        <td>Сумма</td>
+                        <td class="tdrigthware"></td>
+                        <td class="tdhiddencatright"></td>
+                    </tr>
+                    @if (Session["cart"] != null)
+                        {
+                           foreach (Item item in (List<Item>)Session["cart"])
+                            {
+                                <tr class="trhoverbasket trhoveronbasket" dataid="">
+                                <td class="tdhiddencat">&nbsp;</td>
+                                <td class="tdhiddenware">@item.Pr.Brend</td>
+                                <td>@item.Pr.Articul</td>
+                                <td>@item.Pr.Name</td>
+                              
+                                <td style="padding: 0;">
+                                   @using (Html.BeginForm("Edit", "ShoppingCart", FormMethod.Post, new { @class = "quant_edit" }))
+                                    {
+                                       @Html.Editor("id", new { htmlAttributes = new { @quantity = item.Quantity, @Value = item.Pr.Id, id = "id_RS" } })
+                                       @Html.Editor("quant", new { htmlAttributes = new { @Value = item.Quantity, @class = "txtcount", @quantity = item.Quantity, id = item.Pr.Id } })
+                                       <input type="submit" value="Изменить" class="edit_rs">
+                                    }
+                                </td>
+                                <td>@item.Pr.MethodDelivery</td>
+                                <td style="text-align: right;">
+                                    <div name="discoprice" class="masterTooltip" title="3,00 %">
+                                        <span name="itemDiscountPrice" dataid="">@item.Pr.Price</span>
+                                    </div>
+
+                                </td>
+                                <td style="text-align: right;">
+                                    <div name="discoprice" class="masterTooltip" title="3,00 %">
+                                        <span class="itemsumm" name="itemDiscountSumm">@(item.Pr.Price * item.Quantity)</span>
+                                    </div>
+
+                                </td>
+                                <td style="display:none"></td>
+                                <td class="tdrigthware" style="width: 110px;">
+                                    <span class="cart_button button_cr">@Html.ActionLink("Удалить", "Delete", "ShoppingCart", new { id = item.Pr.Id }, null)</span>
+                                </td>
+                                <td class="tdhiddencatright"></td>
+                            </tr>
+                        }
+                    }
+
+
+                      <tr>
+                        <td class="tdhiddencat">&nbsp;</td>
+                        <td class="tdbottomware" colspan="9">
+                            <div class="float-right" style="width: 17%; text-align: right;">
+                              <span class="cart_button button_cr">
+                                @Html.ActionLink("Оформить заказ", "ContentOrder", "ShoppingCart",new {id = iCart++, service = "Бишкек" }, new
+                                   {
+                                       data_dialog_id = "dialog0",
+                                       data_dialog_title = "Внимание",
+                                       data_dialog_width = "auto",
+                                       data_dialog_height = "auto",
+                                       @class = "openDialog"
+                                   })
+                             </span>
+                            </div>
+                        </td>
+                        <td class="tdhiddencatright"></td>
+                    </tr>
+                    <tr>
+                        <td class="tdhiddencatboth" colspan="11">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="lastcat" colspan="11">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="11">&nbsp;</td>
+                    </tr>
+
+                </tbody>
+            </table>
+}
+
+      @if (Session["OrderNowRemoteStore"] != null)
+                        {
+            <table class="basketstable">
+                            <tbody>
+                                <tr dataid="f6d3abde-5eab-11e1-b573-001517a1f012" class="category">
+                                    <td colspan="11">
+                                        <div class="ware">
+                                            <div class="waretitle">Автозапчасти</div>
+                                            <div class="waresecond">
+                                                <div class="float-left" style="margin-top: 7px;">
+                                                    Сумма заказов:
+                                                </div>
+                                                <div class="float-right" style="text-align: right;">
+                                                    <span class="waresumm" catsummid="">
+                                                        @(Math.Round((decimal)(sumRS), 2, MidpointRounding.AwayFromZero))
+                                                    </span>
+                                                </div>
+                                                <div class="clear-fix"></div>
+                                            </div>
+                                            <div class="clear"></div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+@if (sumPhaeton != 0)
+{
+                                <tr dataid="f6d3abde-5eab-11e1-b573-001517a1f012">
+                                    <td class="tdhiddencatboth" colspan="11">&nbsp;</td>
+                                </tr>
+                                <tr dataid="3a33371e-591f-11e1-bb90-001517a1f012" class="warehouse">
+                                    <td class="tdhiddencat">&nbsp;<input type="hidden" name="CatWh" categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012"></td>
+                                    <td class="tdware" colspan="9">
+                                        <div class="clear-fix">
+                                            <div class="float-left">
+                                                <div style="margin-left:60px;" class="float-left">
+
+                                                    Склад Ала
+
+                                                </div>
+
+                                                <div style="margin-left:600px;" class="float-right">
+                                                    Сумма заказа - <span style="text-align:right;" class="waresumm" whsummid="f6d3abde-5eab-11e1-b573-001517a1f012|3a33371e-591f-11e1-bb90-001517a1f012">
+                                                        @sumPhaeton
+                                                    </span>
+                                                </div>
+                                                <div style="width: 80px; padding-top: 20px;margin-left:895px;">
+                                                    <span style="display: inline-block;">
+                                                        <img categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012" src="~/Content/images/selectall.gif" name="selectall" style="cursor:pointer;">&nbsp;<img categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012" src="~/Content/images/deselectall.gif" name="deselectall" style="cursor:pointer;">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tdhiddencatright"></td>
+                                </tr>
+                                <tr dataid="0" style="font-weight: bold; font-size: 0.9em;">
+                                    <td class="tdhiddencat">&nbsp;</td>
+                                    <td class="tdhiddenware">Бренд</td>
+                                    <td style="width: 100px;">Артикул</td>
+                                    <td style="width: 200px;">Наименование</td>
+                                 
+                                    <td style="width: 50px;">Количество</td>
+                                    <td>Изм.</td>
+                                    <td>Цена</td>
+                                    <td>Сумма</td>
+                                    <td class="tdrigthware"></td>
+                                    <td class="tdhiddencatright"></td>
+                                </tr>
+
+    foreach (ItemRemoteStore item in (List<ItemRemoteStore>)Session["OrderNowRemoteStore"])
+    {
+        if (item.Pr.Service == "Phaeton")
+        {
+
+            <tr class="trhoverbasket trhoveronbasket" dataid="">
+                <td class="tdhiddencat">&nbsp;</td>
+                <td class="tdhiddenware">@item.Pr.Code</td>
+                <td>@item.Pr.Articul</td>
+                <td>@item.Pr.Name</td>
+                
+                <td style="padding: 0;">
+                    @using (Html.BeginForm("EditRS", "ShoppingCart", FormMethod.Post, new { @class = "quant_edit" }))
+                    {
+                        @Html.Editor("id", new { htmlAttributes = new { @quantity = item.Quantity, @Value = item.Pr.Id, id = "id_RS" } })
+                        @Html.Editor("quant", new { htmlAttributes = new { @Value = item.Quantity, @class = "txtcount", @quantity = item.Quantity, id = item.Pr.Id } })
+                        <input type="submit" value="Изменить" class="edit_rs">
+                    }
+                </td>
+                <td>@item.Pr.MethodDelivery</td>
+                <td style="text-align: right;">
+                    <div name="discoprice" class="masterTooltip" title="3,00 %">
+                        <span name="itemDiscountPrice" dataid=""> @item.Pr.Price</span>
+                    </div>
+
+                </td>
+                <td style="text-align: right;">
+                    <div name="discoprice" class="masterTooltip" title="3,00 %">
+                        <span class="itemsumm" name="itemDiscountSumm" dataid="">@(item.Pr.Price * item.Quantity)</span>
+                    </div>
+
+                </td>
+                <td style="display:none"></td>
+                <td class="tdrigthware" style="width: 110px;">
+                    <span class="cart_button button_cr">  @Html.ActionLink("Удалить", "DeleteRS", "ShoppingCart", new { id = item.Pr.Id }, null)</span>
+                </td>
+
+                <td class="tdhiddencatright"></td>
+            </tr>
+        }
+
+
+    }
+                                <tr>
+                                    <td class="tdhiddencat">&nbsp;</td>
+                                    <td class="tdbottomware" colspan="9">
+                                        <div class="float-right" style="width: 17%; text-align: right;">
+
+                                            <span class="cart_button button_cr">
+                                                @Html.ActionLink("Оформить заказ", "ContentOrder", "ShoppingCart", new {id = iCart++, service = "Phaeton" }, new
+                                               {
+                                                   data_dialog_id = "MyFirstDialog1",
+                                                   data_dialog_title = "Внимание",
+                                                   data_dialog_width = "auto",
+                                                   data_dialog_height = "auto",
+                                                   @class = "openDialog"
+                                               })
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tdhiddencatright"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdhiddencatboth" colspan="11">&nbsp;</td>
+                                </tr>
+}
+
+                         @if (sumEmex != 0)
+                          {
+                            <tr dataid="f6d3abde-5eab-11e1-b573-001517a1f012">
+                                    <td class="tdhiddencatboth" colspan="11">&nbsp;</td>
+                                </tr>
+                                <tr dataid="3a33371e-591f-11e1-bb90-001517a1f012" class="warehouse">
+                                    <td class="tdhiddencat">&nbsp;<input type="hidden" name="CatWh" categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012"></td>
+                                    <td class="tdware" colspan="9">
+                                        <div class="clear-fix">
+                                            <div class="float-left">
+                                                <div style="margin-left:60px;" class="float-left">
+                                                    Склад Emex
+                                                </div>
+                                                <div style="margin-left:600px;" class="float-right">
+                                                    Сумма заказа - <span style="text-align:right;" class="waresumm" whsummid="f6d3abde-5eab-11e1-b573-001517a1f012|3a33371e-591f-11e1-bb90-001517a1f012">
+                                                        @sumEmex
+                                                    </span>
+                                                </div>
+                                                <div style="width: 80px; padding-top: 20px;margin-left:895px;">
+                                                    <span style="display: inline-block;">
+                                                        <img categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012" src="~/Content/images/selectall.gif" name="selectall" style="cursor:pointer;">&nbsp;<img categoryid="f6d3abde-5eab-11e1-b573-001517a1f012" warehouseid="3a33371e-591f-11e1-bb90-001517a1f012" src="~/Content/images/deselectall.gif" name="deselectall" style="cursor:pointer;">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tdhiddencatright"></td>
+                                </tr>
+                                <tr dataid="0" style="font-weight: bold; font-size: 0.9em;">
+                                    <td class="tdhiddencat">&nbsp;</td>
+                                    <td class="tdhiddenware">Бренд</td>
+                                    <td style="width: 100px;">Артикул</td>
+                                    <td style="width: 200px;">Наименование</td>
+                                 
+                                    <td style="width: 50px;">Количество</td>
+                                    <td>Изм.</td>
+                                    <td>Цена</td>
+                                    <td>Сумма</td>
+                                    <td class="tdrigthware"></td>
+                                    <td class="tdhiddencatright"></td>
+                                </tr>
+
+                                    foreach (ItemRemoteStore item in (List<ItemRemoteStore>)Session["OrderNowRemoteStore"])
+                                    {
+                                        if (item.Pr.Service == "Emex")
+                                        {
+                                            <tr class="trhoverbasket trhoveronbasket" dataid="">
+                                                <td class="tdhiddencat">&nbsp;</td>
+                                                <td class="tdhiddenware">@item.Pr.Code</td>
+                                                <td>@item.Pr.Articul</td>
+                                                <td>@item.Pr.Name</td>
+                                               
+                                                <td style="padding: 0;">
+                                                    @using (Html.BeginForm("EditRS", "ShoppingCart", FormMethod.Post, new { @class = "quant_edit" }))
+                                                    {
+                                                        @Html.Editor("id", new { htmlAttributes = new { @quantity = item.Quantity, @Value = item.Pr.Id, id = "id_RS" } })
+                                                        @Html.Editor("quant", new { htmlAttributes = new { @Value = item.Quantity, @class = "txtcount", @quantity = item.Quantity, id = item.Pr.Id } })
+                                                        <input type="submit" value="Изменить" class="edit_rs">
+                                                    }
+                                                </td>
+                                                <td>@item.Pr.MethodDelivery</td>
+                                                <td style="text-align: right;">
+                                                    <div name="discoprice" class="masterTooltip" title="3,00 %">
+                                                        <span name="itemDiscountPrice" dataid=""> @item.Pr.Price</span>
+                                                    </div>
+
+                                                </td>
+                                                <td style="text-align: right;">
+                                                    <div name="discoprice" class="masterTooltip" title="3,00 %">
+                                                        <span class="itemsumm" name="itemDiscountSumm" dataid="">@(item.Pr.Price * item.Quantity)</span>
+                                                    </div>
+
+                                                </td>
+                                                <td style="display:none"></td>
+                                                <td class="tdrigthware" style="width: 110px;">
+                                                    <span class="cart_button button_cr">  @Html.ActionLink("Удалить", "DeleteRS", "ShoppingCart", new { id = item.Pr.Id }, null)</span>
+                                                </td>
+
+                                                <td class="tdhiddencatright"></td>
+                                            </tr>
+                                        }
+                                    }
+
+
+                                <tr>
+                                    <td class="tdhiddencat">&nbsp;</td>
+                                    <td class="tdbottomware" colspan="9">
+                                        <div class="float-right" style="width: 17%; text-align: right;">
+
+                                            <span class="cart_button button_cr">
+                                             @Html.ActionLink("Оформить заказ", "ContentOrder", "ShoppingCart", new { id = iCart++ , service= "Emex" }, new
+                                               {
+                                                   data_dialog_id = "MyFirstDialog2",
+                                                   data_dialog_title = "Внимание",
+                                                   data_dialog_width = "auto",
+                                                   data_dialog_height = "auto",
+                                                   @class = "openDialog"
+                                               })
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tdhiddencatright"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tdhiddencatboth" colspan="11">&nbsp;</td>
+                                </tr>
+
+}
+
+                                <tr>
+                                    <td class="lastcat" colspan="11">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="11">&nbsp;</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+      }
+ 
+
+                        <script src="/Scripts/jquery-ui-1.12.1.js"></script>
+
+                        <div id="script_block_0" class="script_block_0"></div>
+
+                        <div id="script_ad_0" class="script_ad_0" style="display:none;">
+
+                            <script src="/Scripts/jquery-ui-1.12.1.js"></script>
+                        </div>
+
+
+
+
+
+
+                        <script type="text/javascript">
+                            // переместить его в реальную позицию отображения
+                            document.getElementById('script_block_0').appendChild(document.getElementById('script_ad_0'));
+                            // показать
+                            document.getElementById('script_ad_0').style.display = 'block';
+                        </script>
+
+                        @section Scripts {
+                            @Scripts.Render("~/bundles/jqueryval")
+                        }

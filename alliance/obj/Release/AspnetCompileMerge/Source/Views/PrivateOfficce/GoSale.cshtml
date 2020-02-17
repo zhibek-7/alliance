@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "GoSale";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Car.Controllers;
+<div class="empty-box"></div>
+<script src="/Scripts/Dialog.js" type="text/javascript"></script>
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+
+        </div>
+        <div class="right-column">
+        </div>
+
+        <div class="login">
+            <section class="content-wrapper main-content clear-fix">
+                <div class="rounded">
+                    <h2>Распродажа</h2>
+                    <table class="resultstable">
+                        <tbody>
+                            <tr>
+                                <td style="width: 70px; font-weight: bold;">Бренд</td>
+                                <td style="width: 70px;"><b>Артикул</b></td>
+                                <td style="width: 200px;"><b>Наименование</b></td>
+                               
+                                <td style="width: 30px;"><b>Старая цена</b></td>
+                                <td style="width: 20px;"><b>Распродажа</b></td>
+                               
+                                <td style="width: 170px;"><b>Валюта</b></td>
+                                <td><b></b></td>
+                            </tr>
+                           @foreach (var ordCart in ViewBag.OrdersBByBrend)
+                             {
+                                <tr class="trhover">
+                                    <td>@ordCart.Brend</td>
+                                    <td>@ordCart.Articul</td>
+                                    <td>@ordCart.NameGood</td>
+                                   
+                                    <td style="text-align: right;">@ordCart.Price</td>
+                                    <td style="text-align: right;">@ordCart.Sales</td>
+                                    
+                                    <td>@ordCart.CurrancyCode<br></td>
+                                    <td> @Html.ActionLink("Перейти","SearchDetail", "Home", new { producer = ordCart.Brend, code = ordCart.Articul, SelectedCurrancyCode = ViewBag.SelectedCurrancyCode, caption = ordCart.NameGood }, null)</td>
+                                </tr>
+                             }
+                            <tr>
+                                <td class="tdrigthware" style="width: 110px;">@Html.ActionLink("Назад", "Sales", "Home")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="clear-fix"></div>
+
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/Dialog")
+}
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+	<product>
+      <id>1</id>
+	  <code>wer345</code>
+      <brend>dsdfs</brend>
+	  <articul>werewr234</articul>
+	  <name>name ss</name>
+	  <supplies>1</supplies>
+	  <methodDelivery>wdfa</methodDelivery>
+	  <price>1777</price>
+	  <existence>120</existence>
+	  <days>21</days>
+	  <v_p>123</v_p>
+	  <min_krat>1</min_krat>
+	  <vin>12we</vin>
+	  <currancycode>12</currancycode>
+	  <date>12/12/2016</date>
+	</product>
+	
+	<product>
+      <id>2</id>
+	  <code>wer345</code>
+      <brend>dsdfs</brend>
+	  <articul>werewr234</articul>
+	  <name>name ss</name>
+	  <supplies>1</supplies>
+	  <methodDelivery>wdfa</methodDelivery>
+	  <price>1777</price>
+	  <existence>120</existence>
+	  <days>21</days>
+	  <v_p>123</v_p>
+	  <min_krat>1</min_krat>
+	  <vin>12we</vin>
+	  <currancycode>12</currancycode>
+	  <date>12/12/2016</date>
+	</product>
+	<product>
+      <id>3</id>
+	  <code>wer345</code>
+      <brend>dsdfs</brend>
+	  <articul>werewr234</articul>
+	  <name>name ss</name>
+	  <supplies>1</supplies>
+	  <methodDelivery>wdfa</methodDelivery>
+	  <price>1777</price>
+	  <existence>120</existence>
+	  <days>21</days>
+	  <v_p>123</v_p>
+	  <min_krat>1</min_krat>
+	  <vin>12we</vin>
+	  <currancycode>12</currancycode>
+	  <date>12/12/2016</date>
+	</product>
+</products>

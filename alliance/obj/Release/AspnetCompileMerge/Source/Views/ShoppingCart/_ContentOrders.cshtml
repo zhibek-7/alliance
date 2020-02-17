@@ -1,0 +1,134 @@
+﻿@{
+    Layout = null;
+}
+@using Car.Controllers;
+<div class="context-box" style="margin: 10px; padding: 10px;">
+    <div class="container clearfix dialogCart" style="  width: 400;">
+        
+        <div class="login">
+            <section class="content-wrapper main-content clear-fix">
+
+                <div class="rounded">
+                   
+                    <div class="clear-fix">
+                        @{
+                            double sum = 0;
+                            double sumRSEmex = 0;
+                            double sumRSPhaeton = 0;
+                        }
+
+                        @{
+                            if (ViewBag.CartOrder != null)
+                            {
+                                foreach (Item item in ViewBag.CartOrder)
+                                {
+                                    sum = (double)(item.Pr.Price * item.Quantity) + sum;
+                                }
+                            }
+
+                            if (ViewBag.service == "Emex")
+                            {
+                                foreach (ItemRemoteStore item in ViewBag.CartOrderRSEmex)
+                                {
+                                    sumRSEmex = (double)(item.Pr.Price * item.Quantity) + sumRSEmex;
+                                }
+                            }
+                            if (ViewBag.service == "Phaeton")
+                            {
+                                foreach (ItemRemoteStore item in ViewBag.CartOrderRSPhaeton)
+                                {
+                                    sumRSPhaeton = (double)(item.Pr.Price * item.Quantity) + sumRSPhaeton;
+                                }
+                            }
+                        }
+
+                        <div class="float-left">
+                            <div style="font-weight: bold">
+                                Вы собираетесь разместить заказ 
+                                на сумму @{
+                                    if (sum!=0) {
+                                        @sum
+                                    }
+                                    if (sumRSPhaeton != 0)
+                                    {
+                                        @sumRSPhaeton
+                                    }
+                                    if (sumRSEmex != 0)
+                                    {
+                                        @sumRSEmex
+                                    }
+                               } &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                Контрагент: @Session["LogedUserFullName"]
+                                <br><br>
+
+                              @if (ViewBag.service == "Emex" || ViewBag.service == "Phaeton")
+                                {
+                                    <span class="notes">
+                                        При заказе товаров с EMEX либо от Локальных поставщиков Компания Alliance-Motors не несет никакой ответственности за ошибочно заказанный товар, за неточность кроссов в артикульной базе, за несоответствие между указанными номерами на упаковке и ее содержимым.<br>
+                                        Для рассмотрения рекламации по заказам с удалённых складов заказчик должен предоставить:<br>
+                                        ∙ Рекламационная автозапчасть должна быть предоставлена в той комплектации, в которой она была продана.<br>
+                                        ∙ Акт рекламации, заполняемый СТО, где устанавливалась запасная деталь, с полными данными об автомобиле согласно сведениям Свидетельства о регистрации ТС.<br>
+                                        ∙ ФИО владельца автомобиля.<br>
+                                        ∙ Марка автомобиля, тип двигателя.<br>
+                                        ∙ Номер кузова автомобиля.<br>
+                                        ∙ Пробег автомобиля.<br>
+                                        . Заказ – наряд на работы связанные с установкой либо заменой рекламационной запчасти.<br>
+                                        ∙ Копию наряд – заказа запчасти с записью о гарантийных обязательствах, с подписью уполномоченного лица и оттиска печати СТО.<br>
+                                        . Копии платёжных документов, подтверждающих оплату услуг сервиса<br>
+                                        . Заключение о неработоспособности запчасти, на фирменном бланке СТО<br>
+                                        .Телефон и электронная почта контактного лица.<br>
+                                        При нарушении этикеток или наклеек EMEX либо Локальных поставщиков рекламация не рассматривается.<br><br>
+
+                                        Я прочитал условия, понял и принимаю их.
+                                    </span>
+                                }
+
+                                
+                            </div>
+                          
+                        </div>
+                        <div class="float-right"></div>
+                    </div>
+
+                    <div  style="color:#0000FF">
+                        @ViewBag.QuntityMessage
+                    </div>
+
+                    <table class="resultstable">
+                        <tbody>
+                            <tr>
+                                <td class="tdrigthware" style="width: 110px;">
+                                    <span class="cart_button button_cr">
+                                      @Html.ActionLink("Отказаться", "Refuse", "ShoppingCart", new
+                                       {
+                                           NumOrder = ViewBag.ItemNumber
+                                       }, null)
+                                    </span>
+                                </td>
+                                <td class="tdrigthware" style="width: 110px;">
+                                    <span class="cart_button button_cr">
+                                 @Html.ActionLink("Подтвердить", "Ship", "ShoppingCart", new
+                                   { NumOrder = ViewBag.ItemNumber }, null)
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+                <div class="clear-fix"></div>
+
+            </section>
+        </div>
+
+
+
+
+    </div>
+
+</div>

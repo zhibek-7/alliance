@@ -1,0 +1,76 @@
+﻿@model Car.Users
+
+@{
+    ViewBag.Title = "EditUserEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="empty-box"></div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2>Изменение Email</h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>
+        </div>
+        <div class="right-column">
+            <div class="login">
+
+                <section class="content-wrapper main-content clear-fix">
+
+
+                    <div class="rounded">
+
+
+
+                        @using (Html.BeginForm("EditUserEmail", "PrivateOfficce", FormMethod.Post,new { enctype = "multipart/form-data" }))
+                        {
+                               <fieldset>
+                                <div class="editor-field">
+                                    <div>
+                                        <div class="col-md-15">
+                                            @Html.LabelFor(model => model.Email, "E-mail", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        </div>
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                       <div class="col-md-offset-2 col-md-10">
+                                           <input type="submit" value="Сохранить" class="btn btn-default" />
+                                       </div>
+                                 </div>
+                            </fieldset>
+                        }
+                        
+                        <div>
+                            @Html.ActionLink("Назад", "Index", "PrivateOfficce")
+                        </div>
+
+
+                    </div>
+                    <div class="clear-fix"></div>
+
+                </section>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@* This below line is for create javascript section*@
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

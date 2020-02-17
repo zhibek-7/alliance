@@ -1,0 +1,276 @@
+﻿
+@{
+    ViewBag.Title = "Catalog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-autocomplete-source]").each(function () {
+            var target = $(this);
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });
+        });
+    });
+</script>
+
+<div class="bg-box">
+    <div class="container">
+
+        
+
+        <ul class="tabs">
+
+            <li>
+
+                <input type="radio" name="tabs" id="tab-1" checked>
+
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+ 
+
+    </div>
+</div>
+
+<section class="content-wrapper main-content clear-fix">
+
+
+    <div class="rounded">
+
+
+       
+        <div class="rounded">
+            <h2>Каталог оригинальных запчастей</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 50%">
+                            <p>Найдите модель автомобиля по VIN номеру</p>
+
+                            @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                            {
+                                <div class="search-box1 catalog_search">
+                                    @Html.TextBox("Vin")
+                                    @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                                    <input type="submit" name="SearchVin" value="Поиск" />
+                                </div>
+                            }
+
+
+                         
+                            <p>
+                                VIN вашего автомобиля является самым надежным идентификатором.
+                                Если Вы не знаете VIN или сомневаетесь, подойдет ли выбранная деталь
+                                к вашему автомобилю - свяжитесь с Вашим менеджером
+                            </p>
+                        </td>
+                        <td class="delimetercell2"></td>
+                        <td style="width: 5%; text-align: center; position: relative;">
+                            <div class="celldelimetercaption">ИЛИ</div>
+                        </td>
+
+                        <td style="padding-left: 20px; width: 50%">
+                            @using (Html.BeginForm("Catalog", "Home", FormMethod.Get))
+                            {
+                                <p>Введите vin код</p>
+                                @Html.TextBox("Vin")
+                                <br>
+                                <p>Выберите модель по параметрам</p>
+                                @Html.DropDownList("SelectedAuto",
+                                     new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "All", new { onchange = "form.submit();" })
+                                <br>
+                                <a href="@ViewBag.Url@ViewBag.Vin" class="btn" style="color:white">Поиск  </a>
+                            }
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Найдите модель автомобиля по FRAME номеру</p>
+                            <form action="/AdvancedSearch/ModificationsFrame" method="get" novalidate="novalidate">
+                                <input id="frame" name="frame" placeholder="код кузова" style="border-radius: 4px;">
+                                <input id="frameNo" name="frameNo" placeholder="номер кузова" style="border-radius: 4px;">
+                                <div>например: ACR50-0195054</div>
+                                <input id="advsearchbuttonmain" type="submit" value="Поиск">
+                            </form>                <p>
+                                Номер кузова — указывается в техпаспорте (СРТС) с обратной стороны документа, где нет печати, шестая строка сверху.
+                                Состоит он из букв и цифр и обычно содержит около 10 знаков. На автомашине номер кузова обычно выбивается на металлической табличке под капотом.
+                                При этом у разных марок авто эта табличка может располагаться в совершенно разных местах.
+                                К примеру, у некоторых моделей Suzuki номер кузова выбит в колёсной арке над правым колесом.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>Общий каталог</h3>
+        <table style="width: 100%;  text-align: center;" background="/upload/images/0012.jpg" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/toyota/">
+                        </a><a target="_blank" href="http://catalog.alliance-motors.kg/totalcatalog/">
+                            <img src="/Content/upload/images/TecDoc.JPG" height="50">
+                        </a>
+                    </td>
+                    <td colspan="5"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3>Оригинальные каталоги</h3>
+        <h4>Европа</h4>
+        <table style="width: 100%; text-align : center;" background="/upload/images/0012.jpg" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/audivw/">
+                            <img src="/Content/upload/images/audi.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/audivw/">
+                            <img src="/Content/upload/images/seat.gif" border="0" height="52">
+                        </a>
+                    </td>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/audivw/">
+                            <img src="/Content/upload/images/skoda.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/audivw/">
+                            <img src="/Content/upload/images/folz.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/bmw/">
+                            <img src="/Content/upload/images/bmw.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/bmw/">
+                            <img src="/Content/upload/images/mini.gif" border="0" height="50">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/mercedes/">
+                            <img src="/Content/upload/images/mers1.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/mercedes/#Y2xhc3M9PUZ8fGNvdW50cnk9PU18fHN0PT0yMHx8c3RzPT17IjEwIjoiXHUwNDFhXHUwNDMwXHUwNDQyXHUwNDM1XHUwNDMzXHUwNDNlXHUwNDQwXHUwNDM4XHUwNDM4IFx1MDQzMFx1MDQzMlx1MDQ0Mlx1MDQzZSIsIjIwIjoiU21hcnQtU21hcnQifQ%3D%3D">
+                            <img src="/Content/upload/images/smart.png" border="0" height="55">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/opel/">
+                            <img src="/Content/upload/images/opel.png" border="0" height="55">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/honda/">
+                            <img src="/Content/upload/images/honda-logo.jpg" border="0" height="50">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Япония</h4>
+        <table style="width: 100%; text-align: center;" background="/upload/images/0012.jpg" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/nissan/">
+                            <img src="/Content/upload/images/infi1.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/nissan/">
+                            <img src="/Content/upload/images/nissan.png" border="0" height="50">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/toyota/">
+                            <img src="/Content/upload/images/lex1.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/toyota/">
+                            <img src="/Content/upload/images/logo1.gif" border="0" height="50">
+                        </a>
+                    </td>
+                    <td style="width: 16%;">
+                        <a href="http://catalog.alliance-motors.kg/mazda/">
+                            <img src="/Content/upload/images/Mazda-logo.png" border="0" height="50">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://catalog.alliance-motors.kg/subaru/">
+                            <img src="/Content/upload/images/subaru.png" border="0" height="50">
+                        </a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>&nbsp; &nbsp; &nbsp;</td>
+                    <td>&nbsp; &nbsp; &nbsp;</td>
+                    <td>&nbsp; &nbsp; &nbsp;</td>
+                </tr>
+                <tr>
+                    &nbsp; &nbsp; &nbsp;
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <style>
+            .catalogstable tr {
+                border-bottom: 1px solid #C8C8C8;
+            }
+        </style>
+
+    </div>
+    <div class="clear-fix"></div>
+
+</section>

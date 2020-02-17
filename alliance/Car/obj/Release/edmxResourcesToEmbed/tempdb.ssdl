@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище tempdbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="#Remnants___________________________________________________________________________________________________________000000000004">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="500" />
+    <Property Name="Brend" Type="varchar" MaxLength="500" />
+    <Property Name="Articul" Type="varchar" MaxLength="500" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Supplies" Type="int" />
+    <Property Name="MethodDelivery" Type="varchar" MaxLength="50" />
+    <Property Name="Existence" Type="int" />
+    <Property Name="Days" Type="varchar" MaxLength="500" />
+    <Property Name="V_P" Type="varchar" MaxLength="500" />
+    <Property Name="Min_Krat" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="VIN" Type="varchar" MaxLength="50" />
+    <Property Name="CurrancyCode" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="ViewOfContract" Type="varchar" MaxLength="500" />
+    <Property Name="Contragent" Type="varchar" MaxLength="500" />
+    <Property Name="Status" Type="varchar" MaxLength="500" />
+    <Property Name="ReleaseDate" Type="date" />
+    <Property Name="NameAuto" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="modProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="Options" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="Model" Type="varchar" MaxLength="500" />
+    <Property Name="catProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfSalon" Type="varchar" MaxLength="500" />
+    <Property Name="BrendAuto" Type="varchar" MaxLength="500" />
+    <Property Name="CodeOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="NumberOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="Sklad" Type="varchar" MaxLength="500" />
+    <Property Name="Sale" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "tempdb.dbo.#Remnants___________________________________________________________________________________________________________00000000000A" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="#Remnants___________________________________________________________________________________________________________00000000000A">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="500" />
+    <Property Name="Brend" Type="varchar" MaxLength="500" />
+    <Property Name="Articul" Type="varchar" MaxLength="500" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Supplies" Type="int" />
+    <Property Name="MethodDelivery" Type="varchar" MaxLength="50" />
+    <Property Name="Existence" Type="int" />
+    <Property Name="Days" Type="varchar" MaxLength="500" />
+    <Property Name="V_P" Type="varchar" MaxLength="500" />
+    <Property Name="Min_Krat" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="VIN" Type="varchar" MaxLength="50" />
+    <Property Name="CurrancyCode" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="ViewOfContract" Type="varchar" MaxLength="500" />
+    <Property Name="Contragent" Type="varchar" MaxLength="500" />
+    <Property Name="Status" Type="varchar" MaxLength="500" />
+    <Property Name="ReleaseDate" Type="date" />
+    <Property Name="NameAuto" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="modProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="Options" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="Model" Type="varchar" MaxLength="500" />
+    <Property Name="catProdPeriod" Type="varchar" MaxLength="500" />
+    <Property Name="ColorOfSalon" Type="varchar" MaxLength="500" />
+    <Property Name="BrendAuto" Type="varchar" MaxLength="500" />
+    <Property Name="CodeOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="NumberOfBody" Type="varchar" MaxLength="500" />
+    <Property Name="Sklad" Type="varchar" MaxLength="500" />
+    <Property Name="Sale" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="Хранилище tempdbModelContainer">
+    <EntitySet Name="#Remnants___________________________________________________________________________________________________________000000000004" EntityType="Self.#Remnants___________________________________________________________________________________________________________000000000004" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="#Remnants___________________________________________________________________________________________________________00000000000A" EntityType="Self.#Remnants___________________________________________________________________________________________________________00000000000A" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Id] AS [Id], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Code] AS [Code], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Brend] AS [Brend], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Articul] AS [Articul], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Name] AS [Name], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Supplies] AS [Supplies], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[MethodDelivery] AS [MethodDelivery], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Existence] AS [Existence], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Days] AS [Days], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[V_P] AS [V_P], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Min_Krat] AS [Min_Krat], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Price] AS [Price], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[VIN] AS [VIN], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[CurrancyCode] AS [CurrancyCode], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Date] AS [Date], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[ViewOfContract] AS [ViewOfContract], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Contragent] AS [Contragent], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Status] AS [Status], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[ReleaseDate] AS [ReleaseDate], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[NameAuto] AS [NameAuto], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[ColorOfBody] AS [ColorOfBody], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[modProdPeriod] AS [modProdPeriod], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Options] AS [Options], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Description] AS [Description], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Model] AS [Model], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[catProdPeriod] AS [catProdPeriod], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[ColorOfSalon] AS [ColorOfSalon], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[BrendAuto] AS [BrendAuto], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[CodeOfBody] AS [CodeOfBody], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[NumberOfBody] AS [NumberOfBody], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Sklad] AS [Sklad], 
+    [#Remnants___________________________________________________________________________________________________________00000000000A].[Sale] AS [Sale]
+    FROM [dbo].[#Remnants___________________________________________________________________________________________________________00000000000A] AS [#Remnants___________________________________________________________________________________________________________00000000000A]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

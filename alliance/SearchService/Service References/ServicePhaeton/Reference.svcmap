@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dba4dc65-6a93-41ef-83bb-c64d10182e63" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws.phaeton.kz/SearchService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchService.disco" MetadataType="Disco" ID="0bd1e414-9af8-445f-b9da-6efb38e9d562" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?disco" />
+    <MetadataFile FileName="SearchService.wsdl" MetadataType="Wsdl" ID="9e2e3667-9bd0-4107-b605-7397040f91d8" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?wsdl" />
+    <MetadataFile FileName="SearchService.xsd" MetadataType="Schema" ID="72f006f8-7ff1-4aad-a134-ca80cbe2b22d" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SearchService1.xsd" MetadataType="Schema" ID="5be325e3-67aa-4802-85cc-370696388923" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SearchService2.xsd" MetadataType="Schema" ID="b369396c-9239-4eb2-8276-990d73beeef5" SourceId="1" SourceUrl="http://ws.phaeton.kz/SearchService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

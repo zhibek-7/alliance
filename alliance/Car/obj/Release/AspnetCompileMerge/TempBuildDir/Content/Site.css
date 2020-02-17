@@ -1,0 +1,72 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.bg-box .container .tabs .search-box1 .btn input{
+	    width: 100px;
+    font-weight: 100;
+    background: none;
+    margin: -10px;
+    padding: 0;
+}
+
+.tabs-widget > .content {
+  position: relative;
+}
+
+
+.tabs-widget > .content > .scroller:target + .item {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.tabs-widget > .content > .scroller:target + .item.-default {
+  position: relative;
+}
+
+.tabs-widget > .content > .scroller {
+  display: none;
+}
+.tabs-widget > .content > .item {
+      display: -webkit-box;
+    background: #eaeaea;
+    margin-top: -3px;
+    height: 97px;
+    margin-bottom: 17px;
+    -moz-placeholder-color: #000;
+    -moz-placeholder-font-size: 14px;
+    -ms-input-placeholder-color: #000;
+    -ms-input-placeholder-font-size: 14px;
+}
+
+.tabs-widget > .content > .item.-default {
+  display: block;
+  z-index: 1;
+}
+
+

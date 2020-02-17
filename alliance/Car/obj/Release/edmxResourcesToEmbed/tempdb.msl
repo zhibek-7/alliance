@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище tempdbModelContainer" CdmEntityContainer="tempdbEntities">
+    <EntitySetMapping Name="C_Remnants___________________________________________________________________________________________________________000000000004">
+      <EntityTypeMapping TypeName="tempdbModel.C_Remnants___________________________________________________________________________________________________________000000000004">
+        <MappingFragment StoreEntitySet="#Remnants___________________________________________________________________________________________________________000000000004">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Brend" ColumnName="Brend" />
+          <ScalarProperty Name="Articul" ColumnName="Articul" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Supplies" ColumnName="Supplies" />
+          <ScalarProperty Name="MethodDelivery" ColumnName="MethodDelivery" />
+          <ScalarProperty Name="Existence" ColumnName="Existence" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="V_P" ColumnName="V_P" />
+          <ScalarProperty Name="Min_Krat" ColumnName="Min_Krat" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="CurrancyCode" ColumnName="CurrancyCode" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ViewOfContract" ColumnName="ViewOfContract" />
+          <ScalarProperty Name="Contragent" ColumnName="Contragent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="NameAuto" ColumnName="NameAuto" />
+          <ScalarProperty Name="ColorOfBody" ColumnName="ColorOfBody" />
+          <ScalarProperty Name="modProdPeriod" ColumnName="modProdPeriod" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="catProdPeriod" ColumnName="catProdPeriod" />
+          <ScalarProperty Name="ColorOfSalon" ColumnName="ColorOfSalon" />
+          <ScalarProperty Name="BrendAuto" ColumnName="BrendAuto" />
+          <ScalarProperty Name="CodeOfBody" ColumnName="CodeOfBody" />
+          <ScalarProperty Name="NumberOfBody" ColumnName="NumberOfBody" />
+          <ScalarProperty Name="Sklad" ColumnName="Sklad" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Remnants___________________________________________________________________________________________________________00000000000A">
+      <EntityTypeMapping TypeName="tempdbModel.C_Remnants___________________________________________________________________________________________________________00000000000A">
+        <MappingFragment StoreEntitySet="#Remnants___________________________________________________________________________________________________________00000000000A">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Brend" ColumnName="Brend" />
+          <ScalarProperty Name="Articul" ColumnName="Articul" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Supplies" ColumnName="Supplies" />
+          <ScalarProperty Name="MethodDelivery" ColumnName="MethodDelivery" />
+          <ScalarProperty Name="Existence" ColumnName="Existence" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="V_P" ColumnName="V_P" />
+          <ScalarProperty Name="Min_Krat" ColumnName="Min_Krat" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="CurrancyCode" ColumnName="CurrancyCode" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ViewOfContract" ColumnName="ViewOfContract" />
+          <ScalarProperty Name="Contragent" ColumnName="Contragent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="NameAuto" ColumnName="NameAuto" />
+          <ScalarProperty Name="ColorOfBody" ColumnName="ColorOfBody" />
+          <ScalarProperty Name="modProdPeriod" ColumnName="modProdPeriod" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="catProdPeriod" ColumnName="catProdPeriod" />
+          <ScalarProperty Name="ColorOfSalon" ColumnName="ColorOfSalon" />
+          <ScalarProperty Name="BrendAuto" ColumnName="BrendAuto" />
+          <ScalarProperty Name="CodeOfBody" ColumnName="CodeOfBody" />
+          <ScalarProperty Name="NumberOfBody" ColumnName="NumberOfBody" />
+          <ScalarProperty Name="Sklad" ColumnName="Sklad" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

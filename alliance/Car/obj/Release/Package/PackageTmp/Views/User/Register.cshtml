@@ -1,0 +1,140 @@
+﻿@model Car.Users
+@{
+   ViewBag.Title = "Register";
+   Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="empty-box"></div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2><a href="#">Регистрация</a></h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>
+        </div>
+        <div class="right-column">
+            <div class="login">
+               
+                <h3 style="color:red; font-size:small; font-weight:bold;">
+                    Интернет-портал alliance-motors.kg предназначен для оптовых покупателей (B2B)
+                    <br>
+                    Перед регистрацией Вам необходимо связаться с торговым отделом компании Alliance Motors и заключить договор.<br>
+                    Регистрация доступна только для действующих клиентов компании Alliance Motors.<br>
+                    После регистрации обязательно свяжитесь со своим торговым представителем для прохождения авторизации.
+                </h3>
+
+                @Html.AntiForgeryToken()
+                @{
+                    string url = HttpContext.Current.Request.Url.AbsoluteUri;
+                    string path = HttpContext.Current.Request.Url.AbsolutePath;
+                    string searchstr1 = Request.Params["a"];
+                    <h3 style="color:red; font-size:small; font-weight:bold;">
+                        @(ViewContext.RouteData.Values["a"])
+                       @{ Uri myUri1 = new Uri(Request.Url.AbsoluteUri);
+                      string param2 = HttpUtility.ParseQueryString(myUri1.Query).Get("a"); }
+                        @if (param2 == "")
+                        {
+                            <div> @param2</div>
+                        }
+                        else
+                        {
+                            <div> @param2</div>
+                        }
+
+                     </h3>
+
+
+
+                        }
+
+
+
+                        @using (Html.BeginForm("Register", "User", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+                                <!--<h4>Users</h4>-->
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FamilyName, "Фамилия ", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.FamilyName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FamilyName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.FullName, "Имя", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.UserName, "Логин", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ContactPhone, "Телефон", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.ContactPhone, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ContactPhone, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Password, "Пароль", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ConfirmPassword, "Подтвердите пароль", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <h3 style="color:red; font-size: small; font-weight:bold;">Пожалуйста, не регистрируйтесь, если Вы не являетесь клиентом компании Alliance Motors.</h3>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Регистрировать" class="btn btn-default" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+</div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

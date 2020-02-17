@@ -1,0 +1,224 @@
+﻿@using Car.PhaetonService
+@using System.Web.Script.Services
+@using System.Web.UI
+@using System.ServiceModel.Web
+@using Car.ServicePhaeton1
+@using System.Data.Entity;
+
+
+@{
+    ViewBag.Title = "Original";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Car.Supplies
+
+
+
+
+<link href="@Url.Content("~/Content/")themes/base/all.css" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/")jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/")jquery-1.12.4.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("[data-autocomplete-source]").each(function () {
+            var target = $(this);
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });
+        });
+    });
+</script>
+<div class="bg-box">
+    <div class="container">
+
+        
+
+        <ul class="tabs">
+
+            <li>
+
+                <input type="radio" name="tabs" id="tab-1" checked>
+
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+     
+
+    </div>
+</div>
+
+
+
+<div class="context-box">
+    <div class="container clearfix">
+
+
+        <div class="login">
+          
+            <section class="content-wrapper main-content clear-fix">
+
+
+                <div class="rounded">
+
+
+
+                    <h2>Каталог оригинальных запчастей</h2>
+
+                    <h3>Модификации</h3>
+                    <p>Выберите нужный вариант автомобиля</p>
+                    <table style="width: 100%" class="modifications">
+
+                        <thead style="background-color: #f0ede7; font-size: 12px;">
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <th style="font-weight: normal;">Brand</th>
+                                <th style="font-weight: normal;">Name</th>
+                                <th style="font-weight: normal;">
+                                    Дата выпуска
+                                </th>
+                                <th style="font-weight: normal;">
+                                    Цвет кузова
+                                </th>
+                                <th style="font-weight: normal;">
+                                    modProdPeriod
+                                </th>
+                                <th style="font-weight: normal;">
+                                    Опции
+                                </th>
+                                <th style="font-weight: normal;">
+                                    Описание
+                                </th>
+                                <th style="font-weight: normal;">
+                                    Модель
+                                </th>
+                                <th style="font-weight: normal;">
+                                    catProdPeriod
+                                </th>
+                                <th style="font-weight: normal;">
+                                    Цвет салона
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                           @foreach (var vin in ViewBag.VinCode)
+                           {
+
+                               if (vin.BrendAuto == "NISSAN")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/nissan/?vin=";
+                               }
+                               if (vin.BrendAuto == "AUDIVW")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/audivw/?vin=";
+                               }
+                               if (vin.BrendAuto == "BMW")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/bmw/?vin=";
+                               }
+                               if (vin.BrendAuto == "HONDA")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/honda/?vin=";
+                               }
+                               if (vin.BrendAuto == "MAZDA")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/mazda/?vin=";
+                               }
+                               if (vin.BrendAuto == "MERCEDES")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/mercedes/?vin=";
+                               }
+                               if (vin.BrendAuto == "OPEL")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/opel/?vin=";
+                               }
+                               if (vin.BrendAuto == "SUBARU")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/subaru/?vin=";
+                               }
+                               if (vin.BrendAuto == "TOYOTA")
+                               {
+                                   ViewBag.Url = "http://catalog.alliance-motors.kg/toyota/?vin=";
+                               }
+
+                                  <a href="@ViewBag.Url@ViewBag.Vin">
+                                    <tr onclick="window.location.replace('@ViewBag.Url@ViewBag.Vin')">
+                                        <td>@vin.BrendAuto</td>
+                                        <td>@vin.NameAuto</td>
+                                        <td style="font-weight: normal;">
+                                            @vin.ReleaseDate
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.ColorOfBody
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.modProdPeriod
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.Options
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.Description
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.Model
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.catProdPeriod
+                                        </td>
+                                        <td style="font-weight: normal;">
+                                            @vin.ColorOfSalon
+                                        </td>
+                                    </tr>
+                                </a>
+                           }
+
+
+</tbody>
+                    </table>
+
+                </div>
+                <div class="clear-fix"></div>
+
+            </section>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

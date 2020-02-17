@@ -1,0 +1,1321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CARS_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UsersCARSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="CARS_Model.Clients" />
+    <EntitySet Name="FeedBack" EntityType="CARS_Model.FeedBack" />
+    <EntitySet Name="State" EntityType="CARS_Model.State" />
+    <EntitySet Name="Supplies" EntityType="CARS_Model.Supplies" />
+    <EntitySet Name="ViewOfMade" EntityType="CARS_Model.ViewOfMade" />
+    <EntitySet Name="ViewOfReport" EntityType="CARS_Model.ViewOfReport" />
+    <EntitySet Name="Contraagent" EntityType="CARS_Model.Contraagent" />
+    <AssociationSet Name="FK_Contraagent_Contraagent" Association="CARS_Model.FK_Contraagent_Contraagent">
+      <End Role="Contraagent" EntitySet="Contraagent" />
+      <End Role="Contraagent1" EntitySet="Contraagent" />
+    </AssociationSet>
+    <EntitySet Name="Sale" EntityType="CARS_Model.Sale" />
+    <AssociationSet Name="FK_Sale_Supplies" Association="CARS_Model.FK_Sale_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Sale" EntitySet="Sale" />
+    </AssociationSet>
+    <EntitySet Name="StatusesL" EntityType="CARS_Model.StatusesL" />
+    <EntitySet Name="NameOriginalAuto" EntityType="CARS_Model.NameOriginalAuto" />
+    <EntitySet Name="UrlAutoOriginal" EntityType="CARS_Model.UrlAutoOriginal" />
+    <EntitySet Name="DecoratedOrder" EntityType="CARS_Model.DecoratedOrder" />
+    <EntitySet Name="Orders" EntityType="CARS_Model.Orders" />
+    <AssociationSet Name="FK_Orders_Orders" Association="CARS_Model.FK_Orders_Orders">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <EntitySet Name="Discount" EntityType="CARS_Model.Discount" />
+    <EntitySet Name="RemoteStore" EntityType="CARS_Model.RemoteStore" />
+    <EntitySet Name="CurrancyCode" EntityType="CARS_Model.CurrancyCode" />
+    <EntitySet Name="Aksii" EntityType="CARS_Model.Aksii" />
+    <EntitySet Name="Blog" EntityType="CARS_Model.Blog" />
+    <EntitySet Name="Section" EntityType="CARS_Model.Section" />
+    <EntitySet Name="Users" EntityType="CARS_Model.Users" />
+    <AssociationSet Name="FK_Orders_Users" Association="CARS_Model.FK_Orders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <EntitySet Name="Brends" EntityType="CARS_Model.Brends" />
+    <AssociationSet Name="FK_Brends_Users" Association="CARS_Model.FK_Brends_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Brends" EntitySet="Brends" />
+    </AssociationSet>
+    <FunctionImport Name="usmSelectDiscountBrend" ReturnType="Collection(CARS_Model.usmSelectDiscountBrend_Result)">
+      <Parameter Name="Brend" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectSearch" ReturnType="Collection(CARS_Model.usmSelectSearch_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="sysdiagrams" EntityType="CARS_Model.sysdiagrams" />
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="usmSelectCurrancyCode" ReturnType="Collection(CARS_Model.usmSelectCurrancyCode_Result)" />
+    <FunctionImport Name="usmSelectNameOriginalAuto" ReturnType="Collection(CARS_Model.usmSelectNameOriginalAuto_Result)" />
+    <FunctionImport Name="usmSelectUserID" ReturnType="Collection(CARS_Model.usmSelectUserID_Result)">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllRemnants" ReturnType="Collection(CARS_Model.usmSelectAllRemnants_Result)" />
+    <EntitySet Name="Vacancies" EntityType="CARS_Model.Vacancies" />
+    <FunctionImport Name="uspBrendInsert">
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="Producer" Mode="In" Type="String" />
+      <Parameter Name="Caption" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectBrendPhaeton" ReturnType="Collection(CARS_Model.usmSelectBrendPhaeton_Result)">
+      <Parameter Name="BrendName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectBrendPhaetonByID" ReturnType="Collection(CARS_Model.usmSelectBrendPhaetonByID_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllRemnantsByStore000000001" ReturnType="Collection(CARS_Model.usmSelectAllRemnantsByStore000000001_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllRemnantsByStore000000002" ReturnType="Collection(CARS_Model.usmSelectAllRemnantsByStore000000002_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllRemnantsByStore000000005" ReturnType="Collection(CARS_Model.usmSelectAllRemnantsByStore000000005_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllRemnantsByStore000000006" ReturnType="Collection(CARS_Model.usmSelectAllRemnantsByStore000000006_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="PhaetonBrends" EntityType="CARS_Model.PhaetonBrends" />
+    <FunctionImport Name="usmSelectBrendPhaeton1" ReturnType="Collection(CARS_Model.usmSelectBrendPhaeton1_Result)">
+      <Parameter Name="BrendName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectBrendPhaetonByID1" ReturnType="Collection(CARS_Model.usmSelectBrendPhaetonByID1_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Remnants" EntityType="CARS_Model.Remnants" />
+    <AssociationSet Name="FK_Remnants_Supplies" Association="CARS_Model.FK_Remnants_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Remnants" EntitySet="Remnants" />
+    </AssociationSet>
+    <FunctionImport Name="usmSelectSaleByArticul" ReturnType="Collection(CARS_Model.usmSelectSaleByArticul_Result)">
+      <Parameter Name="Articul" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmAllianceSelectAllRemnantsByStore000000001" ReturnType="Collection(CARS_Model.usmAllianceSelectAllRemnantsByStore000000001_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmAllianceSelectAllRemnantsByStore000000002" ReturnType="Collection(CARS_Model.usmAllianceSelectAllRemnantsByStore000000002_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmAllianceSelectAllRemnantsByStore000000005" ReturnType="Collection(CARS_Model.usmAllianceSelectAllRemnantsByStore000000005_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmAllianceSelectAllRemnantsByStore000000006" ReturnType="Collection(CARS_Model.usmAllianceSelectAllRemnantsByStore000000006_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllRemnantsByStoreMinSklad" ReturnType="Collection(CARS_Model.usmSelectAllRemnantsByStoreMinSklad_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usm_TempTableAnalogRemnantsInsert">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="NumOfAnalog" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspAllianceTempTableAnalog">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="NumOfAnalog" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspAllianceTempTableAnalog1" ReturnType="Collection(CARS_Model.uspAllianceTempTableAnalog1_Result)" />
+    <FunctionImport Name="usm_AnalogRemnantsInsert1">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="NumOfAnalog" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usm_AnalogRemnantsInsert">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="NumOfAnalog" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usmAnalogRemnantsInsert_1" ReturnType="Collection(CARS_Model.usmAnalogRemnantsInsert_1_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="NumOfAnalog" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usmAnalogRemnantsInsert_Array1" />
+    <FunctionImport Name="usmAnalogRemnantsInsert_Array" />
+    <FunctionImport Name="usmAnalogInsert_Array" />
+    <FunctionImport Name="usmAnalogInsert_Array1" />
+    <FunctionImport Name="usmAnalogInsert_Array_2" />
+    <FunctionImport Name="usmAnalogInsert_Array_new" />
+    <FunctionImport Name="usmAnalogInsert_Array_new1" />
+    <FunctionImport Name="usmAnalogInsert_Array_2new" />
+    <EntitySet Name="Analogue" EntityType="CARS_Model.Analogue" />
+    <EntitySet Name="Analogs" EntityType="CARS_Model.Analogs" />
+    <FunctionImport Name="usmSelectAllAnalogsMinSklad" ReturnType="Collection(CARS_Model.usmSelectAllAnalogsMinSklad_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usmSelectAllAnalogsMinSklad1" ReturnType="Collection(CARS_Model.usmSelectAllAnalogsMinSklad1_Result)">
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="BrendProducer" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FeedBack">
+    <Key>
+      <PropertyRef Name="FeedBackId" />
+    </Key>
+    <Property Name="FeedBackId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobilleNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Supplies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameGood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Sale" Relationship="CARS_Model.FK_Sale_Supplies" FromRole="Supplies" ToRole="Sale" />
+    <NavigationProperty Name="Orders" Relationship="CARS_Model.FK_Orders_Orders" FromRole="Supplies" ToRole="Orders" />
+    <NavigationProperty Name="Remnants" Relationship="CARS_Model.FK_Remnants_Supplies" FromRole="Supplies" ToRole="Remnants" />
+  </EntityType>
+  <EntityType Name="ViewOfMade">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ViewMade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewOfReport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Contraagent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Contragent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contraagent1" Relationship="CARS_Model.FK_Contraagent_Contraagent" FromRole="Contraagent" ToRole="Contraagent1" />
+    <NavigationProperty Name="Contraagent2" Relationship="CARS_Model.FK_Contraagent_Contraagent" FromRole="Contraagent1" ToRole="Contraagent" />
+  </EntityType>
+  <Association Name="FK_Contraagent_Contraagent">
+    <End Type="CARS_Model.Contraagent" Role="Contraagent" Multiplicity="1" />
+    <End Type="CARS_Model.Contraagent" Role="Contraagent1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contraagent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contraagent1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NameGood" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Clients" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Adaptation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sales" Type="Double" />
+    <NavigationProperty Name="Supplies1" Relationship="CARS_Model.FK_Sale_Supplies" FromRole="Sale" ToRole="Supplies" />
+  </EntityType>
+  <Association Name="FK_Sale_Supplies">
+    <End Type="CARS_Model.Supplies" Role="Supplies" Multiplicity="0..1" />
+    <End Type="CARS_Model.Sale" Role="Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sale">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StatusesL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsCheck" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NameOriginalAuto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameAuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UrlAutoOriginal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrlAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DecoratedOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NameGood" Type="String" MaxLength="500" FixedLength="false" Unicode="false" ConcurrencyMode="None" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Clients" Type="Int32" />
+    <Property Name="NumOrder" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="VIN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Service" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Supplies1" Relationship="CARS_Model.FK_Orders_Orders" FromRole="Orders" ToRole="Supplies" />
+    <Property Name="Sklad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="PriceAfterDiscount" Type="Double" />
+    <Property Name="DateDiscount" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Users" Relationship="CARS_Model.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Orders_Orders">
+    <End Type="CARS_Model.Supplies" Role="Supplies" Multiplicity="0..1" />
+    <End Type="CARS_Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Discount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Contraget" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name_Contragent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Discount1" Type="Double" />
+    <Property Name="DateBegin" Type="DateTime" Precision="0" />
+    <Property Name="DateEnd" Type="DateTime" Precision="0" />
+    <Property Name="Name_Artikul" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name_Sklad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name_Service" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LimitPrice" Type="Double" />
+  </EntityType>
+  <EntityType Name="RemoteStore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Service" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Client" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CurrancyCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="Double" />
+    <Property Name="ValueToSom" Type="Double" />
+    <Property Name="CodeCur" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aksii">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BasePic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TitleText" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ShortDescription" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="FullPic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FullDescription" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BasePic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TitleText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FullPic" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FullDescription" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameOfSection" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FamilyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Service" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Discount" Type="Int32" />
+    <NavigationProperty Name="Orders" Relationship="CARS_Model.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
+    <Property Name="DiscountPhaeton" Type="Int32" />
+    <Property Name="DiscountStore" Type="Int32" />
+    <NavigationProperty Name="Brends" Relationship="CARS_Model.FK_Brends_Users" FromRole="Users" ToRole="Brends" />
+  </EntityType>
+  <Association Name="FK_Orders_Users">
+    <End Type="CARS_Model.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="CARS_Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="Clients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Brends">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrendName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="Users" Relationship="CARS_Model.FK_Brends_Users" FromRole="Brends" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Brends_Users">
+    <End Type="CARS_Model.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="CARS_Model.Brends" Role="Brends" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Brends">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usmSelectDiscountBrend_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="BrendName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Discount" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usmSelectSearch_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="usmSelectCurrancyCode_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="150" />
+    <Property Type="Double" Name="Value" Nullable="true" />
+    <Property Type="Double" Name="ValueToSom" Nullable="true" />
+    <Property Type="Int32" Name="CodeCur" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usmSelectNameOriginalAuto_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usmSelectUserID_Result">
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="FamilyName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UserRole" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Service" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Discount" Nullable="true" />
+    <Property Type="Int32" Name="DiscountPhaeton" Nullable="true" />
+    <Property Type="Int32" Name="DiscountStore" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllRemnants_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <EntityType Name="Vacancies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Demands" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Duties" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WorkConditions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="usmSelectBrendPhaeton_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="BrendName" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectBrendPhaetonByID_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="BrendName" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Discount" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllRemnantsByStore000000001_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllRemnantsByStore000000002_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllRemnantsByStore000000005_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllRemnantsByStore000000006_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <EntityType Name="PhaetonBrends">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrendName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Markup" Type="Double" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="usmSelectBrendPhaeton1_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="BrendName" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Markup" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectBrendPhaetonByID1_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="BrendName" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Markup" Nullable="true" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <EntityType Name="Remnants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sale" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Supplies1" Relationship="CARS_Model.FK_Remnants_Supplies" FromRole="Remnants" ToRole="Supplies" />
+  </EntityType>
+  <Association Name="FK_Remnants_Supplies">
+    <End Type="CARS_Model.Supplies" Role="Supplies" Multiplicity="0..1" />
+    <End Type="CARS_Model.Remnants" Role="Remnants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Remnants">
+        <PropertyRef Name="Supplies" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usmSelectSaleByArticul_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NameGood" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="Int32" Name="Clients" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="Adaptation" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Sales" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usmAllianceSelectAllRemnantsByStore000000001_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmAllianceSelectAllRemnantsByStore000000002_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmAllianceSelectAllRemnantsByStore000000005_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmAllianceSelectAllRemnantsByStore000000006_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllRemnantsByStoreMinSklad_Result">
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="Expr1" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sale" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="uspAllianceTempTableAnalog1_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sale" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmAnalogRemnantsInsert_1_Result">
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="Expr1" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sale" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <EntityType Name="Analogue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sale" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Analogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Brend" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Articul" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Supplies" Type="Int32" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Existence" Type="Int32" />
+    <Property Name="Days" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="V_P" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Min_Krat" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="VIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrancyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="ViewOfContract" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contragent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+    <Property Name="NameAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="modProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Options" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="catProdPeriod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColorOfSalon" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAuto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NumberOfBody" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sklad" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sale" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BrendAnalog" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CodeAnalog" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="usmSelectAllAnalogsMinSklad_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sale" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Expr1" Nullable="false" />
+    <Property Type="String" Name="Expr2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr3" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr4" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr5" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Expr6" Nullable="true" />
+    <Property Type="String" Name="Expr7" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Expr8" Nullable="true" />
+    <Property Type="String" Name="Expr9" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr10" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Expr11" Nullable="true" />
+    <Property Type="Double" Name="Expr12" Nullable="true" />
+    <Property Type="String" Name="Expr13" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Expr14" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Expr15" Nullable="true" />
+    <Property Type="String" Name="Expr16" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr17" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr18" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="Expr19" Nullable="true" />
+    <Property Type="String" Name="Expr20" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr21" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr22" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr23" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr24" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr25" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr26" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr27" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr28" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr29" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr30" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr31" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr32" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAnalog" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeAnalog" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="usmSelectAllAnalogsMinSklad1_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Brend" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Articul" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Supplies" Nullable="true" />
+    <Property Type="String" Name="MethodDelivery" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Existence" Nullable="true" />
+    <Property Type="String" Name="Days" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="V_P" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Min_Krat" Nullable="true" />
+    <Property Type="Double" Name="Price" Nullable="true" />
+    <Property Type="String" Name="VIN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CurrancyCode" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="ViewOfContract" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Contragent" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="true" />
+    <Property Type="String" Name="NameAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="modProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Model" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="catProdPeriod" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ColorOfSalon" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAuto" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="NumberOfBody" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sklad" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Sale" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Expr1" Nullable="false" />
+    <Property Type="String" Name="Expr2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr3" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr4" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr5" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Expr6" Nullable="true" />
+    <Property Type="String" Name="Expr7" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Expr8" Nullable="true" />
+    <Property Type="String" Name="Expr9" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr10" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="Expr11" Nullable="true" />
+    <Property Type="Double" Name="Expr12" Nullable="true" />
+    <Property Type="String" Name="Expr13" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Expr14" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Expr15" Nullable="true" />
+    <Property Type="String" Name="Expr16" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr17" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr18" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="Expr19" Nullable="true" />
+    <Property Type="String" Name="Expr20" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr21" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr22" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr23" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr24" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr25" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr26" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr27" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr28" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr29" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr30" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr31" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Expr32" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="BrendAnalog" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CodeAnalog" Nullable="true" MaxLength="500" />
+  </ComplexType>
+</Schema>

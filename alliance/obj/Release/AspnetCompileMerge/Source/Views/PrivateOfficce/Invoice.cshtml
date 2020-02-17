@@ -1,0 +1,217 @@
+﻿@model Car.Models.DateFilter
+
+@{
+    ViewBag.Title = "AllOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="empty-box"></div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2>Накладные</h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>
+        </div>
+        <div class="right-column">
+
+            <div class="login">
+
+                <table style="width:100%;">
+                    <tbody>
+                        @using (Html.BeginForm("Invoice", "PrivateOfficce", FormMethod.Get))
+                        {
+
+                            <tr>
+                                <td style="width: 100px;">Вид договора - </td>
+                                <td colspan="2">
+
+                                    @Html.DropDownList("SelectedContract",
+new SelectList(ViewBag.UniqueContract, "Value", "Text", "ViewBag.SelectedContract"), "All",
+new { onchange = "form.submit();" })
+                                </td>
+
+                            </tr>
+                            <tr style="height:10px;"></tr>
+                            <tr>
+                                <td style="width: 100px;">Контрагент - </td>
+                                <td colspan="2">
+                                    @Html.DropDownList("SelectedContragent",
+new SelectList(ViewBag.UniqueContragent, "Value", "Text", "ViewBag.SelectedContragent"), "All",
+new { onchange = "form.submit();" })
+                                </td>
+                            </tr>
+                            <tr style="height:10px;"></tr>
+                            <tr>
+
+
+
+                                <td>Дата с - </td>
+                                <td>
+
+                                @Html.TextBox("DateFrom", DateTime.Today.Date.GetDateTimeFormats()[3], new { @id = "txtdatepicker", @style = "width:150px;" })
+
+                               </td>
+                            </tr>
+                            <tr style="height:10px;"></tr>
+
+                            <tr>
+                                <td>Дата по - </td>
+                                <td>
+                                @Html.TextBox("DateTo", DateTime.Today.Date.GetDateTimeFormats()[3], new { @id = "txtdatepicker", @style = "width:150px;" })
+ 
+                                </td>
+                            </tr>
+                              <tr style="height:10px;"></tr>
+                            <tr>
+                                <td colspan="2"><input type="submit" value="Поиск"/></td>
+                            </tr>}
+
+                    </tbody>
+                </table>
+
+
+                <table class="resultstable">
+                    <tbody>
+
+
+                        <tr>
+                            <th>
+                                Номер
+                            </th>
+                            <th>
+                                Дата
+                            </th>
+                            <th>
+                                Контрагент
+                            </th>
+                            <th>
+                                Наименование
+                            </th>
+                            <th>
+                                Количество
+                            </th>
+                            <th>
+                                Сумма
+                            </th>
+                            <th>
+                                Склад
+                            </th>
+                            <th>
+                                Статус
+                            </th>
+                            <th></th>
+                        </tr>
+
+
+                      
+
+                        
+
+
+                      
+                        @foreach (var prod in ViewBag.AllOrders)
+                        {
+                            if ((ViewBag.SelectedContragent == prod.Contragent && ViewBag.SelectedContract == "") ||
+                                        (ViewBag.SelectedContract == prod.ViewOfContract && ViewBag.SelectedContragent == "") ||
+                             (prod.Contragent == ViewBag.SelectedContragent && prod.ViewOfContract == ViewBag.SelectedContract))
+                            {
+
+
+
+
+                                <tr class="trhover">
+                                    <td>
+                                        P0000764599
+                                    </td>
+                                    <td>
+                                        @prod.Date
+                                    </td>
+                                    <td>
+                                        @prod.Contragent
+                                    </td>
+                                    <td style="text-align: right;">
+                                        1
+                                    </td>
+                                    <td style="text-align: right;">
+                                        @prod.Existence
+                                    </td>
+                                    <td style="text-align: right;">
+                                        @prod.Price
+                                    </td>
+                                    <td>
+                                        Астана
+                                    </td>
+                                    <td>
+                                        @prod.Status
+                                    </td>
+                                    <td class="tdbutton">
+                                        <a href="#">Перейти</a>
+                                    </td>
+                                </tr>
+                            }
+
+
+                            if (ViewBag.SelectedContract == "" && ViewBag.SelectedContragent == "")
+                            {
+
+                              
+
+                                    <tr class="trhover">
+                                        <td>
+                                            P0000764599
+                                        </td>
+                                        <td>
+                                            @prod.Date
+                                        </td>
+                                        <td>
+                                            @prod.Contragent
+                                        </td>
+                                        <td style="text-align: right;">
+                                            1
+                                        </td>
+                                        <td style="text-align: right;">
+                                            @prod.Existence
+                                        </td>
+                                        <td style="text-align: right;">
+                                            @prod.Price
+                                        </td>
+                                        <td>
+                                            Астана
+                                        </td>
+                                        <td>
+                                            @prod.Status
+                                        </td>
+                                        <td class="tdbutton">
+                                            <a href="#">Перейти</a>
+                                        </td>
+                                    </tr>
+
+                                
+                            }
+
+
+                        }
+                    </tbody>
+                </table>
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+

@@ -1,0 +1,96 @@
+﻿@model List<Car.Blog>
+
+<div class="bg-box">
+    <div class="container">
+
+        <ul class="tabs">
+
+            <li>
+
+                <input type="radio" name="tabs" id="tab-1" checked>
+
+                <label for="tab-1">
+                    Быстрый поиск
+                </label>
+                <div class="tab-content">
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+
+                            @Html.TextBox("Part", null, new { data_autocomplete_source = @Url.Action("AutocompleteSearch", "Home") })
+                            <a href="#" class="btn"><input type="submit" name="SearchStore" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" id="tab-2">
+
+                <label for="tab-2">
+
+                    VIN запрос
+
+                </label>
+                <div class="tab-content">
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                        <div class="search-box1">
+                            @Html.TextBox("Vin")
+                            @Html.DropDownList("SelectedAuto", new SelectList(ViewBag.UniqueAuto, "Value", "Text", "ViewBag.Auto"), "Выберите модель по параметрам")
+                            <a href="#" class="btn" style="color:white"><input type="submit" name="SearchVin" value="Поиск" /></a>
+                        </div>
+                    }
+                </div>
+            </li>
+
+        </ul>
+
+
+    </div>
+</div>
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2><a href="about.html">Новости</a></h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            @*<a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>*@
+        </div>
+        <div class="right-column">
+            <div class="row">
+                @{
+                 if (Model != null)
+                    {
+                        int j = 0;
+                        for (int i = 0; i < Model.Count(); i += 4)
+                        {
+                           j = i;
+                            while (j < i + 4 && j < Model.Count())
+                            {
+                               <div class="news-block">
+                                    <div class="disc-news">
+                                        <h3>@Html.Raw(Model[j].TitleText)</h3>
+                                        <p>@Html.Raw(Model[j].ShortDescription)</p>
+                                    @Html.ActionLink("Подробнее", "GoToBlog", "Home", new { NumBlog = @Model[j].Id, @class="btn2" }, null)
+                                    </div>
+                                    <div class="img-wrapper">
+                                        <a href="#">
+                                            @if (Model[j].BasePic != null)
+                                            {
+                                              <img src="data:image/png;base64, @Convert.ToBase64String(Model[j].BasePic,0,Model[j].BasePic.Length)" class="logo_img"  height="349" width="579" alt=""/>
+                                            }
+                                        </a>
+                                     </div>
+                                </div>                                                           
+                                j++;
+                            }
+                        }
+                    }
+                }
+       
+           @*<a href="#" class="baner-link"><img src="@Url.Content("~/Content/")upload/baner3.jpg" height="140" width="880" alt=""></a>*@
+            </div>
+        </div>
+    </div>
+</div>
+

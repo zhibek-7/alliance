@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmRegister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Car.Controllers;
+
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Admire</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="@Url.Content("~/Content/")img/logo1.ico" />
+    <!--global styles-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/")css/components.css" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/")css/custom.css" />
+    <!-- end of global styles-->
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/")vendors/c3/css/c3.min.css" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/")vendors/toastr/css/toastr.min.css" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/")vendors/switchery/css/switchery.min.css" />
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/")css/pages/new_dashboard.css" />
+    <link type="text/css" rel="stylesheet" href="#" id="skin_change" />
+</head>
+<body class="body">
+
+    <div class="bg-dark" id="wrap">
+
+        <!-- /#top -->
+        <div class="wrapper">
+            <div id="left">
+                <div class="media user-media bg-dark dker">
+                    <div class="user-media-toggleHover">
+                        <span class="fa fa-user"></span>
+                    </div>
+
+                </div>
+                <!-- #menu -->
+                <ul id="menu" class="bg-blue dker">
+                    <li class="active">
+                        @Html.ActionLink("Все пользователи", "AllUsers", "AdminPanel")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Новости", "Blog", "AdminPanel")
+                    </li>
+                    <li>
+                        @Html.ActionLink("О нас", "About", "AdminPanel")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Акции", "DescriptionFullAksii", "AdminPanel")
+
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("Вакансии", "Vacancies", "AdminPanel")
+
+
+                    </li>
+
+
+                </ul>
+                <!-- /#menu -->
+            </div>
+            <!-- /#left -->
+            <div id="content" class="bg-container">
+
+
+
+                <div class="empty-box"></div>
+
+                <div class="context-box">
+                    <div class="container clearfix">
+                        <div class="left-column">
+                            <h1>Все пользователи</h1>
+
+                        </div>
+                        <div class="right-column">
+                        </div>      <div class="login">
+
+
+         
+
+                            <table class="basketstable">
+
+                                <tbody>
+                                    <tr dataid="0" style="font-weight: bold; font-size: 0.9em;">
+
+                                        <td class="tdhiddenware">Id</td>
+                                        <td style="width: 100px;">Фамилия</td>
+                                        <td style="width: 200px;">Имя</td>
+                                        <td>Логин</td>
+                                        <td style="width: 50px;">Телефон</td>
+                                        <td>Email</td>
+                                        <td>UserRole</td>
+                                        <td></td>
+                                    </tr>
+
+                                    @if (ViewBag.AllUsersForAdmin != null)
+                                    {
+                                        foreach (Users item in ViewBag.AllUsersForAdmin)
+                                        {
+                                            <tr class="trhoverbasket trhoveronbasket" dataid="">
+
+                                                <td class="tdhiddenware">@item.UserId</td>
+                                                <td>@item.FamilyName</td>
+                                                <td>@item.FullName</td>
+                                                <td presence="yes">@item.UserName</td>
+                                                <td style="padding: 0;">
+                                                    @item.ContactPhone
+                                                </td>
+                                                <td>@item.Email</td>
+                                                <td style="text-align: right;">
+                                                    @item.UserRole
+                                                </td>
+                                                @*<td class="tdrigthware" style="width: 110px;">
+                                                        @Html.ActionLink("", "DeleteUser", "AdminPanel", new { id = item.UserId }, null)
+                                                    </td>*@
+                                                <td class="tdhiddencatright">
+                                                    @Html.ActionLink("Редактировать", "EditUser", "AdminPanel", new { id = item.UserId }, null)
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <!--wrapper-->
+        <!-- # right side -->
+    </div>
+    <!-- /#wrap -->
+    <!-- global scripts-->
+    <script type="text/javascript" src="@Url.Content("~/Content/")js/components.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")js/custom.js"></script>
+    <!-- global scripts end-->
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/raphael/js/raphael-min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/d3/js/d3.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/c3/js/c3.min.js"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/switchery/js/switchery.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotchart/js/jquery.flot.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotchart/js/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotchart/js/jquery.flot.stack.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotchart/js/jquery.flot.time.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotspline/js/jquery.flot.spline.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotchart/js/jquery.flot.categories.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flotchart/js/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/jquery_newsTicker/js/newsTicker.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/")vendors/countUp.js/js/countUp.min.js"></script>
+    <!--end of plugin scripts-->
+    <script type="text/javascript" src="@Url.Content("~/Content/")js/pages/new_dashboard.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

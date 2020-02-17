@@ -1,0 +1,104 @@
+﻿
+@model Car.FeedBack
+
+@{
+    ViewBag.Title = "Submit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="empty-box"></div>
+
+<div class="context-box">
+    <div class="container clearfix">
+        <div class="left-column">
+            <h2><a href="#">Обратная связь</a></h2>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner.jpg" height="400" width="240" alt=""></a>
+            <a href="#" class="baner"><img src="@Url.Content("~/Content/")upload/baner2.jpg" height="400" width="240" alt=""></a>
+        </div>
+        <div class="right-column">
+
+         <div class="login">
+
+
+             @using (Html.BeginForm("Submit", "FeedBack", FormMethod.Post))
+             {
+                 @Html.AntiForgeryToken()
+                 @Html.ValidationSummary(true);
+                 <div class="form-horizontal">
+                     
+                     @if (ViewBag.Message != null)
+                     {
+
+                         <div style="border:solid 1px black">
+                             @ViewBag.Message
+
+                         </div>
+                     }
+
+
+
+                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                     <div class="form-group">
+                       
+                         @Html.LabelFor(model => model.FullName, "Имя", htmlAttributes: new { @class = "control-label col-md-2" })
+                         <div class="col-md-10">
+                             @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                             @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                         </div>
+                     </div>
+
+                     <div class="form-group">
+                         @Html.LabelFor(model => model.Email, "E-mail", htmlAttributes: new { @class = "control-label col-md-2" })
+                         <div class="col-md-10">
+                             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                         </div>
+                     </div>
+
+                     <div class="form-group">
+                         @Html.LabelFor(model => model.MobilleNo, "Телефон", htmlAttributes: new { @class = "control-label col-md-2" })
+                         <div class="col-md-10">
+                             @Html.EditorFor(model => model.MobilleNo, new { htmlAttributes = new { @class = "form-control" } })
+                             @Html.ValidationMessageFor(model => model.MobilleNo, "", new { @class = "text-danger" })
+                         </div>
+                     </div>
+
+                     <div class="form-group">
+                         @Html.LabelFor(model => model.StateID, "Город", htmlAttributes: new { @class = "control-label col-md-2" })
+
+                         <div class="col-md-10">
+                             @Html.DropDownListFor(model => model.StateID, @ViewBag.StateId as SelectList, "Выберите город")
+                             @Html.ValidationMessageFor(model => model.StateID)
+                         </div>
+
+                     </div>
+
+                     <div class="form-group">
+                         @Html.LabelFor(model => model.Message, "Сообщение", htmlAttributes: new { @class = "control-label col-md-2" })
+                         <div class="col-md-10">
+                             @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                             @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                         </div>
+                     </div>
+
+                     <div class="form-group">
+                         <div class="col-md-offset-2 col-md-10">
+                             <input type="submit" value="Отправить" class="btn btn-default" />
+                         </div>
+                     </div>
+                 </div>
+             }
+
+            </div>
+
+        
+        
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

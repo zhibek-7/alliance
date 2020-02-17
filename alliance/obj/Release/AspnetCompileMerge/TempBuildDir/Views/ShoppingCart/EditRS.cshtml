@@ -1,0 +1,75 @@
+﻿
+@model  List<Car.Controllers.ItemRemoteStore>
+<div class="modal-content">
+    <div class="login">
+
+        <section class="content-wrapper main-content clear-fix">
+
+
+            <div class="rounded">
+
+
+                <h2>Изменение количества</h2>
+
+            @using (Html.BeginForm("EditRS", "ShoppingCart", FormMethod.Post))
+            {
+                    <fieldset>
+                        <div class="editor-label">
+                            <label for="quant">Количество</label>
+                        </div>
+                        <div class="editor-field">
+                           @Html.Editor("quant")
+                        </div>
+                        <p>
+                          <input type="submit" value="Сохранить">
+                       </p>
+                    </fieldset>
+                }
+            </div>
+            <div class="clear-fix"></div>
+
+        </section>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="modal-content">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal" area-hidden="true">X</button>
+        <h4>Модель компьютера</h4>
+    </div>
+    <div class="modal-body">
+        <dl class="dl-horizontal">
+            <dt>Название модели:</dt>
+            <dd>ffffffffffffffffffffff</dd>
+
+            <dt>Производитель</dt>
+            <dd>eeeeeeeeeeeeeeeee</dd>
+
+            <dt>Год выпуска</dt>
+            <dd>ffffffffffffff</dd>
+        </dl>
+    </div>
+</div>*@
+
+
+
+
+
+
+
+

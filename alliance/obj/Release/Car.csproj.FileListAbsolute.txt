@@ -1,0 +1,827 @@
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ApplicationInsights.config
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\csc.exe
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\vbc.exe
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\VBCSCompiler.exe
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Car.dll.config
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Car.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Car.pdb
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Antlr3.Runtime.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\EntityFramework.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\EntityFramework.SqlServer.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.Web.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.ApplicationInsights.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Newtonsoft.Json.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Owin.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Helpers.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Mvc.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Optimization.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Razor.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.WebPages.Deployment.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.WebPages.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.WebPages.Razor.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\WebGrease.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.Web.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.ApplicationInsights.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Helpers.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Mvc.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Optimization.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.Razor.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.WebPages.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.WebPages.Deployment.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\System.Web.WebPages.Razor.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Antlr3.Runtime.pdb
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Newtonsoft.Json.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\EntityFramework.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\EntityFramework.SqlServer.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.Razor.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\EntityFramework.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\obj\Release\Car.dll
+D:\alliance-motors\Car 30 06 2017_2\Car 01 02 2017_1\Car 30 01 2017\Car 24 01 2017\Car 23 12 2016\Car 24 11 2016\Car 03 10 2016\Car\obj\Release\Car.pdb
+D:\alliance-motors\Car 03 10 2016\Car\bin\ApplicationInsights.config
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\csc.exe
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\vbc.exe
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\VBCSCompiler.exe
+D:\alliance-motors\Car 03 10 2016\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\alliance-motors\Car 03 10 2016\Car\bin\Car.dll.config
+D:\alliance-motors\Car 03 10 2016\Car\bin\Car.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Car.pdb
+D:\alliance-motors\Car 03 10 2016\Car\bin\Antlr3.Runtime.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\EntityFramework.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\EntityFramework.SqlServer.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.Web.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.ApplicationInsights.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Newtonsoft.Json.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Owin.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Helpers.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Mvc.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Optimization.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Razor.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.WebPages.Deployment.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.WebPages.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.WebPages.Razor.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\WebGrease.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.Web.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.ApplicationInsights.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Helpers.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Mvc.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Optimization.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.Razor.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.WebPages.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.WebPages.Deployment.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\System.Web.WebPages.Razor.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Antlr3.Runtime.pdb
+D:\alliance-motors\Car 03 10 2016\Car\bin\Newtonsoft.Json.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\EntityFramework.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\EntityFramework.SqlServer.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.Razor.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\EntityFramework.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\alliance-motors\Car 03 10 2016\Car\obj\Release\Car.dll
+D:\alliance-motors\Car 03 10 2016\Car\obj\Release\Car.pdb
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ApplicationInsights.config
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\csc.exe
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\vbc.exe
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\VBCSCompiler.exe
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Car.dll.config
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Car.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Car.pdb
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Antlr3.Runtime.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\EntityFramework.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\EntityFramework.SqlServer.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.Web.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.ApplicationInsights.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Newtonsoft.Json.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Owin.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Helpers.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Mvc.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Optimization.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Razor.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.WebPages.Deployment.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.WebPages.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.WebPages.Razor.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\WebGrease.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.Web.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.ApplicationInsights.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Helpers.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Mvc.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Optimization.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.Razor.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.WebPages.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.WebPages.Deployment.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\System.Web.WebPages.Razor.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Antlr3.Runtime.pdb
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Newtonsoft.Json.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\EntityFramework.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\EntityFramework.SqlServer.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.Razor.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\obj\Release\Car.csprojResolveAssemblyReference.cache
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\obj\Release\Car.csproj.CoreCompileInputs.cache
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\obj\Release\Car.dll
+D:\Zhibek\_alliance-motors\Car 20 09 2017\Car\obj\Release\Car.pdb
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ApplicationInsights.config
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\csc.exe
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\vbc.exe
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\VBCSCompiler.exe
+D:\Zhibek\_alliance-motors\alliance\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Car.dll.config
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Car.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Car.pdb
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Antlr3.Runtime.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\EntityFramework.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\EntityFramework.SqlServer.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.Web.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.ApplicationInsights.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Newtonsoft.Json.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Owin.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Helpers.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Mvc.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Optimization.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Razor.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.WebPages.Deployment.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.WebPages.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.WebPages.Razor.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\WebGrease.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.Web.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.ApplicationInsights.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Helpers.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Mvc.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Optimization.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.Razor.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.WebPages.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.WebPages.Deployment.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\System.Web.WebPages.Razor.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Antlr3.Runtime.pdb
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Newtonsoft.Json.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\EntityFramework.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\EntityFramework.SqlServer.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.Razor.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Zhibek\_alliance-motors\alliance\Car\obj\Release\Car.csprojResolveAssemblyReference.cache
+D:\Zhibek\_alliance-motors\alliance\Car\obj\Release\Car.csproj.CoreCompileInputs.cache
+D:\Zhibek\_alliance-motors\alliance\Car\obj\Release\Car.dll
+D:\Zhibek\_alliance-motors\alliance\Car\obj\Release\Car.pdb
+D:\Zhibek\_alliance-motors\alliance\Car\bin\DevTrends.MvcDonutCaching.dll
+D:\Zhibek\_alliance-motors\alliance\Car\bin\DevTrends.MvcDonutCaching.pdb
+D:\Zhibek\_alliance-motors\alliance\Car\bin\DevTrends.MvcDonutCaching.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ApplicationInsights.config
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\csc.exe
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\vbc.exe
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\VBCSCompiler.exe
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Car.dll.config
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Car.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Car.pdb
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Antlr3.Runtime.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.SqlServer.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Web.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.ApplicationInsights.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Newtonsoft.Json.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Helpers.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Mvc.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Optimization.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Razor.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Deployment.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Razor.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\WebGrease.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.pdb
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Web.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.ApplicationInsights.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Helpers.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Mvc.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Optimization.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.Razor.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Deployment.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Razor.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Antlr3.Runtime.pdb
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Newtonsoft.Json.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.SqlServer.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Razor.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\obj\Release\Car.csprojResolveAssemblyReference.cache
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\obj\Release\Car.csproj.CoreCompileInputs.cache
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\obj\Release\Car.dll
+D:\Zhibek\_alliance-motors\4y\alliance26 02 2018_1\alliance\Car\obj\Release\Car.pdb
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ApplicationInsights.config
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\csc.exe
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\vbc.exe
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\VBCSCompiler.exe
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Car.dll.config
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Car.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Car.pdb
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Antlr3.Runtime.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.SqlServer.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Web.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.ApplicationInsights.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Newtonsoft.Json.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Helpers.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Mvc.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Optimization.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Razor.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Deployment.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Razor.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\WebGrease.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.pdb
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Web.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.ApplicationInsights.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Helpers.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Mvc.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Optimization.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Razor.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Deployment.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Razor.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Antlr3.Runtime.pdb
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Newtonsoft.Json.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.SqlServer.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Razor.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.csprojResolveAssemblyReference.cache
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.csproj.CoreCompileInputs.cache
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.dll
+D:\Zhibek\_alliance-motors\4y\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.pdb
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ApplicationInsights.config
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\csc.exe
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\vbc.exe
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\VBCSCompiler.exe
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Car.dll.config
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Car.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Car.pdb
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Antlr3.Runtime.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.SqlServer.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Web.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.ApplicationInsights.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Newtonsoft.Json.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Owin.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Helpers.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Mvc.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Optimization.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Razor.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Deployment.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Razor.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\WebGrease.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.pdb
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\DevTrends.MvcDonutCaching.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\EntityFramework.SqlServer.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.Web.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.ApplicationInsights.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Helpers.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Mvc.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Optimization.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.Razor.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Deployment.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\System.Web.WebPages.Razor.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Antlr3.Runtime.pdb
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Newtonsoft.Json.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.Razor.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.csprojResolveAssemblyReference.cache
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.csproj.CoreCompileInputs.cache
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.dll
+D:\Zhibek\_alliance-motors\4y\alliance19 04 2018_1\alliance04 04 2018_1\alliance26 02 2018_1\alliance\Car\obj\Release\Car.pdb
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ApplicationInsights.config
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\csc.exe
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\System.Collections.Immutable.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\System.Reflection.Metadata.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\vbc.exe
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\VBCSCompiler.exe
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\roslyn\VBCSCompiler.exe.config
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Car.dll.config
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Car.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Car.pdb
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Antlr3.Runtime.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\DevTrends.MvcDonutCaching.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\EntityFramework.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\EntityFramework.SqlServer.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.DependencyCollector.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.Web.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.WindowsServer.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.ApplicationInsights.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Google.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Web.Infrastructure.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Newtonsoft.Json.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Owin.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Helpers.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Mvc.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Optimization.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Razor.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.WebPages.Deployment.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.WebPages.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.WebPages.Razor.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\WebGrease.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\DevTrends.MvcDonutCaching.pdb
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\DevTrends.MvcDonutCaching.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\EntityFramework.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\EntityFramework.SqlServer.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.DependencyCollector.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.Web.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AI.WindowsServer.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.ApplicationInsights.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Helpers.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Mvc.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Optimization.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.Razor.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.WebPages.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.WebPages.Deployment.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\System.Web.WebPages.Razor.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Antlr3.Runtime.pdb
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Newtonsoft.Json.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Google.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\EntityFramework.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\EntityFramework.SqlServer.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.Helpers.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.Mvc.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.Optimization.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.Razor.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.WebPages.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.WebPages.Deployment.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\System.Web.WebPages.Razor.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Core.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.Security.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.Security.Facebook.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.Security.Google.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\obj\Release\Car.csproj.CoreCompileInputs.cache
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\obj\Release\Car.dll
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\obj\Release\Car.pdb
+D:\Zhibek\alliance03 07 2018_4\alliance\Car\obj\Release\Car.csprojResolveAssemblyReference.cache
